@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="x_414100_project_3_trailer_catalog_table">
+    <x_414100_project_3_trailer_catalog_table action="DELETE">
+        <active>true</active>
+        <availability>on_desktop</availability>
+        <billable>false</billable>
+        <category/>
+        <cost>0</cost>
+        <custom_cart/>
+        <delivery_plan/>
+        <delivery_plan_script/>
+        <delivery_time>1970-01-03 00:00:00</delivery_time>
+        <description><![CDATA[asdfasdfasdfasdfasdf]]></description>
+        <display_price_property>non_zero</display_price_property>
+        <entitlement_script/>
+        <group/>
+        <hide_sp>false</hide_sp>
+        <icon/>
+        <ignore_price>false</ignore_price>
+        <image/>
+        <list_price>0</list_price>
+        <location/>
+        <mandatory_attachment>false</mandatory_attachment>
+        <meta/>
+        <meta_condition>new</meta_condition>
+        <meta_description>asdfasdfasdfasdfasdf</meta_description>
+        <meta_floor_length>120</meta_floor_length>
+        <meta_gvwr>123</meta_gvwr>
+        <meta_manufacturer>cargo mate</meta_manufacturer>
+        <meta_model>asdfasdf</meta_model>
+        <meta_name/>
+        <meta_number/>
+        <meta_price/>
+        <meta_pull_type>bumper</meta_pull_type>
+        <meta_qty>12</meta_qty>
+        <meta_trailer_image/>
+        <meta_trailer_type>cargo</meta_trailer_type>
+        <meta_vin>asdfasdf</meta_vin>
+        <meta_weight>12300</meta_weight>
+        <meta_width>1200</meta_width>
+        <meta_year>2019</meta_year>
+        <mobile_hide_price>false</mobile_hide_price>
+        <mobile_picture/>
+        <mobile_picture_type>use_desktop_picture</mobile_picture_type>
+        <model/>
+        <name>img swap test</name>
+        <no_attachment_v2>false</no_attachment_v2>
+        <no_cart>false</no_cart>
+        <no_cart_v2>false</no_cart_v2>
+        <no_delivery_time_v2>false</no_delivery_time_v2>
+        <no_order>false</no_order>
+        <no_order_now>false</no_order_now>
+        <no_proceed_checkout>false</no_proceed_checkout>
+        <no_quantity>false</no_quantity>
+        <no_quantity_v2>false</no_quantity_v2>
+        <no_search>false</no_search>
+        <no_wishlist_v2>false</no_wishlist_v2>
+        <number>TRA0001145</number>
+        <omit_price>false</omit_price>
+        <order>0</order>
+        <ordered_item_link/>
+        <picture/>
+        <preview>JavaScript: popupOpenStandard("com.glideapp.servicecatalog_cat_item_view.do?v=1&amp;sysparm_id=178a14c1db6c80106e345c7a489619bf&amp;sysparm_preview=true", "summary");</preview>
+        <price>123</price>
+        <recurring_frequency/>
+        <recurring_price>0</recurring_price>
+        <request_method/>
+        <roles/>
+        <sc_catalogs/>
+        <sc_ic_item_staging/>
+        <sc_ic_version/>
+        <short_description>asdfasdfasdf</short_description>
+        <show_variable_help_on_load>false</show_variable_help_on_load>
+        <start_closed>false</start_closed>
+        <sys_class_name>x_414100_project_3_trailer_catalog_table</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-15 11:59:47</sys_created_on>
+        <sys_id>178a14c1db6c80106e345c7a489619bf</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>img swap test</sys_name>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_update_name>x_414100_project_3_trailer_catalog_table_178a14c1db6c80106e345c7a489619bf</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-15 12:35:47</sys_updated_on>
+        <template/>
+        <type>item</type>
+        <use_sc_layout>true</use_sc_layout>
+        <vendor/>
+        <visible_bundle>true</visible_bundle>
+        <visible_guide>true</visible_guide>
+        <visible_standalone>true</visible_standalone>
+        <workflow display_value="Trailer Order Flow">41af15efdb1080106e345c7a489619cd</workflow>
+    </x_414100_project_3_trailer_catalog_table>
+    <sys_translated_text action="delete_multiple" query="documentkey=178a14c1db6c80106e345c7a489619bf"/>
+    <fx_price action="delete_multiple" query="id=178a14c1db6c80106e345c7a489619bf"/>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>123</amount>
+        <currency display_value="USD">USD</currency>
+        <field>price</field>
+        <id>178a14c1db6c80106e345c7a489619bf</id>
+        <parent/>
+        <reference_amount>123</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-15 11:59:47</sys_created_on>
+        <sys_id>138a18c1db6c80106e345c7a489619da</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-15 11:59:47</sys_updated_on>
+        <table>x_414100_project_3_trailer_catalog_table</table>
+        <type>calculated</type>
+    </fx_price>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>recurring_price</field>
+        <id>178a14c1db6c80106e345c7a489619bf</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-15 11:59:47</sys_created_on>
+        <sys_id>d38a18c1db6c80106e345c7a489619db</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-15 11:59:47</sys_updated_on>
+        <table>x_414100_project_3_trailer_catalog_table</table>
+        <type>calculated</type>
+    </fx_price>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</application>
+        <file_path/>
+        <instance_id>72ba96d3db05b7004d2bac44d49619e4</instance_id>
+        <instance_name>dev84767</instance_name>
+        <name>x_414100_project_3_trailer_catalog_table_178a14c1db6c80106e345c7a489619bf</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="x_414100_project_3_trailer_catalog_table"&gt;&lt;x_414100_project_3_trailer_catalog_table action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;availability&gt;on_desktop&lt;/availability&gt;&lt;billable&gt;false&lt;/billable&gt;&lt;category/&gt;&lt;cost&gt;0&lt;/cost&gt;&lt;custom_cart/&gt;&lt;delivery_plan/&gt;&lt;delivery_plan_script/&gt;&lt;delivery_time&gt;1970-01-03 00:00:00&lt;/delivery_time&gt;&lt;description&gt;&lt;![CDATA[asdfasdfasdfasdfasdf]]&gt;&lt;/description&gt;&lt;display_price_property&gt;non_zero&lt;/display_price_property&gt;&lt;entitlement_script/&gt;&lt;group/&gt;&lt;hide_sp&gt;false&lt;/hide_sp&gt;&lt;icon/&gt;&lt;ignore_price&gt;false&lt;/ignore_price&gt;&lt;image/&gt;&lt;list_price&gt;0&lt;/list_price&gt;&lt;location/&gt;&lt;mandatory_attachment&gt;false&lt;/mandatory_attachment&gt;&lt;meta/&gt;&lt;meta_condition&gt;new&lt;/meta_condition&gt;&lt;meta_description&gt;asdfasdfasdfasdfasdf&lt;/meta_description&gt;&lt;meta_floor_length&gt;120&lt;/meta_floor_length&gt;&lt;meta_gvwr&gt;123&lt;/meta_gvwr&gt;&lt;meta_manufacturer&gt;cargo mate&lt;/meta_manufacturer&gt;&lt;meta_model&gt;asdfasdf&lt;/meta_model&gt;&lt;meta_name/&gt;&lt;meta_number/&gt;&lt;meta_price/&gt;&lt;meta_pull_type&gt;bumper&lt;/meta_pull_type&gt;&lt;meta_qty&gt;12&lt;/meta_qty&gt;&lt;meta_trailer_image/&gt;&lt;meta_trailer_type&gt;cargo&lt;/meta_trailer_type&gt;&lt;meta_vin&gt;asdfasdf&lt;/meta_vin&gt;&lt;meta_weight&gt;12300&lt;/meta_weight&gt;&lt;meta_width&gt;1200&lt;/meta_width&gt;&lt;meta_year&gt;2019&lt;/meta_year&gt;&lt;mobile_hide_price&gt;false&lt;/mobile_hide_price&gt;&lt;mobile_picture/&gt;&lt;mobile_picture_type&gt;use_desktop_picture&lt;/mobile_picture_type&gt;&lt;model/&gt;&lt;name&gt;img swap test&lt;/name&gt;&lt;no_attachment_v2&gt;false&lt;/no_attachment_v2&gt;&lt;no_cart&gt;false&lt;/no_cart&gt;&lt;no_cart_v2&gt;false&lt;/no_cart_v2&gt;&lt;no_delivery_time_v2&gt;false&lt;/no_delivery_time_v2&gt;&lt;no_order&gt;false&lt;/no_order&gt;&lt;no_order_now&gt;false&lt;/no_order_now&gt;&lt;no_proceed_checkout&gt;false&lt;/no_proceed_checkout&gt;&lt;no_quantity&gt;false&lt;/no_quantity&gt;&lt;no_quantity_v2&gt;false&lt;/no_quantity_v2&gt;&lt;no_search&gt;false&lt;/no_search&gt;&lt;no_wishlist_v2&gt;false&lt;/no_wishlist_v2&gt;&lt;number&gt;TRA0001145&lt;/number&gt;&lt;omit_price&gt;false&lt;/omit_price&gt;&lt;order&gt;0&lt;/order&gt;&lt;ordered_item_link/&gt;&lt;picture/&gt;&lt;preview&gt;JavaScript: popupOpenStandard("com.glideapp.servicecatalog_cat_item_view.do?v=1&amp;amp;sysparm_id=178a14c1db6c80106e345c7a489619bf&amp;amp;sysparm_preview=true", "summary");&lt;/preview&gt;&lt;price&gt;123&lt;/price&gt;&lt;recurring_frequency/&gt;&lt;recurring_price&gt;0&lt;/recurring_price&gt;&lt;request_method/&gt;&lt;roles/&gt;&lt;sc_catalogs/&gt;&lt;sc_ic_item_staging/&gt;&lt;sc_ic_version/&gt;&lt;short_description&gt;asdfasdfasdf&lt;/short_description&gt;&lt;show_variable_help_on_load&gt;false&lt;/show_variable_help_on_load&gt;&lt;start_closed&gt;false&lt;/start_closed&gt;&lt;sys_class_name&gt;x_414100_project_3_trailer_catalog_table&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-15 11:59:47&lt;/sys_created_on&gt;&lt;sys_id&gt;178a14c1db6c80106e345c7a489619bf&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;img swap test&lt;/sys_name&gt;&lt;sys_package display_value="Project 3" source="x_414100_project_3"&gt;eb77e1a2db1c00106e345c7a489619be&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Project 3"&gt;eb77e1a2db1c00106e345c7a489619be&lt;/sys_scope&gt;&lt;sys_update_name&gt;x_414100_project_3_trailer_catalog_table_178a14c1db6c80106e345c7a489619bf&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-15 12:35:47&lt;/sys_updated_on&gt;&lt;template/&gt;&lt;type&gt;item&lt;/type&gt;&lt;use_sc_layout&gt;true&lt;/use_sc_layout&gt;&lt;vendor/&gt;&lt;visible_bundle&gt;true&lt;/visible_bundle&gt;&lt;visible_guide&gt;true&lt;/visible_guide&gt;&lt;visible_standalone&gt;true&lt;/visible_standalone&gt;&lt;workflow display_value="Trailer Order Flow"&gt;41af15efdb1080106e345c7a489619cd&lt;/workflow&gt;&lt;/x_414100_project_3_trailer_catalog_table&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=178a14c1db6c80106e345c7a489619bf"/&gt;&lt;fx_price action="delete_multiple" query="id=178a14c1db6c80106e345c7a489619bf"/&gt;&lt;fx_price action="INSERT_OR_UPDATE"&gt;&lt;amount&gt;123&lt;/amount&gt;&lt;currency display_value="USD"&gt;USD&lt;/currency&gt;&lt;field&gt;price&lt;/field&gt;&lt;id&gt;178a14c1db6c80106e345c7a489619bf&lt;/id&gt;&lt;parent/&gt;&lt;reference_amount&gt;123&lt;/reference_amount&gt;&lt;reference_currency display_value="USD"&gt;USD&lt;/reference_currency&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-15 11:59:47&lt;/sys_created_on&gt;&lt;sys_id&gt;138a18c1db6c80106e345c7a489619da&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-15 11:59:47&lt;/sys_updated_on&gt;&lt;table&gt;x_414100_project_3_trailer_catalog_table&lt;/table&gt;&lt;type&gt;calculated&lt;/type&gt;&lt;/fx_price&gt;&lt;fx_price action="INSERT_OR_UPDATE"&gt;&lt;amount&gt;0&lt;/amount&gt;&lt;currency display_value="USD"&gt;USD&lt;/currency&gt;&lt;field&gt;recurring_price&lt;/field&gt;&lt;id&gt;178a14c1db6c80106e345c7a489619bf&lt;/id&gt;&lt;parent/&gt;&lt;reference_amount&gt;0&lt;/reference_amount&gt;&lt;reference_currency display_value="USD"&gt;USD&lt;/reference_currency&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-15 11:59:47&lt;/sys_created_on&gt;&lt;sys_id&gt;d38a18c1db6c80106e345c7a489619db&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-15 11:59:47&lt;/sys_updated_on&gt;&lt;table&gt;x_414100_project_3_trailer_catalog_table&lt;/table&gt;&lt;type&gt;calculated&lt;/type&gt;&lt;/fx_price&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1813344831</payload_hash>
+        <record_name>img swap test</record_name>
+        <reverted_from/>
+        <source>fb1689a3dbdc40106e345c7a489619d8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-15 12:35:47</sys_created_on>
+        <sys_id>b6c2ecc9db6c80106e345c7a48961980</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16dcf6ad1a50000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-15 12:35:47</sys_updated_on>
+        <type>Trailer Catalog Table</type>
+        <update_guid>32c2ecc9956c80108e2cfb7b09b32180</update_guid>
+        <update_guid_history>32c2ecc9956c80108e2cfb7b09b32180:-1813344831,defe10095c6c80106764cf07030ae91d:672290189,88ddd885b46c801092a426ef9ac2ac80:1502467388,20aa58c1a66c801057128665eedfb777:-311336335,338a18c1da6c8010214769f834a6d4fe:1396379851,638a18c1046c8010671e9aad52c5b7f0:-754067583,278a18c12d6c801048fa123ff90260e3:-1930234195</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="img swap test">fac2ecc9db6c80106e345c7a48961993</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-15 12:35:47</sys_created_on>
+        <sys_db_object display_value="" name="x_414100_project_3_trailer_catalog_table">x_414100_project_3_trailer_catalog_table</sys_db_object>
+        <sys_id>167930021bf4427e858dbd0e16de1c04</sys_id>
+        <sys_metadata>178a14c1db6c80106e345c7a489619bf</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>img swap test</sys_name>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_scope_delete display_value="">205e6add2b6c46828e85eec0dde7c144</sys_scope_delete>
+        <sys_update_name>x_414100_project_3_trailer_catalog_table_178a14c1db6c80106e345c7a489619bf</sys_update_name>
+        <sys_update_version display_value="x_414100_project_3_trailer_catalog_table_178a14c1db6c80106e345c7a489619bf">b6c2ecc9db6c80106e345c7a48961980</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-15 12:35:47</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

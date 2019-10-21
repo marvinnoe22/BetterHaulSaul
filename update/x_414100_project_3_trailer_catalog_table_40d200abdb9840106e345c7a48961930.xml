@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="x_414100_project_3_trailer_catalog_table">
+    <x_414100_project_3_trailer_catalog_table action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <availability>on_desktop</availability>
+        <billable>false</billable>
+        <category display_value="Flatbed">d47bf16edb5c00106e345c7a4896199e</category>
+        <cost>0</cost>
+        <custom_cart/>
+        <delivery_plan/>
+        <delivery_plan_script/>
+        <delivery_time>1970-01-03 00:00:00</delivery_time>
+        <description><![CDATA[<p><span style="font-size: 10pt;">8.5 x 30 10 Ton | Flatbed Gooseneck Deck Over Trailer | FG102-30T10-FF</span></p>
+<p>OPTIONS:</p>
+<ul style="list-style-position: inside;"><li>5ft Self-cleaning Dove </li><li>2-10k Dexter Oil Bath Axles with Electric Brakes </li><li>3-Inch Cross Members on 16-Inch Centers</li><li>All LED Lighting </li><li>8-235/80R16-Inch 10-ply Radial tires each rated at 3080# (Total Tire Rating &#61; 24,640#) </li><li>12&#34; I-Beam Gooseneck (19 lb/Ft) </li><li>Pipe Spools and Rub Rails </li><li>Double Drop Leg Side Wind Jacks </li><li>2 Adjustable Fold Over Flat Double Hinged Spring Assisted Wedge Ramps </li><li>2x8 Pressure Treated Decking Sealed with Woodrich Timber Oil wood Preservative </li><li>12-Inch I-Beam &#64; 19# per foot Main Frame</li></ul>]]></description>
+        <display_price_property>non_zero</display_price_property>
+        <entitlement_script/>
+        <group/>
+        <hide_sp>false</hide_sp>
+        <icon/>
+        <ignore_price>false</ignore_price>
+        <image/>
+        <list_price>0</list_price>
+        <location/>
+        <mandatory_attachment>false</mandatory_attachment>
+        <meta/>
+        <meta_condition>new</meta_condition>
+        <meta_description>8.5 x 30 10 Ton | Flatbed Gooseneck Deck Over Trailer | FG102-30T10-FF&#13;
+&#13;
+OPTIONS:&#13;
+&#13;
+5ft Self-cleaning Dove &#13;
+2-10k Dexter Oil Bath Axles with Electric Brakes &#13;
+3-Inch Cross Members on 16-Inch Centers&#13;
+All LED Lighting &#13;
+8-235/80R16-Inch 10-ply Radial tires each rated at 3080# (Total Tire Rating = 24,640#) &#13;
+12" I-Beam Gooseneck (19 lb/Ft) &#13;
+Pipe Spools and Rub Rails &#13;
+Double Drop Leg Side Wind Jacks &#13;
+2 Adjustable Fold Over Flat Double Hinged Spring Assisted Wedge Ramps &#13;
+2x8 Pressure Treated Decking Sealed with Woodrich Timber Oil wood Preservative &#13;
+12-Inch I-Beam @ 19# per foot Main Frame</meta_description>
+        <meta_floor_length>30</meta_floor_length>
+        <meta_gvwr>20000 </meta_gvwr>
+        <meta_manufacturer>haulmark</meta_manufacturer>
+        <meta_model>FG102-30T10-FF</meta_model>
+        <meta_name>Flatbed Gooseneck Deck Over Trailer</meta_name>
+        <meta_number/>
+        <meta_price/>
+        <meta_pull_type>gooseneck</meta_pull_type>
+        <meta_qty>13</meta_qty>
+        <meta_trailer_image/>
+        <meta_trailer_type>flatbed</meta_trailer_type>
+        <meta_vin>1ORLFG23234567890</meta_vin>
+        <meta_weight>20000</meta_weight>
+        <meta_width>8.5 </meta_width>
+        <meta_year>2019</meta_year>
+        <mobile_hide_price>false</mobile_hide_price>
+        <mobile_picture/>
+        <mobile_picture_type>use_desktop_picture</mobile_picture_type>
+        <model/>
+        <name>Flatbed Gooseneck Deck Over Trailer</name>
+        <no_attachment_v2>false</no_attachment_v2>
+        <no_cart>false</no_cart>
+        <no_cart_v2>false</no_cart_v2>
+        <no_delivery_time_v2>false</no_delivery_time_v2>
+        <no_order>false</no_order>
+        <no_order_now>false</no_order_now>
+        <no_proceed_checkout>false</no_proceed_checkout>
+        <no_quantity>false</no_quantity>
+        <no_quantity_v2>false</no_quantity_v2>
+        <no_search>false</no_search>
+        <no_wishlist_v2>false</no_wishlist_v2>
+        <number>TRA0001004</number>
+        <omit_price>false</omit_price>
+        <order>0</order>
+        <ordered_item_link/>
+        <picture>fc5e3a43db9400106e345c7a4896191f</picture>
+        <preview>JavaScript: popupOpenStandard("com.glideapp.servicecatalog_cat_item_view.do?v=1&amp;sysparm_id=40d200abdb9840106e345c7a48961930&amp;sysparm_preview=true", "summary");</preview>
+        <price>2500</price>
+        <recurring_frequency/>
+        <recurring_price>0</recurring_price>
+        <request_method/>
+        <roles/>
+        <sc_catalogs>88dab92edb5c00106e345c7a48961905</sc_catalogs>
+        <sc_ic_item_staging/>
+        <sc_ic_version/>
+        <short_description>8.5 x 30 10 Ton | Flatbed Gooseneck Deck Over Trailer | FG102-30T10-FF</short_description>
+        <show_variable_help_on_load>false</show_variable_help_on_load>
+        <start_closed>false</start_closed>
+        <sys_class_name>x_414100_project_3_trailer_catalog_table</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-10 18:25:11</sys_created_on>
+        <sys_id>40d200abdb9840106e345c7a48961930</sys_id>
+        <sys_mod_count>26</sys_mod_count>
+        <sys_name>Flatbed Gooseneck Deck Over Trailer</sys_name>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_update_name>x_414100_project_3_trailer_catalog_table_40d200abdb9840106e345c7a48961930</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-16 13:34:41</sys_updated_on>
+        <template/>
+        <type>item</type>
+        <use_sc_layout>true</use_sc_layout>
+        <vendor/>
+        <visible_bundle>true</visible_bundle>
+        <visible_guide>true</visible_guide>
+        <visible_standalone>true</visible_standalone>
+        <workflow display_value="Trailer Order Flow">41af15efdb1080106e345c7a489619cd</workflow>
+    </x_414100_project_3_trailer_catalog_table>
+    <sys_translated_text action="delete_multiple" query="documentkey=40d200abdb9840106e345c7a48961930"/>
+    <fx_price action="delete_multiple" query="id=40d200abdb9840106e345c7a48961930"/>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>2500</amount>
+        <currency display_value="USD">USD</currency>
+        <field>price</field>
+        <id>40d200abdb9840106e345c7a48961930</id>
+        <parent/>
+        <reference_amount>2500</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-10 18:25:11</sys_created_on>
+        <sys_id>04d200abdb9840106e345c7a48961931</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-10 19:24:52</sys_updated_on>
+        <table>x_414100_project_3_trailer_catalog_table</table>
+        <type>calculated</type>
+    </fx_price>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>recurring_price</field>
+        <id>40d200abdb9840106e345c7a48961930</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-10 18:25:11</sys_created_on>
+        <sys_id>4cd200abdb9840106e345c7a48961931</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-10 18:25:11</sys_updated_on>
+        <table>x_414100_project_3_trailer_catalog_table</table>
+        <type>calculated</type>
+    </fx_price>
+</record_update>

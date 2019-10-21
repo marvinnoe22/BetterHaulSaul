@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container">
+    <sp_container action="DELETE">
+        <background_color/>
+        <background_image/>
+        <background_style>default</background_style>
+        <bootstrap_alt>false</bootstrap_alt>
+        <class_name/>
+        <container_class_name/>
+        <name> Trailers_HomePage - Container 1</name>
+        <order>1</order>
+        <sp_page display_value="trailers_homepage">0906134fdbd400106e345c7a48961979</sp_page>
+        <subheader>false</subheader>
+        <sys_class_name>sp_container</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-09 20:30:59</sys_created_on>
+        <sys_id>c906134fdbd400106e345c7a4896197c</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name> Trailers_HomePage - Container 1</sys_name>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_update_name>sp_container_c906134fdbd400106e345c7a4896197c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-12 19:22:56</sys_updated_on>
+        <title/>
+        <width>container-fluid</width>
+    </sp_container>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</application>
+        <file_path/>
+        <instance_id>72ba96d3db05b7004d2bac44d49619e4</instance_id>
+        <instance_name>dev84767</instance_name>
+        <name>sp_container_c906134fdbd400106e345c7a4896197c</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container"><sp_container action="INSERT_OR_UPDATE"><background_color/><background_image/><background_style>default</background_style><bootstrap_alt>false</bootstrap_alt><class_name/><container_class_name/><name> Trailers_HomePage - Container 1</name><order>1</order><sp_page display_value="trailers_homepage">0906134fdbd400106e345c7a48961979</sp_page><subheader>false</subheader><sys_class_name>sp_container</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2019-10-09 20:30:59</sys_created_on><sys_id>c906134fdbd400106e345c7a4896197c</sys_id><sys_mod_count>3</sys_mod_count><sys_name> Trailers_HomePage - Container 1</sys_name><sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package><sys_policy/><sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope><sys_update_name>sp_container_c906134fdbd400106e345c7a4896197c</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2019-10-12 19:22:56</sys_updated_on><title/><width>container-fluid</width></sp_container></record_update>]]></payload>
+        <payload_hash>-1522972589</payload_hash>
+        <record_name> Trailers_HomePage - Container 1</record_name>
+        <reverted_from/>
+        <source>fb1689a3dbdc40106e345c7a489619d8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-12 19:22:56</sys_created_on>
+        <sys_id>ed33a684dbe004106e345c7a489619d8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16dc16c7f830000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-12 19:22:56</sys_updated_on>
+        <type>Container</type>
+        <update_guid>6933a68453e00410a9577222d6ad36d8</update_guid>
+        <update_guid_history>6933a68453e00410a9577222d6ad36d8:-1522972589,d9aca07f951c80100565ee620cd29b70:-248742741,9616974f81d4001055af0d96aaf19d76:-829800760,cd06134f0fd4001068f23ad55871577d:474065666</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value=" Trailers_HomePage - Container 1">3d5646a8dba040106e345c7a4896190c</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-14 06:33:45</sys_created_on>
+        <sys_db_object display_value="" name="sp_container">sp_container</sys_db_object>
+        <sys_id>31c2941d46a44a828b08c84437e2fc91</sys_id>
+        <sys_metadata>c906134fdbd400106e345c7a4896197c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name> Trailers_HomePage - Container 1</sys_name>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_scope_delete display_value="">205e6add2b6c46828e85eec0dde7c144</sys_scope_delete>
+        <sys_update_name>sp_container_c906134fdbd400106e345c7a4896197c</sys_update_name>
+        <sys_update_version display_value="sp_container_c906134fdbd400106e345c7a4896197c">ed33a684dbe004106e345c7a489619d8</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-14 06:33:45</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

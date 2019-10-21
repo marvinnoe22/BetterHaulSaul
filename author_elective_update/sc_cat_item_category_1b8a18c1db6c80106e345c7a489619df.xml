@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category">
+    <sc_cat_item_category action="DELETE">
+        <sc_cat_item display_value="img swap test">178a14c1db6c80106e345c7a489619bf</sc_cat_item>
+        <sc_category display_value="Cargo/Enclosed">be3bb12edb5c00106e345c7a489619ea</sc_category>
+        <sys_class_name>sc_cat_item_category</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-15 11:59:47</sys_created_on>
+        <sys_id>1b8a18c1db6c80106e345c7a489619df</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Cargo/Enclosed.img swap test</sys_name>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_update_name>sc_cat_item_category_1b8a18c1db6c80106e345c7a489619df</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-15 11:59:47</sys_updated_on>
+    </sc_cat_item_category>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</application>
+        <file_path/>
+        <instance_id>72ba96d3db05b7004d2bac44d49619e4</instance_id>
+        <instance_name>dev84767</instance_name>
+        <name>sc_cat_item_category_1b8a18c1db6c80106e345c7a489619df</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category"><sc_cat_item_category action="INSERT_OR_UPDATE"><sc_cat_item display_value="img swap test">178a14c1db6c80106e345c7a489619bf</sc_cat_item><sc_category display_value="Cargo/Enclosed">be3bb12edb5c00106e345c7a489619ea</sc_category><sys_class_name>sc_cat_item_category</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2019-10-15 11:59:47</sys_created_on><sys_id>1b8a18c1db6c80106e345c7a489619df</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Cargo/Enclosed.img swap test</sys_name><sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package><sys_policy/><sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope><sys_update_name>sc_cat_item_category_1b8a18c1db6c80106e345c7a489619df</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2019-10-15 11:59:47</sys_updated_on></sc_cat_item_category></record_update>]]></payload>
+        <payload_hash>1594490225</payload_hash>
+        <record_name>Cargo/Enclosed.img swap test</record_name>
+        <reverted_from/>
+        <source>fb1689a3dbdc40106e345c7a489619d8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-15 11:59:47</sys_created_on>
+        <sys_id>af8a18c1db6c80106e345c7a489619e1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16dcf49dd3d0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-15 11:59:47</sys_updated_on>
+        <type>Catalog Item Category</type>
+        <update_guid>e78a18c1476c8010e82db8e3c992b0e1</update_guid>
+        <update_guid_history>e78a18c1476c8010e82db8e3c992b0e1:1594490225</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Cargo/Enclosed.img swap test">3ac2ecc9db6c80106e345c7a4896197c</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-15 12:35:47</sys_created_on>
+        <sys_db_object display_value="" name="sc_cat_item_category">sc_cat_item_category</sys_db_object>
+        <sys_id>6ab066184c6247bd951210bbfbf37829</sys_id>
+        <sys_metadata>1b8a18c1db6c80106e345c7a489619df</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Cargo/Enclosed.img swap test</sys_name>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_parent display_value="">178a14c1db6c80106e345c7a489619bf</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_scope_delete display_value="">205e6add2b6c46828e85eec0dde7c144</sys_scope_delete>
+        <sys_update_name>sc_cat_item_category_1b8a18c1db6c80106e345c7a489619df</sys_update_name>
+        <sys_update_version display_value="sc_cat_item_category_1b8a18c1db6c80106e345c7a489619df">af8a18c1db6c80106e345c7a489619e1</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-15 12:35:47</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

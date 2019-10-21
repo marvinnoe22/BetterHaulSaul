@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="x_414100_project_3_trailers_inventory">
+    <x_414100_project_3_trailers_inventory action="INSERT_OR_UPDATE">
+        <number>TRA0001015</number>
+        <sys_class_name>x_414100_project_3_trailers_inventory</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 13:57:52</sys_created_on>
+        <sys_id>3f81f0b6db1840106e345c7a489619d8</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>Deck Over Trailer Gooseneck</sys_name>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_update_name>x_414100_project_3_trailers_inventory_3f81f0b6db1840106e345c7a489619d8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-10 14:13:35</sys_updated_on>
+        <trailer_image>3117120bdbd000106e345c7a489619f8</trailer_image>
+        <u_condition>new</u_condition>
+        <u_description>8.5x36 Deck Over Trailer Gooseneck 12 TON Flatbed 8.5 x 36 | FG102-36T12-FF&#13;
+OPTIONS:&#13;
+- 2 - 12,000 Lb Dexter Sprg Axles (2 Elec Brakes)&#13;
+- ST235/80 R16 LRE 10 Ply. (BLACK WHEELS)(Dual)&#13;
+- Coupler 2-5/16" Adj. Rd. 19 lb. (Standard Neck &amp; Coupler)&#13;
+- Treated Wood Floor&#13;
+- 16" Cross-Members&#13;
+- Jack Spring Loaded Drop Leg 2-10K&#13;
+- Lighting LED&#13;
+- Mud Flaps&#13;
+- Front Tool Box (Full Width Between Risers)&#13;
+- Standard Frame w/out Bridge&#13;
+- Black (w/Primer)&#13;
+- Road Service Program&#13;
+- 2 Adjustable Fold Over Flat Double Hinged Spring Assisted Wedge Ramps&#13;
+</u_description>
+        <u_floor_length>36 ft</u_floor_length>
+        <u_gvwr>24000 lbs</u_gvwr>
+        <u_manufacturer>pace america</u_manufacturer>
+        <u_model>FG102-36T12-FF</u_model>
+        <u_name>Deck Over Trailer Gooseneck</u_name>
+        <u_price>1000</u_price>
+        <u_pull_type>gooseneck</u_pull_type>
+        <u_qty>8</u_qty>
+        <u_trailer_type>flatbed</u_trailer_type>
+        <u_vin>1ORLFG72234567890</u_vin>
+        <u_weight>12 ton</u_weight>
+        <u_width>8.5 ft</u_width>
+        <u_year>2019</u_year>
+    </x_414100_project_3_trailers_inventory>
+</record_update>

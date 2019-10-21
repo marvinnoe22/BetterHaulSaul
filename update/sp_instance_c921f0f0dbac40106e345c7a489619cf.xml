@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">0121f0f0dbac40106e345c7a489619ce</sp_column>
+        <sp_widget display_value="trailers-html-box-1">633b153adb5c40106e345c7a48961971</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-14 18:59:59</sys_created_on>
+        <sys_id>c921f0f0dbac40106e345c7a489619cf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_update_name>sp_instance_c921f0f0dbac40106e345c7a489619cf</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-14 18:59:59</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"html": {
+		"value": "<div class=\"col-md-12\" style=\"border-top: 1px solid red; margin-top: 10px;\" data-mce-style=\"border-top: 1px solid red; margin-top: 10px;\"><h1 style=\"padding-top: 10px; font-family: Anton, sans-serif; letter-spacing: 5px; color: black; text-align: center;\" data-mce-style=\"padding-top: 10px; font-family: Anton, sans-serif; letter-spacing: 5px; color: black; text-align: center;\">LATEST <span style=\"color: #1662a6;\" data-mce-style=\"color: #1662a6;\">ARRIVALS</span></h1></div>",
+		"displayValue": "<div class=\"col-md-12\" style=\"border-top: 1px solid red; margin-top: 10px;\">\n<h1 style=\"padding-top: 10px; font-family: Anton, sans-serif; letter-spacing: 5px; color: black; text-align: center;\">LATEST <span style=\"color: #1662a6;\">ARRIVALS</span></h1>\n</div>"
+	}
+}]]></widget_parameters>
+    </sp_instance>
+    <sys_translated_text action="delete_multiple" query="documentkey=c921f0f0dbac40106e345c7a489619cf"/>
+</record_update>

@@ -1,0 +1,1119 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="DELETE">
+        <category>custom</category>
+        <client_script><![CDATA[function($scope) {
+    /* widget controller */
+    var c = this;
+		
+    c.modalBtn = function(i) {
+        var table = document.querySelector('.modalTable').children;
+        table[0].children[1].innerHTML = c.data.trailers[i].type;
+        table[1].children[1].innerHTML = c.data.trailers[i].condition;
+        table[2].children[1].innerHTML = c.data.trailers[i].manufacturer;
+        table[3].children[1].innerHTML = c.data.trailers[i].model;
+        table[4].children[1].innerHTML = c.data.trailers[i].width;
+        table[5].children[1].innerHTML = c.data.trailers[i].length;
+        table[6].children[1].innerHTML = c.data.trailers[i].weight;
+				table[7].innerHTML = c.data.trailers[i].description;
+				c.checkout = c.data.trailers[i].checkout;
+    }
+
+    c.data.trailerList = c.data.trailers;
+		c.data.price.curVal = c.data.price.max;
+    c.data.searchTerm = "";
+    c.data.checkboxType = {
+        cat1: false,
+        cat2: false,
+        cat3: false,
+        cat4: false,
+        cat5: false,
+        cat6: false,
+        other: false,
+				price: c.data.price.max
+    }
+	
+	$scope.$on('customEvent', function(event, obj) {
+		switch(obj.type){
+			case "cargo": c.data.checkboxType.cat1= true;
+				break;
+			case "dump": c.data.checkboxType.cat2= true;
+				break;
+			case "car haulers": c.data.checkboxType.cat3 = true;
+				break;
+			case "equipment": c.data.checkboxType.cat4 = true;
+				break;
+			case "utility": c.data.checkboxType.cat5 = true;
+				break;
+			case "flatbed": c.data.checkboxType.cat6 = true;
+				break;
+		}
+		
+		c.selected();	
+  });
+	
+    c.selected = function() {
+        //console.log("test passed");
+        c.data.trailerList = [];
+        if (c.data.checkboxType.cat1) {
+            var cat1 = c.data.trailers.filter(function(trailer) {
+                return (trailer.type === "cargo");
+            });
+            c.data.trailerList = c.data.trailerList.concat(cat1);
+        }
+
+        if (c.data.checkboxType.cat2) {
+            var cat2 = c.data.trailers.filter(function(trailer) {
+                return (trailer.type === "dump");
+            });
+            c.data.trailerList = c.data.trailerList.concat(cat2);
+        }
+        if (c.data.checkboxType.cat3) {
+            var cat3 = c.data.trailers.filter(function(trailer) {
+                return (trailer.type === "car haulers");
+            });
+            c.data.trailerList = c.data.trailerList.concat(cat3);
+        }
+
+        if (c.data.checkboxType.cat4) {
+            var cat4 = c.data.trailers.filter(function(trailer) {
+                return (trailer.type === "equipment");
+            });
+            c.data.trailerList = c.data.trailerList.concat(cat4);
+        }
+
+        if (c.data.checkboxType.cat5) {
+            var cat5 = c.data.trailers.filter(function(trailer) {
+                return (trailer.type === "utility");
+            });
+            c.data.trailerList = c.data.trailerList.concat(cat5);
+        }
+
+        if (c.data.checkboxType.cat6) {
+            var cat6 = c.data.trailers.filter(function(trailer) {
+                return (trailer.type === "flatbed");
+            });
+            c.data.trailerList = c.data.trailerList.concat(cat6);
+        }
+
+        if (c.data.checkboxType.other) {
+            var other = c.data.trailers.filter(function(trailer) {
+                return ((trailer.type != "cargo" &&
+                    trailer.type != "dump" &&
+                    trailer.type != "car haulers" &&
+                    trailer.type != "equipment" &&
+                    trailer.type != "utility" &&
+                    trailer.type != "flatbed"));
+            });
+            c.data.trailerList = c.data.trailerList.concat(other);
+        }
+
+        if (!c.data.checkboxType.other && !c.data.checkboxType.cat1 &&
+            !c.data.checkboxType.cat2 && !c.data.checkboxType.cat3 &&
+            !c.data.checkboxType.cat4 && !c.data.checkboxType.cat5 &&
+            !c.data.checkboxType.cat6) {
+            c.data.trailerList = c.data.trailers
+        }
+
+
+    }
+		
+	
+		c.slider_price = function(){
+			console.log("cur = "+ c.data.price.curVal);
+			c.data.checkboxType.price = c.data.price.curVal;
+			 var temp = c.data.trailers.filter(function(trailer) {
+             return (Number(trailer.price) <= c.data.price.curVal);
+        });
+			
+       c.data.trailerList = temp;
+			
+			//c.data.action = "slidePrice";
+			//$scope.server.update().then(function(){
+			//	.data.action = undefined;
+			//});
+		}
+			
+		
+			
+    
+}
+
+
+
+
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.leftSide{
+  width: 30%;
+  float: left;
+  padding: 10px;
+  //border-right: 2px solid black;
+}
+.add_Filter{
+  display: block;
+}
+
+.main{
+  width: 70%;
+  padding: 10px;
+  float: right;
+}
+
+
+.txtStyle {
+    font-family: 'Raleway', sans-serif;
+ }
+
+.trailers{
+  width: 45%;
+  float: left;
+  display: inline-block;
+  border: 2px solid red;
+  height: 180px;
+  margin: 5px;
+  padding: 2px;
+}
+
+.trailer_desc{
+  float: right;
+  display: inline;
+  width: 60%;
+}
+
+.trailers_image{
+  width: 40%; 
+  height: 160px; 
+  loat: left; 
+  padding-right: 10px;
+  padding-top: 10px;
+}
+.trailer_title{
+  height: 45px;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 768px){
+  .trailers{
+   width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px){
+  .trailers{
+   width: 100%;
+  }
+  .main, .leftSide{
+    width: 100%;
+    float: none;
+  }
+  .add_Filter{
+    display: none;
+  }
+  .leftSide{
+  	border-right: none;
+	}
+}
+
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>Copy of Catalog Trailer List</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+    
+    data.trailers = [];
+		
+    var trailerGR = new GlideRecord('x_414100_project_3_trailer_catalog_table');
+    //trailerGR.addQuery("u_trailer_type", "flatbed");
+    trailerGR.query();
+    while (trailerGR.next()) {
+        data.trailers.push({					
+					stock_number: trailerGR.number.toString(),
+					checkout: "https://dev84767.service-now.com/trailers?id=sc_cat_item&sys_id="+trailerGR.sys_id.toString(),
+					id: trailerGR.sys_id.toString(),
+					name: trailerGR.name.toString(),
+					price: trailerGR.price.toString(),
+					photo: trailerGR.picture.getDisplayValue().toString(),
+					type: trailerGR.meta_trailer_type.toString(),
+					condition: trailerGR.meta_condition.toString(),
+					manufacturer: trailerGR.meta_manufacturer.toString(),
+					model: trailerGR.meta_model.toString(),
+					width: trailerGR.meta_width.toString(),
+					length: trailerGR.meta_floor_length.toString(),
+					weight: trailerGR.meta_weight.toString(),
+					gvwr: trailerGR.meta_gvwr.toString(),
+					quantity: trailerGR.meta_qty.toString(),
+					description: trailerGR.meta_description.toString()
+				});
+    }
+	
+	//Get max price, width and length
+
+	var ga = new GlideAggregate('x_414100_project_3_trailer_catalog_table');
+  ga.addAggregate('MIN', 'price');
+  ga.addAggregate('MAX', 'price');
+	ga.groupBy("meta_trailer_type");
+  ga.query();
+	var min= 0, max = 0;
+	data.price = {'min': 10000000, 'max': 0} 
+  while(ga.next()) {  
+     min = Number(ga.getAggregate('MIN', 'price'));
+     max = Number(ga.getAggregate('MAX', 'price'));
+		//console.log("min1 "+min+" max1= "+max);
+		if(data.price.min > min){data.price.min = min}
+		if(data.price.max < max){data.price.max = max}
+	
+		 //console.log("min "+data.price.min+" max= "+data.price.max);
+ }
+	
+	
+		
+if((input && input.checkboxType) &&(input.action == "slidePrice")) {
+		data.trailers= [];
+      trailerGR = new GlideRecord('x_414100_project_3_trailer_catalog_table');
+			if(input.checkboxType.cat1){
+				trailerGR.addQuery("u_trailer_type", "cargo");
+			}
+			if(input.checkboxType.cat1){
+				trailerGR.addQuery("u_trailer_type", "dump");
+			}
+			if(input.checkboxType.cat1){
+				trailerGR.addQuery("u_trailer_type", "car haulers");
+			}
+			if(input.checkboxType.cat1){
+				trailerGR.addQuery("u_trailer_type", "equipment");
+			}
+			if(input.checkboxType.cat1){
+				trailerGR.addQuery("u_trailer_type", "utility");
+			}
+			trailerGR.addEncodedQuery("price<javascript:global.getCurrencyFilter('x_414100_project_3_trailer_catalog_table','price', 'USD;input.checkboxType.price')");
+			trailerGR.query();
+	
+    while (trailerGR.next()) {
+        data.trailers.push({					
+					stock_number: trailerGR.number.toString(),
+					checkout: "https://dev84767.service-now.com/trailers?id=sc_cat_item&sys_id="+trailerGR.sys_id.toString(),
+					id: trailerGR.sys_id.toString(),
+					name: trailerGR.meta_name.toString(),
+					price: trailerGR.price.toString(),
+					photo: trailerGR.picture.getDisplayValue().toString(),
+					type: trailerGR.meta_trailer_type.toString(),
+					condition: trailerGR.meta_condition.toString(),
+					manufacturer: trailerGR.meta_manufacturer.toString(),
+					model: trailerGR.meta_model.toString(),
+					width: trailerGR.meta_width.toString(),
+					length: trailerGR.meta_floor_length.toString(),
+					weight: trailerGR.meta_weight.toString(),
+					gvwr: trailerGR.meta_gvwr.toString(),
+					quantity: trailerGR.meta_qty.toString(),
+					description: trailerGR.meta_description.toString()
+				});
+    }
+   
+}
+
+	
+})();
+
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-14 18:15:34</sys_created_on>
+        <sys_id>9af6ec74db6c40106e345c7a48961982</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Copy of Catalog Trailer List</sys_name>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_update_name>sp_widget_9af6ec74db6c40106e345c7a48961982</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-14 18:15:34</sys_updated_on>
+        <template><![CDATA[<!-- Google Fonts / Raleway -->
+<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+
+
+<!-- Form -->
+<div class="leftSide">
+<form>
+<h5 style="background-color: #dddddd; padding-top: 5px; padding-bottom: 5px; color: black; font-family: 'Noto Sans JP', sans-serif; text-align: center;">SEARCH BY STOCK #</h5>
+<input id="inputSearch" class="form-control" required="" type="text" autofocus="" placeholder="ex: trailers" 
+       ng-model="c.data.searchTerm"/>
+</form>
+<!-- break -->
+<p>&nbsp;</p>
+<!-- break -->
+  
+<form class="add_Filter">
+<!-- CATEGORY -->
+<div style="margin-bottom: 20px; margin-top: 10px;">
+<h5 style="background-color: #dddddd; padding-top: 5px; padding-bottom: 5px; color: black; font-family: 'Noto Sans JP', sans-serif; text-align: center;">CATEGORY</h5>
+<div style="padding-left: 4px;">
+  <div class="custom-control custom-checkbox">
+    <input class="custom-control-input" type="checkbox"  
+           ng-model="c.data.checkboxType.cat1" 
+           ng-checked="c.selected()"/> 
+    <label class="custom-control-label" for="customCheck1">
+      Enclosed Cargo Trailer
+    </label>
+  </div>
+  <div class="custom-control custom-checkbox">
+    <input class="custom-control-input" type="checkbox" 
+           ng-model="c.data.checkboxType.cat2" 
+           ng-checked="c.selected()" /> 
+    <label class="custom-control-label" for="customCheck1">
+      Dump Trailer
+    </label>
+  </div>
+  <div class="custom-control custom-checkbox">
+    <input class="custom-control-input" type="checkbox" 
+           ng-model="c.data.checkboxType.cat3" 
+           ng-checked="c.selected()" /> 
+    <label class="custom-control-label" for="customCheck1">
+      Car hauler
+    </label>
+  </div>
+  <div class="custom-control custom-checkbox">
+    <input class="custom-control-input" type="checkbox" 
+           ng-model="c.data.checkboxType.cat4" 
+           ng-checked="c.selected()"/> 
+    <label class="custom-control-label" for="customCheck1">
+      Equipment Trailer
+    </label>
+  </div>
+  <div class="custom-control custom-checkbox">
+    <input class="custom-control-input" type="checkbox" 
+           ng-model="c.data.checkboxType.cat5" 
+           ng-checked="c.selected()"/> 
+    <label class="custom-control-label" for="customCheck1">
+      Utility Trailer
+    </label>
+  </div>
+  <div class="custom-control custom-checkbox">
+    <input class="custom-control-input" type="checkbox" 
+           ng-model="c.data.checkboxType.cat6" 
+           ng-checked="c.selected()"/> 
+    <label class="custom-control-label" for="customCheck1">
+      Flatbed Trailer
+    </label>
+  </div>
+  <div class="custom-control custom-checkbox">
+    <input class="custom-control-input" type="checkbox" 
+           ng-model="c.data.checkboxType.other" 
+           ng-checked="c.selected()"/> 
+    <label class="custom-control-label" for="customCheck1">
+      Other
+    </label>
+  </div>
+</div>
+</div>
+<!-- LENGTH -->
+<div class="form-group">
+<h5 style="background-color: #dddddd; padding-top: 5px; padding-bottom: 5px; color: black; font-family: 'Noto Sans JP', sans-serif; text-align: center;">LENGTH (FT)</h5>
+<input class="form-control-range" type="range" /></div>
+<!-- WIDTH -->
+<div class="form-group">
+<h5 style="background-color: #dddddd; padding-top: 5px; padding-bottom: 5px; color: black; font-family: 'Noto Sans JP', sans-serif; text-align: center;">WIDTH (FT)</h5>
+<input class="form-control-range" type="range" /></div>
+<!-- HEIGHT -->
+<div class="form-group">
+<h5 style="background-color: #dddddd; padding-top: 5px; padding-bottom: 5px; color: black; font-family: 'Noto Sans JP', sans-serif; text-align: center;">HEIGHT (FT)</h5>
+<input class="form-control-range" type="range" /></div>
+
+<!-- PULL TYPE -->
+<div style="margin-bottom: 20px; margin-top: 40px;">
+<h5 style="background-color: #dddddd; padding-top: 5px; padding-bottom: 5px; color: black; font-family: 'Noto Sans JP', sans-serif; text-align: center;">PULL TYPE</h5>
+<div style="padding-left: 4px;">
+<div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" /> <label class="custom-control-label" for="customCheck1">Bumper</label></div>
+<div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" /> <label class="custom-control-label" for="customCheck1">Gooseneck</label></div>
+<div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" /> <label class="custom-control-label" for="customCheck1">Pintle</label></div>
+</div>
+</div>
+<!-- GVWR -->
+<div class="form-group">
+<h5 style="background-color: #dddddd; padding-top: 5px; padding-bottom: 5px; color: black; font-family: 'Noto Sans JP', sans-serif; text-align: center;">GVWR</h5>
+<input class="form-control-range" type="range" /></div>
+<!-- PAYLOAD CAPACITY -->
+<div class="form-group">
+<h5 style="background-color: #dddddd; padding-top: 5px; padding-bottom: 5px; color: black; font-family: 'Noto Sans JP', sans-serif; text-align: center;">PAYLOAD CAPACITY</h5>
+<input class="form-control-range" type="range" /></div>
+
+<!-- Price -->
+<div class="form-group">
+  <h5 style="background-color: #dddddd; padding-top: 5px; padding-bottom: 5px; color: black; font-family: 'Noto Sans JP', sans-serif; text-align: center;">
+    Min PRICE
+  </h5>
+  <p>{{c.data.price.min}}- {{c.data.price.curVal}}- {{c.data.price.max}}</p>
+  <input type="range" ng-input-range name="range" ng-model="c.data.price.curVal" 
+         min="{{c.data.price.min}}"  max="{{c.data.price.max}}" ng-change="c.slider_price()" >
+</div>
+
+        
+ </form>
+</div>
+
+<div class="main">
+	<div ng-repeat="trailers in c.data.trailerList| filter : {'name' : c.data.searchTerm}"  class="trailers">
+      <img class="img-fluid trailers_image" ng-src="{{trailers.photo}}">
+    <div class="trailer_desc">
+      	<div class="trailer_title">
+        <h5>{{trailers.name}}</h5>
+    	</div>
+      <p style="font-size: 12px; text-overflow: hidden; margin: left;">
+        <span style="color: red;">Price: ${{trailers.price}}</span>  
+        <br /> Stock #: {{trailers.stock_number}} | Type: {{trailers.type}}
+      </p>
+       <a class="btn btn-primary btn-sm txtStyle" style="background-color: #de412c;" 
+             ng-href={{trailers.checkout}}>
+          Checkout
+       </a>
+                <!-- Trigger the modal with a button -->
+       <button type="button" class="btn btn-primary btn-sm txtStyle" style="background-color: #de412c;" 
+            data-toggle="modal" data-target="#myModal" ng-click="c.modalBtn($index)">
+          More Details
+       </button>
+    </div>
+      
+  </div>
+</div>
+<div class="clearfix"></div>
+
+<!-- More Details Popup -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Popup Content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">More Information</h4>
+      </div>
+      <div class="modal-body">
+     <table class="table">
+    <tbody class="modalTable">
+        <tr>
+          <th>Trailer Type</th>
+            <td>{{trailers.type}}</td>
+        </tr>
+        <tr>
+          <th>Condition</th>
+            <td>{{trailers.condition}}</td>
+        </tr>
+        <tr>
+          <th>Manufacturer</th>
+            <td>{{trailers.manufacturer}}</td>
+        </tr>
+      <tr>
+          <th>Model</th>
+          	<td>{{trailers.model}}</td>
+        </tr>
+            <tr>
+          <th>Width</th>
+          	<td>{{trailers.width}}</td>
+        </tr>
+            <tr>
+          <th>Length</th>
+          	<td>{{trailers.length}}</td>
+        </tr>
+            <tr>
+          <th>Weight</th>
+          	<td>{{trailers.weight}}</td>
+        </tr>
+      	<tr>
+          	<td>{{trailers.description}}</td>
+        </tr>
+    </tbody>
+</table>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-sm" style="background-color: #de412c; float:left" 
+             ng-href={{c.checkout}}>
+          Checkout
+       </a>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+    </div>
+ </div>
+
+
+
+]]></template>
+    </sp_widget>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</application>
+        <file_path/>
+        <instance_id>72ba96d3db05b7004d2bac44d49619e4</instance_id>
+        <instance_name>dev84767</instance_name>
+        <name>sp_widget_9af6ec74db6c40106e345c7a48961982</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_widget"&gt;&lt;sp_widget action="INSERT_OR_UPDATE"&gt;&lt;category&gt;custom&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[function($scope) {
+    /* widget controller */
+    var c = this;
+		
+    c.modalBtn = function(i) {
+        var table = document.querySelector('.modalTable').children;
+        table[0].children[1].innerHTML = c.data.trailers[i].type;
+        table[1].children[1].innerHTML = c.data.trailers[i].condition;
+        table[2].children[1].innerHTML = c.data.trailers[i].manufacturer;
+        table[3].children[1].innerHTML = c.data.trailers[i].model;
+        table[4].children[1].innerHTML = c.data.trailers[i].width;
+        table[5].children[1].innerHTML = c.data.trailers[i].length;
+        table[6].children[1].innerHTML = c.data.trailers[i].weight;
+				table[7].innerHTML = c.data.trailers[i].description;
+				c.checkout = c.data.trailers[i].checkout;
+    }
+
+    c.data.trailerList = c.data.trailers;
+		c.data.price.curVal = c.data.price.max;
+    c.data.searchTerm = "";
+    c.data.checkboxType = {
+        cat1: false,
+        cat2: false,
+        cat3: false,
+        cat4: false,
+        cat5: false,
+        cat6: false,
+        other: false,
+				price: c.data.price.max
+    }
+	
+	$scope.$on('customEvent', function(event, obj) {
+		switch(obj.type){
+			case "cargo": c.data.checkboxType.cat1= true;
+				break;
+			case "dump": c.data.checkboxType.cat2= true;
+				break;
+			case "car haulers": c.data.checkboxType.cat3 = true;
+				break;
+			case "equipment": c.data.checkboxType.cat4 = true;
+				break;
+			case "utility": c.data.checkboxType.cat5 = true;
+				break;
+			case "flatbed": c.data.checkboxType.cat6 = true;
+				break;
+		}
+		
+		c.selected();	
+  });
+	
+    c.selected = function() {
+        //console.log("test passed");
+        c.data.trailerList = [];
+        if (c.data.checkboxType.cat1) {
+            var cat1 = c.data.trailers.filter(function(trailer) {
+                return (trailer.type === "cargo");
+            });
+            c.data.trailerList = c.data.trailerList.concat(cat1);
+        }
+
+        if (c.data.checkboxType.cat2) {
+            var cat2 = c.data.trailers.filter(function(trailer) {
+                return (trailer.type === "dump");
+            });
+            c.data.trailerList = c.data.trailerList.concat(cat2);
+        }
+        if (c.data.checkboxType.cat3) {
+            var cat3 = c.data.trailers.filter(function(trailer) {
+                return (trailer.type === "car haulers");
+            });
+            c.data.trailerList = c.data.trailerList.concat(cat3);
+        }
+
+        if (c.data.checkboxType.cat4) {
+            var cat4 = c.data.trailers.filter(function(trailer) {
+                return (trailer.type === "equipment");
+            });
+            c.data.trailerList = c.data.trailerList.concat(cat4);
+        }
+
+        if (c.data.checkboxType.cat5) {
+            var cat5 = c.data.trailers.filter(function(trailer) {
+                return (trailer.type === "utility");
+            });
+            c.data.trailerList = c.data.trailerList.concat(cat5);
+        }
+
+        if (c.data.checkboxType.cat6) {
+            var cat6 = c.data.trailers.filter(function(trailer) {
+                return (trailer.type === "flatbed");
+            });
+            c.data.trailerList = c.data.trailerList.concat(cat6);
+        }
+
+        if (c.data.checkboxType.other) {
+            var other = c.data.trailers.filter(function(trailer) {
+                return ((trailer.type != "cargo" &amp;&amp;
+                    trailer.type != "dump" &amp;&amp;
+                    trailer.type != "car haulers" &amp;&amp;
+                    trailer.type != "equipment" &amp;&amp;
+                    trailer.type != "utility" &amp;&amp;
+                    trailer.type != "flatbed"));
+            });
+            c.data.trailerList = c.data.trailerList.concat(other);
+        }
+
+        if (!c.data.checkboxType.other &amp;&amp; !c.data.checkboxType.cat1 &amp;&amp;
+            !c.data.checkboxType.cat2 &amp;&amp; !c.data.checkboxType.cat3 &amp;&amp;
+            !c.data.checkboxType.cat4 &amp;&amp; !c.data.checkboxType.cat5 &amp;&amp;
+            !c.data.checkboxType.cat6) {
+            c.data.trailerList = c.data.trailers
+        }
+
+
+    }
+		
+	
+		c.slider_price = function(){
+			console.log("cur = "+ c.data.price.curVal);
+			c.data.checkboxType.price = c.data.price.curVal;
+			 var temp = c.data.trailers.filter(function(trailer) {
+             return (Number(trailer.price) &lt;= c.data.price.curVal);
+        });
+			
+       c.data.trailerList = temp;
+			
+			//c.data.action = "slidePrice";
+			//$scope.server.update().then(function(){
+			//	.data.action = undefined;
+			//});
+		}
+			
+		
+			
+    
+}
+
+
+
+
+]]&gt;&lt;/client_script&gt;&lt;controller_as&gt;c&lt;/controller_as&gt;&lt;css&gt;.leftSide{
+  width: 30%;
+  float: left;
+  padding: 10px;
+  //border-right: 2px solid black;
+}
+.add_Filter{
+  display: block;
+}
+
+.main{
+  width: 70%;
+  padding: 10px;
+  float: right;
+}
+
+
+.txtStyle {
+    font-family: 'Raleway', sans-serif;
+ }
+
+.trailers{
+  width: 45%;
+  float: left;
+  display: inline-block;
+  border: 2px solid red;
+  height: 180px;
+  margin: 5px;
+  padding: 2px;
+}
+
+.trailer_desc{
+  float: right;
+  display: inline;
+  width: 60%;
+}
+
+.trailers_image{
+  width: 40%; 
+  height: 160px; 
+  loat: left; 
+  padding-right: 10px;
+  padding-top: 10px;
+}
+.trailer_title{
+  height: 45px;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 768px){
+  .trailers{
+   width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px){
+  .trailers{
+   width: 100%;
+  }
+  .main, .leftSide{
+    width: 100%;
+    float: none;
+  }
+  .add_Filter{
+    display: none;
+  }
+  .leftSide{
+  	border-right: none;
+	}
+}
+
+&lt;/css&gt;&lt;data_table&gt;sp_instance&lt;/data_table&gt;&lt;demo_data/&gt;&lt;description/&gt;&lt;docs/&gt;&lt;field_list/&gt;&lt;has_preview&gt;true&lt;/has_preview&gt;&lt;id/&gt;&lt;internal&gt;false&lt;/internal&gt;&lt;link&gt;&lt;![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]&gt;&lt;/link&gt;&lt;name&gt;Copy of Catalog Trailer List&lt;/name&gt;&lt;option_schema/&gt;&lt;public&gt;false&lt;/public&gt;&lt;roles/&gt;&lt;script&gt;&lt;![CDATA[(function() {
+    
+    data.trailers = [];
+		
+    var trailerGR = new GlideRecord('x_414100_project_3_trailer_catalog_table');
+    //trailerGR.addQuery("u_trailer_type", "flatbed");
+    trailerGR.query();
+    while (trailerGR.next()) {
+        data.trailers.push({					
+					stock_number: trailerGR.number.toString(),
+					checkout: "https://dev84767.service-now.com/trailers?id=sc_cat_item&amp;sys_id="+trailerGR.sys_id.toString(),
+					id: trailerGR.sys_id.toString(),
+					name: trailerGR.name.toString(),
+					price: trailerGR.price.toString(),
+					photo: trailerGR.picture.getDisplayValue().toString(),
+					type: trailerGR.meta_trailer_type.toString(),
+					condition: trailerGR.meta_condition.toString(),
+					manufacturer: trailerGR.meta_manufacturer.toString(),
+					model: trailerGR.meta_model.toString(),
+					width: trailerGR.meta_width.toString(),
+					length: trailerGR.meta_floor_length.toString(),
+					weight: trailerGR.meta_weight.toString(),
+					gvwr: trailerGR.meta_gvwr.toString(),
+					quantity: trailerGR.meta_qty.toString(),
+					description: trailerGR.meta_description.toString()
+				});
+    }
+	
+	//Get max price, width and length
+
+	var ga = new GlideAggregate('x_414100_project_3_trailer_catalog_table');
+  ga.addAggregate('MIN', 'price');
+  ga.addAggregate('MAX', 'price');
+	ga.groupBy("meta_trailer_type");
+  ga.query();
+	var min= 0, max = 0;
+	data.price = {'min': 10000000, 'max': 0} 
+  while(ga.next()) {  
+     min = Number(ga.getAggregate('MIN', 'price'));
+     max = Number(ga.getAggregate('MAX', 'price'));
+		//console.log("min1 "+min+" max1= "+max);
+		if(data.price.min &gt; min){data.price.min = min}
+		if(data.price.max &lt; max){data.price.max = max}
+	
+		 //console.log("min "+data.price.min+" max= "+data.price.max);
+ }
+	
+	
+		
+if((input &amp;&amp; input.checkboxType) &amp;&amp;(input.action == "slidePrice")) {
+		data.trailers= [];
+      trailerGR = new GlideRecord('x_414100_project_3_trailer_catalog_table');
+			if(input.checkboxType.cat1){
+				trailerGR.addQuery("u_trailer_type", "cargo");
+			}
+			if(input.checkboxType.cat1){
+				trailerGR.addQuery("u_trailer_type", "dump");
+			}
+			if(input.checkboxType.cat1){
+				trailerGR.addQuery("u_trailer_type", "car haulers");
+			}
+			if(input.checkboxType.cat1){
+				trailerGR.addQuery("u_trailer_type", "equipment");
+			}
+			if(input.checkboxType.cat1){
+				trailerGR.addQuery("u_trailer_type", "utility");
+			}
+			trailerGR.addEncodedQuery("price&lt;javascript:global.getCurrencyFilter('x_414100_project_3_trailer_catalog_table','price', 'USD;input.checkboxType.price')");
+			trailerGR.query();
+	
+    while (trailerGR.next()) {
+        data.trailers.push({					
+					stock_number: trailerGR.number.toString(),
+					checkout: "https://dev84767.service-now.com/trailers?id=sc_cat_item&amp;sys_id="+trailerGR.sys_id.toString(),
+					id: trailerGR.sys_id.toString(),
+					name: trailerGR.meta_name.toString(),
+					price: trailerGR.price.toString(),
+					photo: trailerGR.picture.getDisplayValue().toString(),
+					type: trailerGR.meta_trailer_type.toString(),
+					condition: trailerGR.meta_condition.toString(),
+					manufacturer: trailerGR.meta_manufacturer.toString(),
+					model: trailerGR.meta_model.toString(),
+					width: trailerGR.meta_width.toString(),
+					length: trailerGR.meta_floor_length.toString(),
+					weight: trailerGR.meta_weight.toString(),
+					gvwr: trailerGR.meta_gvwr.toString(),
+					quantity: trailerGR.meta_qty.toString(),
+					description: trailerGR.meta_description.toString()
+				});
+    }
+   
+}
+
+	
+})();
+
+]]&gt;&lt;/script&gt;&lt;servicenow&gt;false&lt;/servicenow&gt;&lt;sys_class_name&gt;sp_widget&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-14 18:15:34&lt;/sys_created_on&gt;&lt;sys_id&gt;9af6ec74db6c40106e345c7a48961982&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Copy of Catalog Trailer List&lt;/sys_name&gt;&lt;sys_package display_value="Project 3" source="x_414100_project_3"&gt;eb77e1a2db1c00106e345c7a489619be&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Project 3"&gt;eb77e1a2db1c00106e345c7a489619be&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_widget_9af6ec74db6c40106e345c7a48961982&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-14 18:15:34&lt;/sys_updated_on&gt;&lt;template&gt;&lt;![CDATA[&lt;!-- Google Fonts / Raleway --&gt;
+&lt;link href="https://fonts.googleapis.com/css?family=Raleway&amp;display=swap" rel="stylesheet"&gt;
+
+
+&lt;!-- Form --&gt;
+&lt;div class="leftSide"&gt;
+&lt;form&gt;
+&lt;h5 style="background-color: #dddddd; padding-top: 5px; padding-bottom: 5px; color: black; font-family: 'Noto Sans JP', sans-serif; text-align: center;"&gt;SEARCH BY STOCK #&lt;/h5&gt;
+&lt;input id="inputSearch" class="form-control" required="" type="text" autofocus="" placeholder="ex: trailers" 
+       ng-model="c.data.searchTerm"/&gt;
+&lt;/form&gt;
+&lt;!-- break --&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;!-- break --&gt;
+  
+&lt;form class="add_Filter"&gt;
+&lt;!-- CATEGORY --&gt;
+&lt;div style="margin-bottom: 20px; margin-top: 10px;"&gt;
+&lt;h5 style="background-color: #dddddd; padding-top: 5px; padding-bottom: 5px; color: black; font-family: 'Noto Sans JP', sans-serif; text-align: center;"&gt;CATEGORY&lt;/h5&gt;
+&lt;div style="padding-left: 4px;"&gt;
+  &lt;div class="custom-control custom-checkbox"&gt;
+    &lt;input class="custom-control-input" type="checkbox"  
+           ng-model="c.data.checkboxType.cat1" 
+           ng-checked="c.selected()"/&gt; 
+    &lt;label class="custom-control-label" for="customCheck1"&gt;
+      Enclosed Cargo Trailer
+    &lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class="custom-control custom-checkbox"&gt;
+    &lt;input class="custom-control-input" type="checkbox" 
+           ng-model="c.data.checkboxType.cat2" 
+           ng-checked="c.selected()" /&gt; 
+    &lt;label class="custom-control-label" for="customCheck1"&gt;
+      Dump Trailer
+    &lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class="custom-control custom-checkbox"&gt;
+    &lt;input class="custom-control-input" type="checkbox" 
+           ng-model="c.data.checkboxType.cat3" 
+           ng-checked="c.selected()" /&gt; 
+    &lt;label class="custom-control-label" for="customCheck1"&gt;
+      Car hauler
+    &lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class="custom-control custom-checkbox"&gt;
+    &lt;input class="custom-control-input" type="checkbox" 
+           ng-model="c.data.checkboxType.cat4" 
+           ng-checked="c.selected()"/&gt; 
+    &lt;label class="custom-control-label" for="customCheck1"&gt;
+      Equipment Trailer
+    &lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class="custom-control custom-checkbox"&gt;
+    &lt;input class="custom-control-input" type="checkbox" 
+           ng-model="c.data.checkboxType.cat5" 
+           ng-checked="c.selected()"/&gt; 
+    &lt;label class="custom-control-label" for="customCheck1"&gt;
+      Utility Trailer
+    &lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class="custom-control custom-checkbox"&gt;
+    &lt;input class="custom-control-input" type="checkbox" 
+           ng-model="c.data.checkboxType.cat6" 
+           ng-checked="c.selected()"/&gt; 
+    &lt;label class="custom-control-label" for="customCheck1"&gt;
+      Flatbed Trailer
+    &lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class="custom-control custom-checkbox"&gt;
+    &lt;input class="custom-control-input" type="checkbox" 
+           ng-model="c.data.checkboxType.other" 
+           ng-checked="c.selected()"/&gt; 
+    &lt;label class="custom-control-label" for="customCheck1"&gt;
+      Other
+    &lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- LENGTH --&gt;
+&lt;div class="form-group"&gt;
+&lt;h5 style="background-color: #dddddd; padding-top: 5px; padding-bottom: 5px; color: black; font-family: 'Noto Sans JP', sans-serif; text-align: center;"&gt;LENGTH (FT)&lt;/h5&gt;
+&lt;input class="form-control-range" type="range" /&gt;&lt;/div&gt;
+&lt;!-- WIDTH --&gt;
+&lt;div class="form-group"&gt;
+&lt;h5 style="background-color: #dddddd; padding-top: 5px; padding-bottom: 5px; color: black; font-family: 'Noto Sans JP', sans-serif; text-align: center;"&gt;WIDTH (FT)&lt;/h5&gt;
+&lt;input class="form-control-range" type="range" /&gt;&lt;/div&gt;
+&lt;!-- HEIGHT --&gt;
+&lt;div class="form-group"&gt;
+&lt;h5 style="background-color: #dddddd; padding-top: 5px; padding-bottom: 5px; color: black; font-family: 'Noto Sans JP', sans-serif; text-align: center;"&gt;HEIGHT (FT)&lt;/h5&gt;
+&lt;input class="form-control-range" type="range" /&gt;&lt;/div&gt;
+
+&lt;!-- PULL TYPE --&gt;
+&lt;div style="margin-bottom: 20px; margin-top: 40px;"&gt;
+&lt;h5 style="background-color: #dddddd; padding-top: 5px; padding-bottom: 5px; color: black; font-family: 'Noto Sans JP', sans-serif; text-align: center;"&gt;PULL TYPE&lt;/h5&gt;
+&lt;div style="padding-left: 4px;"&gt;
+&lt;div class="custom-control custom-checkbox"&gt;&lt;input class="custom-control-input" type="checkbox" /&gt; &lt;label class="custom-control-label" for="customCheck1"&gt;Bumper&lt;/label&gt;&lt;/div&gt;
+&lt;div class="custom-control custom-checkbox"&gt;&lt;input class="custom-control-input" type="checkbox" /&gt; &lt;label class="custom-control-label" for="customCheck1"&gt;Gooseneck&lt;/label&gt;&lt;/div&gt;
+&lt;div class="custom-control custom-checkbox"&gt;&lt;input class="custom-control-input" type="checkbox" /&gt; &lt;label class="custom-control-label" for="customCheck1"&gt;Pintle&lt;/label&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- GVWR --&gt;
+&lt;div class="form-group"&gt;
+&lt;h5 style="background-color: #dddddd; padding-top: 5px; padding-bottom: 5px; color: black; font-family: 'Noto Sans JP', sans-serif; text-align: center;"&gt;GVWR&lt;/h5&gt;
+&lt;input class="form-control-range" type="range" /&gt;&lt;/div&gt;
+&lt;!-- PAYLOAD CAPACITY --&gt;
+&lt;div class="form-group"&gt;
+&lt;h5 style="background-color: #dddddd; padding-top: 5px; padding-bottom: 5px; color: black; font-family: 'Noto Sans JP', sans-serif; text-align: center;"&gt;PAYLOAD CAPACITY&lt;/h5&gt;
+&lt;input class="form-control-range" type="range" /&gt;&lt;/div&gt;
+
+&lt;!-- Price --&gt;
+&lt;div class="form-group"&gt;
+  &lt;h5 style="background-color: #dddddd; padding-top: 5px; padding-bottom: 5px; color: black; font-family: 'Noto Sans JP', sans-serif; text-align: center;"&gt;
+    Min PRICE
+  &lt;/h5&gt;
+  &lt;p&gt;{{c.data.price.min}}- {{c.data.price.curVal}}- {{c.data.price.max}}&lt;/p&gt;
+  &lt;input type="range" ng-input-range name="range" ng-model="c.data.price.curVal" 
+         min="{{c.data.price.min}}"  max="{{c.data.price.max}}" ng-change="c.slider_price()" &gt;
+&lt;/div&gt;
+
+        
+ &lt;/form&gt;
+&lt;/div&gt;
+
+&lt;div class="main"&gt;
+	&lt;div ng-repeat="trailers in c.data.trailerList| filter : {'name' : c.data.searchTerm}"  class="trailers"&gt;
+      &lt;img class="img-fluid trailers_image" ng-src="{{trailers.photo}}"&gt;
+    &lt;div class="trailer_desc"&gt;
+      	&lt;div class="trailer_title"&gt;
+        &lt;h5&gt;{{trailers.name}}&lt;/h5&gt;
+    	&lt;/div&gt;
+      &lt;p style="font-size: 12px; text-overflow: hidden; margin: left;"&gt;
+        &lt;span style="color: red;"&gt;Price: ${{trailers.price}}&lt;/span&gt;  
+        &lt;br /&gt; Stock #: {{trailers.stock_number}} | Type: {{trailers.type}}
+      &lt;/p&gt;
+       &lt;a class="btn btn-primary btn-sm txtStyle" style="background-color: #de412c;" 
+             ng-href={{trailers.checkout}}&gt;
+          Checkout
+       &lt;/a&gt;
+                &lt;!-- Trigger the modal with a button --&gt;
+       &lt;button type="button" class="btn btn-primary btn-sm txtStyle" style="background-color: #de412c;" 
+            data-toggle="modal" data-target="#myModal" ng-click="c.modalBtn($index)"&gt;
+          More Details
+       &lt;/button&gt;
+    &lt;/div&gt;
+      
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="clearfix"&gt;&lt;/div&gt;
+
+&lt;!-- More Details Popup --&gt;
+&lt;div id="myModal" class="modal fade" role="dialog"&gt;
+  &lt;div class="modal-dialog"&gt;
+
+    &lt;!-- Popup Content--&gt;
+    &lt;div class="modal-content"&gt;
+      &lt;div class="modal-header"&gt;
+        &lt;button type="button" class="close" data-dismiss="modal"&gt;&amp;times;&lt;/button&gt;
+        &lt;h4 class="modal-title"&gt;More Information&lt;/h4&gt;
+      &lt;/div&gt;
+      &lt;div class="modal-body"&gt;
+     &lt;table class="table"&gt;
+    &lt;tbody class="modalTable"&gt;
+        &lt;tr&gt;
+          &lt;th&gt;Trailer Type&lt;/th&gt;
+            &lt;td&gt;{{trailers.type}}&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;th&gt;Condition&lt;/th&gt;
+            &lt;td&gt;{{trailers.condition}}&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;th&gt;Manufacturer&lt;/th&gt;
+            &lt;td&gt;{{trailers.manufacturer}}&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Model&lt;/th&gt;
+          	&lt;td&gt;{{trailers.model}}&lt;/td&gt;
+        &lt;/tr&gt;
+            &lt;tr&gt;
+          &lt;th&gt;Width&lt;/th&gt;
+          	&lt;td&gt;{{trailers.width}}&lt;/td&gt;
+        &lt;/tr&gt;
+            &lt;tr&gt;
+          &lt;th&gt;Length&lt;/th&gt;
+          	&lt;td&gt;{{trailers.length}}&lt;/td&gt;
+        &lt;/tr&gt;
+            &lt;tr&gt;
+          &lt;th&gt;Weight&lt;/th&gt;
+          	&lt;td&gt;{{trailers.weight}}&lt;/td&gt;
+        &lt;/tr&gt;
+      	&lt;tr&gt;
+          	&lt;td&gt;{{trailers.description}}&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+      &lt;div class="modal-footer"&gt;
+        &lt;a class="btn btn-primary btn-sm" style="background-color: #de412c; float:left" 
+             ng-href={{c.checkout}}&gt;
+          Checkout
+       &lt;/a&gt;
+        &lt;button type="button" class="btn btn-default" data-dismiss="modal"&gt;Close&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+    &lt;/div&gt;
+ &lt;/div&gt;
+
+
+
+]]&gt;&lt;/template&gt;&lt;/sp_widget&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>951606669</payload_hash>
+        <record_name>Copy of Catalog Trailer List</record_name>
+        <reverted_from/>
+        <source>fb1689a3dbdc40106e345c7a489619d8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-14 18:15:34</sys_created_on>
+        <sys_id>96f6ec74db6c40106e345c7a48961984</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16dcb7b8be00000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-14 18:15:34</sys_updated_on>
+        <type>Widget</type>
+        <update_guid>def6ec74776c4010598d05ef480f8e83</update_guid>
+        <update_guid_history>def6ec74776c4010598d05ef480f8e83:951606669</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Copy of Catalog Trailer List">273724b4db6c40106e345c7a48961995</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-14 18:16:45</sys_created_on>
+        <sys_db_object display_value="" name="sp_widget">sp_widget</sys_db_object>
+        <sys_id>773999545e7641468b27b84744a11f89</sys_id>
+        <sys_metadata>9af6ec74db6c40106e345c7a48961982</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Copy of Catalog Trailer List</sys_name>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_scope_delete display_value="">205e6add2b6c46828e85eec0dde7c144</sys_scope_delete>
+        <sys_update_name>sp_widget_9af6ec74db6c40106e345c7a48961982</sys_update_name>
+        <sys_update_version display_value="sp_widget_9af6ec74db6c40106e345c7a48961982">96f6ec74db6c40106e345c7a48961984</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-14 18:16:45</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

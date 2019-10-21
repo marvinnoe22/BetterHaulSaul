@@ -1,0 +1,979 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function($scope, $http, $location, $timeout) {
+    /* widget controller */
+    var c = this;
+		
+    c.modalBtn = function(i) {
+        var table = document.querySelector('.modalTable').children;
+        table[0].children[1].innerHTML = c.data.trailers[i].type;
+        table[1].children[1].innerHTML = c.data.trailers[i].condition;
+        table[2].children[1].innerHTML = c.data.trailers[i].manufacturer;
+        table[3].children[1].innerHTML = c.data.trailers[i].model;
+        table[4].children[1].innerHTML = c.data.trailers[i].width +"ft";
+        table[5].children[1].innerHTML = c.data.trailers[i].length +"ft";
+        table[6].children[1].innerHTML = c.data.trailers[i].weight +"lbs";
+				//table[7].children[1].innerHTML = c.data.trailers[i].description;
+				c.checkout = c.data.trailers[i].checkout;
+				c.description = c.data.trailers[i].description;
+    }
+		
+		c.data.price.range = (c.data.price.max - c.data.price.min);
+		c.data.height.range = (c.data.height.max - c.data.height.min);
+		c.data.width.range = (c.data.width.max - c.data.width.min);
+		c.data.weight.range = (c.data.weight.max - c.data.weight.min);
+		
+		c.temp = null;
+    c.data.trailerList = c.data.trailers;
+		c.data.price.curVal = c.data.price.max;
+    c.data.searchTerm = undefined;
+		c.previousTr = 0;
+		c.nextTr = 7;
+		c.data.searchTermFlag = false;
+    c.data.checkboxType = {
+        cat1: false,
+        cat2: false,
+        cat3: false,
+        cat4: false,
+        cat5: false,
+        cat6: false,
+        other: false
+    }
+	 
+	
+	//add to cart info message
+	function addToCartInfo(){
+       $scope.showGreeting = true;
+       $timeout(function(){
+          $scope.showGreeting = false;
+       }, 10000);
+	}
+	
+	//Add to cart button
+	c.addToCart = function(sysId) {
+		console.log(sysId);
+  $http({ url: '/api/sn_sc/servicecatalog/items/' + sysId + '/add_to_cart',
+   method: 'POST',
+   data: {
+     sysparm_quantity: 1
+   }
+  }).then(function(response) {
+    if(response.data.result) {
+	$rootScope.$broadcast("$sp.service_catalog.cart.add_item");
+	$rootScope.$broadcast("$sp.service_catalog.cart.update");
+        //If you want to redirect afterwards
+	redirect(c.options.add_to_cart_redirect_url);
+    }
+  });
+		function redirect(url) {
+			addToCartInfo();
+  $location.url(url);
+}
+		
+}
+	
+	$scope.$on('customEvent', function(event, obj) {
+		switch(obj.type){
+			case "cargo": c.data.checkboxType.cat1= true;
+				break;
+			case "dump": c.data.checkboxType.cat2= true;
+				break;
+			case "car haulers": c.data.checkboxType.cat3 = true;
+				break;
+			case "equipment": c.data.checkboxType.cat4 = true;
+				break;
+			case "utility": c.data.checkboxType.cat5 = true;
+				break;
+			case "flatbed": c.data.checkboxType.cat6 = true;
+				break;
+		}
+		
+		c.selected();	
+  });
+	/****** selected function: categories checkbox *******/
+    c.selected = function() {
+        //console.log("test passed");
+        c.data.trailerList = [];
+			
+				c.temp = null;
+				c.priceRangeValue = null;
+				c.heightRangeValue = null;
+				c.widthRangeValue = null;
+				c.weightRangeValue = null;
+			
+				c.previousTr = 0;
+				c.nextTr = 7;
+			
+        if (c.data.checkboxType.cat1) {
+            var cat1 = c.data.trailers.filter(function(trailer) {
+                return (trailer.type === "cargo");
+            });
+            c.data.trailerList = c.data.trailerList.concat(cat1);
+        }
+
+        if (c.data.checkboxType.cat2) {
+            var cat2 = c.data.trailers.filter(function(trailer) {
+                return (trailer.type === "dump");
+            });
+            c.data.trailerList = c.data.trailerList.concat(cat2);
+        }
+        if (c.data.checkboxType.cat3) {
+            var cat3 = c.data.trailers.filter(function(trailer) {
+                return (trailer.type === "car haulers");
+            });
+            c.data.trailerList = c.data.trailerList.concat(cat3);
+        }
+
+        if (c.data.checkboxType.cat4) {
+            var cat4 = c.data.trailers.filter(function(trailer) {
+                return (trailer.type === "equipment");
+            });
+            c.data.trailerList = c.data.trailerList.concat(cat4);
+        }
+
+        if (c.data.checkboxType.cat5) {
+            var cat5 = c.data.trailers.filter(function(trailer) {
+                return (trailer.type === "utility");
+            });
+            c.data.trailerList = c.data.trailerList.concat(cat5);
+        }
+
+        if (c.data.checkboxType.cat6) {
+            var cat6 = c.data.trailers.filter(function(trailer) {
+                return (trailer.type === "flatbed");
+            });
+            c.data.trailerList = c.data.trailerList.concat(cat6);
+        }
+
+        if (c.data.checkboxType.other) {
+            var other = c.data.trailers.filter(function(trailer) {
+                return ((trailer.type != "cargo" &&
+                    trailer.type != "dump" &&
+                    trailer.type != "car haulers" &&
+                    trailer.type != "equipment" &&
+                    trailer.type != "utility" &&
+                    trailer.type != "flatbed"));
+            });
+            c.data.trailerList = c.data.trailerList.concat(other);
+        }
+
+        if (!c.data.checkboxType.other && !c.data.checkboxType.cat1 &&
+            !c.data.checkboxType.cat2 && !c.data.checkboxType.cat3 &&
+            !c.data.checkboxType.cat4 && !c.data.checkboxType.cat5 &&
+            !c.data.checkboxType.cat6) {
+            c.data.trailerList = c.data.trailers
+        }
+
+    }
+		
+		/****** searchTermChanged function *******/
+	c.searchTermChanged = function(){
+		//console.log("searchterm= "+ c.data.searchTerm);
+		if(c.data.searchTerm){
+			c.previousTr = 0;
+			c.nextTr = c.data.trailerList.length;
+		}else{
+				c.previousTr = 0;
+				c.nextTr = 7;
+				//c.server.refresh();
+		}
+		
+	}
+	
+
+	/****** priceRangeFunc function *******/
+	c.priceRangeValue = "";
+	
+	c.priceRangeFunc = function(){
+		//console.log(c.priceRangeValue);
+		c.heightRangeValue = null; //disable heigh choice
+		c.widthRangeValue = null; //disable heigh choice
+		c.weightRangeValue = null; //disable heigh choice
+		
+		Object.keys(c.data.checkboxType).forEach(function(cat){
+			c.data.checkboxType[cat] = false;
+		});
+		
+		c.temp = c.data.trailers.filter(function(trailer) {
+			var  rangeChooser = false;
+			var lenp = parseFloat(trailer.price);
+			//console.log("lenp = "+ lenp);
+			var val1p, val2p
+				switch(c.priceRangeValue){
+					case "1":
+						//rangeChooser = (Number(trailer.price) >= c.data.price.min) && (Number(trailer.price) < c.data.price.max/3);
+						val1p = c.data.price.min;
+						val2p = c.data.price.range/3 + c.data.price.min;
+						rangeChooser = (lenp >= val1p) && (lenp < val2p);
+						break;
+					case "2":
+						//rangeChooser = (Number(trailer.price) > c.data.price.max/3) && (Number(trailer.price) < 2*(c.data.price.max/3));
+						val1p = c.data.price.range/3 + c.data.price.min;
+						val2p = (2*c.data.price.range)/3 + c.data.price.min;
+						rangeChooser = (lenp > val1p) && (lenp < val2p);
+						break;
+					case "3":
+						//rangeChooser = (Number(trailer.price) > 2*(c.data.price.max/3)) && (Number(trailer.price) <= c.data.price.max);
+						val1p = (2*c.data.price.range)/3 + c.data.price.min;
+						val2p = c.data.price.max;
+						rangeChooser = (lenp > val1p) && (lenp <= val2p);
+						break;
+				}
+             return rangeChooser;
+        });
+		//c.data.trailerList = temp;
+		//c.server.refresh();
+	}
+	
+	
+	/****** heightRangeFunc function *******/
+	c.heightRangeValue = "";
+	c.heightRangeFunc = function(){
+		
+		c.priceRangeValue = null; //disable Price option
+		c.widthRangeValue = null; //disable weigh choice
+		c.weightRangeValue = null; //disable width choice
+		
+		//disable checkbox options
+		Object.keys(c.data.checkboxType).forEach(function(cat){
+			c.data.checkboxType[cat] = false;
+		});
+		
+		c.temp = c.data.trailers.filter(function(trailer) {
+			var  heightChooser = false;
+			var len = parseFloat(trailer.length);
+			//console.log("len = "+ len);
+			var val1, val2
+			//console.log(trailer.length);
+				switch(c.heightRangeValue){
+					case "1":
+						val1 = parseFloat(c.data.height.min);
+						val2 = parseFloat(c.data.height.range/3 + c.data.height.min); 
+						heightChooser = (len >= val1) && (len < val2);
+						break;
+					case "2":
+						val1 = c.data.height.range/3 + c.data.height.min;
+						val2 = (2*c.data.height.range)/3 + c.data.height.min;
+						heightChooser = (len > val1) && (len < val2);
+						break;
+					case "3":
+						val1 = (2*c.data.height.range)/3 + c.data.height.min;
+						val2 = c.data.height.max;
+						heightChooser = (len > val1) && (len <= val2);
+						break;
+				}
+             return heightChooser;
+        });
+		//c.data.trailerList = temp;
+		//c.server.refresh();
+	}
+	
+	
+	/****** widthRangeFunc function *******/
+	c.widthRangeValue = "";
+	c.widthRangeFunc = function(){
+		//console.log(c.heightRangeValue);
+		c.priceRangeValue = null; //disable Price option
+		c.heightRangeValue = null; //disable heigh choice
+		c.weightRangeValue = null; //disable heigh choice
+		//disable checkbox options
+		Object.keys(c.data.checkboxType).forEach(function(cat){
+			c.data.checkboxType[cat] = false;
+		});
+		
+		c.temp = c.data.trailers.filter(function(trailer) {
+			var  widthChooser = true;
+			var wit = parseFloat(trailer.width);
+			//console.log("wit = "+ wit);
+			var val3, val4
+				switch(c.widthRangeValue){
+					case "1":
+						val3 = c.data.width.min;
+						val4 = c.data.width.range/3 + c.data.width.min;
+						widthChooser = (wit >= val3) && (wit < val4);
+						break;
+					case "2":
+						val3 = c.data.width.range/3 + c.data.width.min;
+						val4 = (2*c.data.width.range)/3 + c.data.width.min;
+						widthChooser = (wit > val3) && (wit < val4);
+						break;
+					case "3":
+						val3 = (2*c.data.width.range)/3 + c.data.width.min;
+						val4 = c.data.width.max;
+						widthChooser = (wit > val3) && (wit <= val4);
+						break;
+				}
+             return widthChooser;
+        });
+		
+	}
+	
+	
+	/****** heightRangeFunc function *******/
+	c.weightRangeValue = "";
+	c.weightRangeFunc = function(){
+		//console.log(c.heightRangeValue);
+		c.priceRangeValue = null; //disable Price option
+		c.heightRangeValue = null; //disable heigh choice
+		c.widthRangeValue = null; //disable heigh choice
+		
+		//disable checkbox options
+		Object.keys(c.data.checkboxType).forEach(function(cat){
+			c.data.checkboxType[cat] = false;
+		});
+		
+		c.temp = c.data.trailers.filter(function(trailer) {
+			var  weightChooser = true;
+			var lenw = parseFloat(trailer.weight);
+			//console.log("lenw = "+ lenw);
+			var val1w, val2w
+			//console.log(trailer.length);
+				switch(c.weightRangeValue){
+					case "1":
+						val1w = c.data.weight.min;
+						val2w = c.data.weight.range/3 + c.data.weight.min;
+						weightChooser = (lenw >= val1w) && (lenw < val2w);
+						break;
+					case "2":
+						val1w = c.data.weight.range/3 + c.data.weight.min;
+						val2w = (2*c.data.weight.range)/3 + c.data.weight.min;
+						weightChooser = (lenw > val1w) && (lenw < val2w);
+						break;
+					case "3":
+						val1w = (2*c.data.weight.range)/3 + c.data.weight.min;
+						val2w = c.data.weight.max;
+						weightChooser = (lenw > val1w) && (lenw <= val2w);
+						break;
+				}
+             return weightChooser;
+        });
+		
+	}
+	
+	
+	
+	/****** nextTrFunc function *******/
+c.nextTrFunc= function(){
+		c.nextTr = c.nextTr + 7;
+		//c.previousTr= c.previousTr + 7;
+		if(c.nextTr >= c.data.trailerList.length){
+			c.nextTr = c.data.trailerList.length;
+			//c.previousTr= c.nextTr - 7;
+		}
+		c.previousTr = c.nextTr - 7;
+	}
+	
+	
+	/****** PreviousTrFunc function *******/
+	c.previousTrFunc= function(){
+			c.previousTr = c.previousTr - 7;
+			//c.nextTr = c.nextTr - 7;
+		if(c.previousTr <= 0){
+			c.previousTr = 0;
+		}
+		c.nextTr = c.previousTr + 7;
+		//c.server.refresh();
+		
+	}
+	
+	/****** check function: condition filter trailersList  *******/
+	c.check = function(i){
+		var b= (i >= c.previousTr && i <= c.nextTr);
+		return b;
+	}
+			
+    
+}
+
+
+
+
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.infoMessage{
+    color: red;
+    font-weight: bold;
+    width: 70%;
+    padding-left: 20px;
+    float: right;
+}
+.leftSide{
+  width: 30%;
+  float: left;
+  padding: 10px;
+  //border-right: 2px solid black;
+}
+.add_Filter{
+  display: block;
+}
+
+.main{
+  width: 70%;
+  padding-left: 10px;
+  float: right;
+}
+
+
+.txtStyle {
+    font-family: 'Raleway', sans-serif;
+ }
+
+.trailers{
+  width: 48%;
+  float: left;
+  display: inline-block;
+  border: 2px solid red;
+  height: 180px;
+  margin: 5px;
+  padding: 2px;
+}
+
+.trailer_desc{
+  float: right;
+  display: inline;
+  width: 60%;
+}
+
+.trailers_image{
+  width: 40%; 
+  height: 160px; 
+  loat: left; 
+  padding-right: 10px;
+  padding-top: 10px;
+}
+.trailer_title{
+  height: 45px;
+  overflow: hidden;
+}
+
+.modalTable{
+  text-align:left;
+}
+
+.modal-description{
+  width:100%;
+  #text{
+    width:100%;
+  }
+}
+td{
+  width: 100px;
+}
+
+.pagination{
+  margin-top: 10px;
+  width: 100%;
+}
+
+.titleh5{
+  background-color: #dddddd; 
+  padding-top: 5px; 
+  padding-bottom: 5px; 
+  color: black; 
+  ont-family: 'Noto Sans JP', sans-serif; 
+  text-align: center;
+}
+
+
+@media screen and (max-width: 768px){
+  .trailers{
+   width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px){
+  .trailers{
+   width: 100%;
+  }
+  .main, .leftSide{
+    width: 100%;
+    float: none;
+  }
+  .add_Filter{
+    display: none;
+  }
+  .leftSide{
+  	border-right: none;
+	}
+}
+
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>Catalog Trailer List</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+    
+    data.trailers = [];
+		
+    var trailerGR = new GlideRecord('x_414100_project_3_trailer_catalog_table');
+    //trailerGR.addQuery("u_trailer_type", "flatbed");
+    trailerGR.query();
+    while (trailerGR.next()) {
+        data.trailers.push({					
+					stock_number: trailerGR.number.toString(),
+					checkout: "https://dev84767.service-now.com/trailers?id=sc_cat_item&sys_id="+trailerGR.sys_id.toString(),
+					id: trailerGR.sys_id.toString(),
+					name: trailerGR.name.toString(),
+					price: trailerGR.price.toString(),
+					photo: trailerGR.picture.getDisplayValue().toString(),
+					type: trailerGR.meta_trailer_type.toString(),
+					condition: trailerGR.meta_condition.toString(),
+					manufacturer: trailerGR.meta_manufacturer.toString(),
+					model: trailerGR.meta_model.toString(),
+					width: trailerGR.meta_width.toString(),
+					length: trailerGR.meta_floor_length.toString(),
+					weight: trailerGR.meta_weight.toString(),
+					gvwr: trailerGR.meta_gvwr.toString(),
+					quantity: trailerGR.meta_qty.toString(),
+					description: trailerGR.meta_description.toString()
+				});
+    }
+	
+	//Get max price, width and length
+
+	var ga = new GlideAggregate('x_414100_project_3_trailer_catalog_table');
+  ga.addAggregate('MIN', 'price');
+  ga.addAggregate('MAX', 'price');
+	
+	ga.addAggregate('MIN', 'meta_width');
+  ga.addAggregate('MAX', 'meta_width');
+	
+	ga.addAggregate('MIN', 'meta_weight');
+  ga.addAggregate('MAX', 'meta_weight');
+	
+	ga.addAggregate('MIN', 'meta_floor_length');
+  ga.addAggregate('MAX', 'meta_floor_length');
+	ga.groupBy("meta_trailer_type");
+  ga.query();
+	
+	var minp= 0, maxp = 0, minwd= 0, maxwd= 0, minwg= 0, maxwg = 0, minh= 0, maxh = 0 ;
+	data.price = {'min': 10000000, 'max': 0};
+	data.height = {'min': 10000000, 'max': 0};
+	data.width = {'min': 10000000, 'max': 0};
+	data.weight = {'min': 10000000, 'max': 0};
+	
+  while(ga.next()) {  
+     minp = parseFloat(ga.getAggregate('MIN', 'price'));
+     maxp = parseFloat(ga.getAggregate('MAX', 'price'));
+		
+		 minh = parseFloat(ga.getAggregate('MIN', 'meta_floor_length'));
+     maxh = parseFloat(ga.getAggregate('MAX', 'meta_floor_length'));
+		
+		 minwd = parseFloat(ga.getAggregate('MIN', 'meta_width'));
+     maxwd = parseFloat(ga.getAggregate('MAX', 'meta_width'));
+		
+		 minwg = parseFloat(ga.getAggregate('MIN', 'meta_weight'));
+     maxwg = parseFloat(ga.getAggregate('MAX', 'meta_weight'));
+		
+		console.log("*******minh= "+ typeof(minh));
+		if(data.price.min > minp){data.price.min = minp}
+		if(data.price.max < maxp){data.price.max = maxp}
+		 //console.log("minh "+minh+" maxh= "+maxh);
+		if(data.height.min > minh){data.height.min = minh}
+		if(data.height.max < maxh){data.height.max = maxh}
+		//console.log("minh2 "+data.height.min+" maxh2= "+data.height.max);
+		if(data.width.min > minwd){data.width.min = minwd}
+		if(data.width.max < maxwd){data.width.max = maxwd}
+		//console.log("minh2 "+data.height.min+" maxh2= "+data.height.max);
+		if(data.weight.min > minwg){data.weight.min = minwg}
+		if(data.weight.max < maxwg){data.weight.max = maxwg}
+		//console.log("minh2 "+data.height.min+" maxh2= "+data.height.max);
+	}
+	
+	
+		
+
+	
+})();
+
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-10 15:28:01</sys_created_on>
+        <sys_id>494a175fdbd440106e345c7a489619a9</sys_id>
+        <sys_mod_count>454</sys_mod_count>
+        <sys_name>Catalog Trailer List</sys_name>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_update_name>sp_widget_494a175fdbd440106e345c7a489619a9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-17 16:39:20</sys_updated_on>
+        <template><![CDATA[<!-- Google Fonts / Raleway -->
+<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/9898e913cd.js" crossorigin="anonymous"></script>
+
+
+<!-- Form -->
+<div class="leftSide">
+<form>
+<h5 class="titleh5">SEARCH BY NAME</h5>
+<input id="inputSearch" class="form-control" required="" type="text" autofocus="" placeholder="ex: trailers" 
+       ng-model="c.data.searchTerm" ng-change="c.searchTermChanged()"/>
+</form>
+<!-- break -->
+<p>&nbsp;</p>
+<!-- break -->
+  
+<form class="add_Filter">
+<!-- CATEGORY -->
+<div style="margin-bottom: 20px; margin-top: 10px;">
+<h5 style="background-color: #dddddd; padding-top: 5px; padding-bottom: 5px; color: black; font-family: 'Noto Sans JP', sans-serif; text-align: center;">CATEGORY</h5>
+<div style="padding-left: 4px;">
+  <div class="custom-control custom-checkbox">
+    <input class="custom-control-input" type="checkbox"  
+           ng-model="c.data.checkboxType.cat1" 
+           ng-click="c.selected()"/> 
+    <label class="custom-control-label" for="customCheck1">
+      Enclosed Cargo Trailer
+    </label>
+  </div>
+  <div class="custom-control custom-checkbox">
+    <input class="custom-control-input" type="checkbox" 
+           ng-model="c.data.checkboxType.cat2" 
+           ng-click="c.selected()" /> 
+    <label class="custom-control-label" for="customCheck1">
+      Dump Trailer
+    </label>
+  </div>
+  <div class="custom-control custom-checkbox">
+    <input class="custom-control-input" type="checkbox" 
+           ng-model="c.data.checkboxType.cat3" 
+           ng-click="c.selected()" /> 
+    <label class="custom-control-label" for="customCheck1">
+      Car Hauler
+    </label>
+  </div>
+  <div class="custom-control custom-checkbox">
+    <input class="custom-control-input" type="checkbox" 
+           ng-model="c.data.checkboxType.cat4" 
+           ng-click="c.selected()"/> 
+    <label class="custom-control-label" for="customCheck1">
+      Equipment Trailer
+    </label>
+  </div>
+  <div class="custom-control custom-checkbox">
+    <input class="custom-control-input" type="checkbox" 
+           ng-model="c.data.checkboxType.cat5" 
+           ng-click="c.selected()"/> 
+    <label class="custom-control-label" for="customCheck1">
+      Utility Trailer
+    </label>
+  </div>
+  <div class="custom-control custom-checkbox">
+    <input class="custom-control-input" type="checkbox" 
+           ng-model="c.data.checkboxType.cat6" 
+           ng-click="c.selected()"/> 
+    <label class="custom-control-label" for="customCheck1">
+      Flatbed Trailer
+    </label>
+  </div>
+  <div class="custom-control custom-checkbox">
+    <input class="custom-control-input" type="checkbox" 
+           ng-model="c.data.checkboxType.other" 
+           ng-click="c.selected()"/> 
+    <label class="custom-control-label" for="customCheck1">
+      Other
+    </label>
+  </div>
+</div>
+  
+</div>
+  
+   <!-- Price -->
+  <div class="form-group">
+    <h5 class="titleh5">PRICE RANGE</h5>
+    <div class="radio">
+      <label><input type="radio" name="optradio" ng-model="c.priceRangeValue" value="1" ng-change="c.priceRangeFunc()">
+        [$ {{c.data.price.min | number:2}} - $ {{c.data.price.max/3 | number:2}}] 
+      </label>
+    </div>
+    <div class="radio">
+      <label><input type="radio" name="optradio" ng-model="c.priceRangeValue" value="2" ng-change="c.priceRangeFunc()">
+        [$ {{c.data.price.max/3 | number:2}} - $ {{(2*c.data.price.max)/3 | number:2}}]
+      </label>
+    </div>
+    <div class="radio">
+      <label><input type="radio" name="optradio"  ng-model="c.priceRangeValue" value="3" ng-change="c.priceRangeFunc()">
+        [$ {{(2*c.data.price.max)/3 | number:2}} - $ {{c.data.price.max | number:2}}]
+      </label>
+    </div>
+  </div>
+ 
+  
+    <!-- WIDTH -->
+  <div class="form-group">
+    <h5 class="titleh5">WIDTH RANGE</h5>
+    <div class="radio">
+      <label><input type="radio" name="widthradio" ng-model="c.widthRangeValue" value="1" ng-change="c.widthRangeFunc()">
+        [{{c.data.width.min | number:1}} ft -  
+        {{(c.data.width.range/3 + c.data.width.min) | number:1}} ft] 
+      </label>
+    </div>
+    <div class="radio">
+      <label><input type="radio" name="widthradio" ng-model="c.widthRangeValue" value="2" ng-change="c.widthRangeFunc()">
+       [{{(c.data.width.range/3 + c.data.width.min) | number:1}} ft -  
+        {{((2*c.data.width.range)/3 + c.data.width.min)  | number:1}} ft]
+      </label>
+    </div>
+    <div class="radio">
+      <label><input type="radio" name="widthradio"  ng-model="c.widthRangeValue" value="3" ng-change="c.widthRangeFunc()">
+       [{{((2*c.data.width.range)/3 + c.data.width.min) | number:1}} ft -  {{c.data.width.max | number:1}} ft]
+      </label>
+    </div>
+  </div>
+  
+  <!-- HEIGHT -->
+  <div class="form-group">
+    <h5 class="titleh5">LENGTH RANGE</h5>
+    <div class="radio">
+      <label><input type="radio" name="heightradio" ng-model="c.heightRangeValue" value="1" ng-change="c.heightRangeFunc()">
+        [{{c.data.height.min | number:1}} ft -  
+        {{(c.data.height.range/3 + c.data.height.min) | number:1}} ft] 
+      </label>
+    </div>
+    <div class="radio">
+      <label><input type="radio" name="heightradio" ng-model="c.heightRangeValue" value="2" ng-change="c.heightRangeFunc()">
+       [{{(c.data.height.range/3 + c.data.height.min) | number:1}} ft -  
+        {{((2*c.data.height.range)/3 + c.data.height.min)  | number:1}} ft]
+      </label>
+    </div>
+    <div class="radio">
+      <label><input type="radio" name="heightradio"  ng-model="c.heightRangeValue" value="3" ng-change="c.heightRangeFunc()">
+       [{{((2*c.data.height.range)/3 + c.data.height.min) | number:1}} ft -  {{c.data.height.max | number:1}} ft]
+      </label>
+    </div>
+  </div>
+
+  <!-- WEIGHT -->
+  <div class="form-group">
+    <h5 class="titleh5">HEIGHT RANGE</h5>
+    <div class="radio">
+      <label><input type="radio" name="weightradio" ng-model="c.weightRangeValue" value="1" ng-change="c.weightRangeFunc()">
+        [{{c.data.weight.min | number:1}} lbs -  
+        {{(c.data.weight.range/3 + c.data.weight.min) | number:1}} lbs] 
+      </label>
+    </div>
+    <div class="radio">
+      <label><input type="radio" name="weightradio" ng-model="c.weightRangeValue" value="2" ng-change="c.weightRangeFunc()">
+       [{{(c.data.weight.range/3 + c.data.weight.min) | number:1}} lbs -  
+        {{((2*c.data.weight.range)/3 + c.data.weight.min)  | number:1}} lbs]
+      </label>
+    </div>
+    <div class="radio">
+      <label><input type="radio" name="weightradio"  ng-model="c.weightRangeValue" value="3" ng-change="c.weightRangeFunc()">
+       [{{((2*c.data.weight.range)/3 + c.data.weight.min) | number:1}} lbs -  {{c.data.weight.max | number:1}} lbs]
+      </label>
+    </div>
+  </div>
+  	
+  
+  
+  
+  
+  
+
+        
+ </form>
+</div>
+  <div class="infoMessage" ng-show="showGreeting ">
+    Your item has been added to your Cart. To make changes to the items in your cart, click 
+    <a ng-href="https://dev84767.service-now.com/trailers?id=sc_cart">View Cart</a>
+	</div>
+
+<div class="main"  id="main" >
+  <div ng-show ="!c.temp">
+   	<div ng-repeat="trailers in c.data.trailerList | filter : {'name' : c.data.searchTerm}"  class="trailers" 
+       ng-show="c.check($index)">
+      <img class="img-fluid trailers_image" ng-src="{{trailers.photo}}">
+    <div class="trailer_desc">
+      	<div class="trailer_title">
+        <h5>{{trailers.name}}</h5>
+    	</div>
+      
+      <p style="font-size: 12px; text-overflow: hidden; margin: left;">
+        <span style="color: red;">Price: {{trailers.price| currency }}</span>  
+        <br /> Stock #: {{trailers.stock_number}} | Type: {{trailers.type}}
+      </p>
+      
+       <a class="btn btn-primary btn-sm txtStyle" style="background-color: #de412c;" 
+             ng-href={{trailers.checkout}}>
+          Checkout
+       </a>
+                <!-- Trigger the modal with a button -->
+       <button type="button" class="btn btn-primary btn-sm txtStyle" style="background-color: #de412c;" 
+            data-toggle="modal" data-target="#myModal" ng-click="c.modalBtn($index)">
+          More Details
+       </button>
+      
+       <!-- Add to Cart -->
+      <button type="button" class="btn btn-primary btn-sm txtStyle" style="background-color: #de412c;" 
+             ng-click="c.addToCart(trailers.id)">
+          <i class="fas fa-cart-plus"></i>
+       </button>  
+      
+    </div>
+    </div>
+  
+
+      
+  	<div class="clearfix"></div>    
+ 		<div class="pagination">
+   <button class="btn btn-info btnPrevious" ng-click ="c.previousTrFunc()" style="float:left"
+           ng-show="c.previousTr > 0 ">
+     previous
+   </button>
+   <button class="btn btn-info btnNext" ng-click ="c.nextTrFunc()" style="float:right"
+           ng-show="c.nextTr < c.data.trailerList.length">
+     next
+   </button>
+  </div> 
+ </div>
+  
+  
+  
+  
+  
+  
+  
+  <!-- price Range code   -->
+  <div ng-show ="c.temp">
+   	<div ng-repeat="trailers in c.temp | filter : {'name' : c.data.searchTerm}"  class="trailers" 
+       ng-show="c.check($index)">
+      <img class="img-fluid trailers_image" ng-src="{{trailers.photo}}">
+    <div class="trailer_desc">
+      	<div class="trailer_title">
+        <h5>{{trailers.name}}</h5>
+    	</div>
+      
+      <p style="font-size: 12px; text-overflow: hidden; margin: left;">
+        <span style="color: red;">Price: {{trailers.price| currency }}</span>  
+        <br /> Stock #: {{trailers.stock_number}} | Type: {{trailers.type}}
+      </p>
+      
+       <a class="btn btn-primary btn-sm txtStyle" style="background-color: #de412c;" 
+             ng-href={{trailers.checkout}}>
+          Checkout
+       </a>
+                <!-- Trigger the modal with a button -->
+       <button type="button" class="btn btn-primary btn-sm txtStyle" style="background-color: #de412c;" 
+            data-toggle="modal" data-target="#myModal" ng-click="c.modalBtn($index)">
+          More Details
+       </button>
+      
+       <!-- Add to Cart -->
+      <button type="button" class="btn btn-primary btn-sm txtStyle" style="background-color: #de412c;" 
+             ng-click="c.addToCart(trailers.id)">
+          <i class="fas fa-cart-plus"></i>
+       </button>  
+      
+    </div>
+    </div>
+  
+  	<div class="clearfix"></div>    
+ 		<div class="pagination">
+   <button class="btn btn-info btnPrevious" ng-click ="c.previousTrFunc()" style="float:left"
+           ng-show="c.previousTr > 0 ">
+     previous
+   </button>
+   <button class="btn btn-info btnNext" ng-click ="c.nextTrFunc()" style="float:right"
+           ng-show="c.nextTr < c.temp.length">
+     next
+   </button>
+  </div> 
+ </div>
+
+</div>
+<div class="clearfix"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- More Details Popup -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Popup Content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title text-center">More Information</h4>
+      </div>
+      <div class="modal-body">
+     <table class="table">
+    <tbody class="modalTable text-right">
+        <tr>
+          <th>Trailer Type</th>
+            <td>{{trailers.type}}</td>
+        </tr>
+        <tr>
+          <th>Condition</th>
+            <td>{{trailers.condition}}</td>
+        </tr>
+        <tr>
+          <th>Manufacturer</th>
+            <td>{{trailers.manufacturer}}</td>
+        </tr>
+      <tr>
+          <th>Model</th>
+          	<td>{{trailers.model}}</td>
+        </tr>
+            <tr>
+          <th>Width</th>
+          	<td>{{trailers.width}} </td>
+        </tr>
+            <tr>
+          <th>Length</th>
+          	<td>{{trailers.length}} </td>
+        </tr>
+            <tr>
+          <th>Weight</th>
+          	<td>{{trailers.weight}} </td>
+        </tr>
+      	
+    </tbody>
+</table>
+        <div>
+          <h3 class="text-center">Description</h3>
+          <p>
+            {{c.description}}
+          </p>
+        </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+    </div>
+ </div>
+
+
+
+]]></template>
+    </sp_widget>
+</record_update>

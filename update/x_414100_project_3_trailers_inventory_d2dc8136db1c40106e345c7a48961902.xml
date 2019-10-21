@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="x_414100_project_3_trailers_inventory">
+    <x_414100_project_3_trailers_inventory action="INSERT_OR_UPDATE">
+        <number>TRA0001023</number>
+        <sys_class_name>x_414100_project_3_trailers_inventory</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 15:55:21</sys_created_on>
+        <sys_id>d2dc8136db1c40106e345c7a48961902</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Hydraulic Tilt Equipment Hauler Trailer</sys_name>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_update_name>x_414100_project_3_trailers_inventory_d2dc8136db1c40106e345c7a48961902</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-10 14:12:06</sys_updated_on>
+        <trailer_image>556d0d36db1c40106e345c7a48961956</trailer_image>
+        <u_condition>new</u_condition>
+        <u_description>2 - 7,000 Lb Dexter Torsion Axles (UP)(2 Elec FSA Brakes)&#13;
+ST235/80 R16 LRE 10 Ply.&#13;
+Coupler 2-5/16" Adjustable (6 HOLE)&#13;
+Gravity 16' Deck 2' Stationary Deck&#13;
+Diamond Plate Fenders (weld-on)&#13;
+16" Cross-Members&#13;
+Jack Spring Loaded Drop Leg 1-10K&#13;
+Lighting LED&#13;
+6 - D-Rings 4" Weld On&#13;
+2" - Rub Rail&#13;
+&#13;
+Optional&#13;
+Spare Tire Mount&#13;
+Tool Tray Winch Plate</u_description>
+        <u_floor_length>18 ft</u_floor_length>
+        <u_gvwr>7000 lbs</u_gvwr>
+        <u_manufacturer>haulmark</u_manufacturer>
+        <u_model>T83-162T7T-GT</u_model>
+        <u_name>Hydraulic Tilt Equipment Hauler Trailer</u_name>
+        <u_price/>
+        <u_pull_type>bumper</u_pull_type>
+        <u_qty>12</u_qty>
+        <u_trailer_type>tilt</u_trailer_type>
+        <u_vin/>
+        <u_weight>7000 lbs</u_weight>
+        <u_width>7 ft</u_width>
+        <u_year>2019</u_year>
+    </x_414100_project_3_trailers_inventory>
+</record_update>

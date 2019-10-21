@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_catalog">
+    <sc_cat_item_catalog action="DELETE">
+        <sc_cat_item display_value="test scope local">726fa1c5db64c0106e345c7a489619c0</sc_cat_item>
+        <sc_catalog display_value="Trailers">88dab92edb5c00106e345c7a48961905</sc_catalog>
+        <sys_class_name>sc_cat_item_catalog</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-15 18:10:34</sys_created_on>
+        <sys_id>f26fe1c5db64c0106e345c7a48961996</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Trailers.test scope local</sys_name>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_update_name>sc_cat_item_catalog_f26fe1c5db64c0106e345c7a48961996</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-15 18:10:34</sys_updated_on>
+    </sc_cat_item_catalog>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</application>
+        <file_path/>
+        <instance_id>72ba96d3db05b7004d2bac44d49619e4</instance_id>
+        <instance_name>dev84767</instance_name>
+        <name>sc_cat_item_catalog_f26fe1c5db64c0106e345c7a48961996</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_catalog"><sc_cat_item_catalog action="INSERT_OR_UPDATE"><sc_cat_item display_value="test scope local">726fa1c5db64c0106e345c7a489619c0</sc_cat_item><sc_catalog display_value="Trailers">88dab92edb5c00106e345c7a48961905</sc_catalog><sys_class_name>sc_cat_item_catalog</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2019-10-15 18:10:34</sys_created_on><sys_id>f26fe1c5db64c0106e345c7a48961996</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Trailers.test scope local</sys_name><sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package><sys_policy/><sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope><sys_update_name>sc_cat_item_catalog_f26fe1c5db64c0106e345c7a48961996</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2019-10-15 18:10:34</sys_updated_on></sc_cat_item_catalog></record_update>]]></payload>
+        <payload_hash>1369054541</payload_hash>
+        <record_name>Trailers.test scope local</record_name>
+        <reverted_from/>
+        <source>fb1689a3dbdc40106e345c7a489619d8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-15 18:10:34</sys_created_on>
+        <sys_id>f66fe1c5db64c0106e345c7a48961998</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16dd09d52a70000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-15 18:10:34</sys_updated_on>
+        <type>Catalog Items Catalog</type>
+        <update_guid>326fe1c57564c01074f651e2ec429a98</update_guid>
+        <update_guid_history>326fe1c57564c01074f651e2ec429a98:1369054541</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Trailers.test scope local">4ff1f9c9db64c0106e345c7a489619c5</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-15 18:21:47</sys_created_on>
+        <sys_db_object display_value="" name="sc_cat_item_catalog">sc_cat_item_catalog</sys_db_object>
+        <sys_id>436fb7af88a340f6a1fa637d3067ca19</sys_id>
+        <sys_metadata>f26fe1c5db64c0106e345c7a48961996</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Trailers.test scope local</sys_name>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_parent display_value="">726fa1c5db64c0106e345c7a489619c0</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_scope_delete display_value="">205e6add2b6c46828e85eec0dde7c144</sys_scope_delete>
+        <sys_update_name>sc_cat_item_catalog_f26fe1c5db64c0106e345c7a48961996</sys_update_name>
+        <sys_update_version display_value="sc_cat_item_catalog_f26fe1c5db64c0106e345c7a48961996">f66fe1c5db64c0106e345c7a48961998</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-15 18:21:47</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

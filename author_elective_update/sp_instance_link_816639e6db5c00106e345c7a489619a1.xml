@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_link">
+    <sp_instance_link action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph>comments</glyph>
+        <id/>
+        <kb_article/>
+        <kb_category/>
+        <kb_topic/>
+        <order>1</order>
+        <roles/>
+        <sc_cat_item display_value="">12147da2d7532100a9ad1e173e24d4de</sc_cat_item>
+        <sc_category/>
+        <short_description>Community-sourced answers to your questions</short_description>
+        <size>md</size>
+        <sp_column display_value="4">c56639e6db5c00106e345c7a4896199f</sp_column>
+        <sp_page display_value="sqa_tagged_questions">c8b2e216d701120023c84f80de6103e9</sp_page>
+        <sp_widget display_value="Icon Link">3caa67afcb13020000f8d856634c9c2e</sp_widget>
+        <sys_class_name>sp_instance_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 00:16:13</sys_created_on>
+        <sys_id>816639e6db5c00106e345c7a489619a1</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Community</sys_name>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_update_name>sp_instance_link_816639e6db5c00106e345c7a489619a1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 15:06:58</sys_updated_on>
+        <title>Community</title>
+        <type>url</type>
+        <url>?id=sqa_tagged_questions</url>
+        <widget_parameters><![CDATA[{
+	"link_template": {
+		"value": "Circle Icon",
+		"displayValue": "Circle Icon"
+	}
+}]]></widget_parameters>
+    </sp_instance_link>
+    <sys_translated_text action="delete_multiple" query="documentkey=816639e6db5c00106e345c7a489619a1"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</application>
+        <file_path/>
+        <instance_id>72ba96d3db05b7004d2bac44d49619e4</instance_id>
+        <instance_name>dev84767</instance_name>
+        <name>sp_instance_link_816639e6db5c00106e345c7a489619a1</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_instance_link"&gt;&lt;sp_instance_link action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;class_name/&gt;&lt;color&gt;default&lt;/color&gt;&lt;css/&gt;&lt;glyph&gt;comments&lt;/glyph&gt;&lt;id/&gt;&lt;kb_article/&gt;&lt;kb_category/&gt;&lt;kb_topic/&gt;&lt;order&gt;1&lt;/order&gt;&lt;roles/&gt;&lt;sc_cat_item display_value=""&gt;12147da2d7532100a9ad1e173e24d4de&lt;/sc_cat_item&gt;&lt;sc_category/&gt;&lt;short_description&gt;Community-sourced answers to your questions&lt;/short_description&gt;&lt;size&gt;md&lt;/size&gt;&lt;sp_column display_value="4"&gt;c56639e6db5c00106e345c7a4896199f&lt;/sp_column&gt;&lt;sp_page display_value="sqa_tagged_questions"&gt;c8b2e216d701120023c84f80de6103e9&lt;/sp_page&gt;&lt;sp_widget display_value="Icon Link"&gt;3caa67afcb13020000f8d856634c9c2e&lt;/sp_widget&gt;&lt;sys_class_name&gt;sp_instance_link&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-08 00:16:13&lt;/sys_created_on&gt;&lt;sys_id&gt;816639e6db5c00106e345c7a489619a1&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;Community&lt;/sys_name&gt;&lt;sys_package display_value="Project 3" source="x_414100_project_3"&gt;eb77e1a2db1c00106e345c7a489619be&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Project 3"&gt;eb77e1a2db1c00106e345c7a489619be&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_instance_link_816639e6db5c00106e345c7a489619a1&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-08 15:06:58&lt;/sys_updated_on&gt;&lt;title&gt;Community&lt;/title&gt;&lt;type&gt;url&lt;/type&gt;&lt;url&gt;?id=sqa_tagged_questions&lt;/url&gt;&lt;widget_parameters&gt;&lt;![CDATA[{
+	"link_template": {
+		"value": "Circle Icon",
+		"displayValue": "Circle Icon"
+	}
+}]]&gt;&lt;/widget_parameters&gt;&lt;/sp_instance_link&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=816639e6db5c00106e345c7a489619a1"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-557770089</payload_hash>
+        <record_name>Community</record_name>
+        <reverted_from/>
+        <source>a6c765a6db1c00106e345c7a48961914</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 15:06:58</sys_created_on>
+        <sys_id>c94209f2db9840106e345c7a48961998</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16dabe8b8620000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 15:06:58</sys_updated_on>
+        <type>Instance with Link</type>
+        <update_guid>454209f21c984010aea067db60811f98</update_guid>
+        <update_guid_history>454209f21c984010aea067db60811f98:-557770089,096639e6865c001040c93a005dc4b9a2:1307374264</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Community">d1b30f0bdb9400106e345c7a4896196d</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-09 19:10:59</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance_link">sp_instance_link</sys_db_object>
+        <sys_id>3a02df3578354bf4aa42f4bc644a6e61</sys_id>
+        <sys_metadata>816639e6db5c00106e345c7a489619a1</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Community</sys_name>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_scope_delete display_value="">205e6add2b6c46828e85eec0dde7c144</sys_scope_delete>
+        <sys_update_name>sp_instance_link_816639e6db5c00106e345c7a489619a1</sys_update_name>
+        <sys_update_version display_value="sp_instance_link_816639e6db5c00106e345c7a489619a1">c94209f2db9840106e345c7a48961998</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-09 19:10:59</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

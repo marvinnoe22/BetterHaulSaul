@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="u_trailer_type" table="x_414100_project_3_trailers_inventory" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_trailer_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Tilt</label>
+            <language>en</language>
+            <name>x_414100_project_3_trailers_inventory</name>
+            <sequence>0</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-10-08 00:30:31</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a6a9f1eadb5c00106e345c7a48961930</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-10-08 00:30:31</sys_updated_on>
+            <value>tilt</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_trailer_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Utility</label>
+            <language>en</language>
+            <name>x_414100_project_3_trailers_inventory</name>
+            <sequence>1</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-10-08 00:30:31</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>2ea9f1eadb5c00106e345c7a48961931</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-10-08 00:30:31</sys_updated_on>
+            <value>utility</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_trailer_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Flatbed</label>
+            <language>en</language>
+            <name>x_414100_project_3_trailers_inventory</name>
+            <sequence>2</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-10-08 00:30:31</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>eea9f1eadb5c00106e345c7a48961932</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-10-08 00:30:31</sys_updated_on>
+            <value>flatbed</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_trailer_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Car Haulers</label>
+            <language>en</language>
+            <name>x_414100_project_3_trailers_inventory</name>
+            <sequence>3</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-10-08 00:30:31</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a2a9f1eadb5c00106e345c7a48961934</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-10-08 00:30:31</sys_updated_on>
+            <value>car haulers</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_trailer_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Cargo</label>
+            <language>en</language>
+            <name>x_414100_project_3_trailers_inventory</name>
+            <sequence>4</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-10-08 00:30:31</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>66a9f1eadb5c00106e345c7a48961935</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-10-08 00:30:31</sys_updated_on>
+            <value>cargo</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_trailer_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Dump</label>
+            <language>en</language>
+            <name>x_414100_project_3_trailers_inventory</name>
+            <sequence>5</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-10-08 00:30:31</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>2aa9f1eadb5c00106e345c7a48961936</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-10-08 00:30:31</sys_updated_on>
+            <value>dump</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_trailer_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Equipment</label>
+            <language>en</language>
+            <name>x_414100_project_3_trailers_inventory</name>
+            <sequence>6</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-10-08 00:30:31</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>eaa9f1eadb5c00106e345c7a48961937</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-10-08 00:30:31</sys_updated_on>
+            <value>equipment</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>u_trailer_type</element>
+            <name>x_414100_project_3_trailers_inventory</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-10-08 00:30:31</sys_created_on>
+            <sys_id>eea9f1eadb5c00106e345c7a48961930</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>u_trailer_type</sys_name>
+            <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+            <sys_update_name>sys_choice_x_414100_project_3_trailers_inventory_u_trailer_type</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-10-08 00:30:31</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

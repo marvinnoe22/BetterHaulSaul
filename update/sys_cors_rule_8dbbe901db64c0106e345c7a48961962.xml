@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_cors_rule">
+    <sys_cors_rule action="INSERT_OR_UPDATE">
+        <delete>true</delete>
+        <domain>http://alexkutz.selfip.com</domain>
+        <exposed_headers>'Access-Control-Allow-Origin'</exposed_headers>
+        <get>true</get>
+        <max_age>0</max_age>
+        <name>Trailers-inc_Attachments</name>
+        <patch>true</patch>
+        <post>true</post>
+        <put>true</put>
+        <rest_api>now/attachment</rest_api>
+        <sys_class_name>sys_cors_rule</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-15 17:55:07</sys_created_on>
+        <sys_id>8dbbe901db64c0106e345c7a48961962</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Trailers-inc_Attachments</sys_name>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_update_name>sys_cors_rule_8dbbe901db64c0106e345c7a48961962</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-15 17:55:07</sys_updated_on>
+    </sys_cors_rule>
+</record_update>

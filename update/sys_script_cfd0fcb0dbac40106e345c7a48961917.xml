@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_414100_project_3_trailer_catalog_table</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Auto catagorize catalog item</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+
+
+    var ids = {
+        flatbed: 'd47bf16edb5c00106e345c7a4896199e',
+		utility: 'd48bb52edb5c00106e345c7a4896195c',
+		tilt: '478bb56edb5c00106e345c7a48961948',
+		equipment: 'e46b316edb5c00106e345c7a489619b5',
+		dump: 'b15b716edb5c00106e345c7a489619f7',
+		cargo: 'be3bb12edb5c00106e345c7a489619ea',
+		carhaulers: '722b316edb5c00106e345c7a48961933'
+    };
+
+    switch (current.meta_trailer_type.toString()) {
+        case "flatbed":
+            current.category = ids.flatbed;
+            break;
+		case "utility":
+			current.category = ids.utility;
+			break;
+		case "tilt":
+			current.category = ids.tilt;
+			break;
+		case "equipment":
+			current.category = ids.equipment;
+			break;
+		case "dump":
+			current.category = ids.bump;
+			break;
+		case "cargo":
+			current.category = ids.cargo;
+			break;
+		case "carhaulers":
+			current.category = ids.carhaulers;
+			break;
+    }
+
+
+
+
+
+
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-14 19:00:11</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>cfd0fcb0dbac40106e345c7a48961917</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Auto catagorize catalog item</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_update_name>sys_script_cfd0fcb0dbac40106e345c7a48961917</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-14 23:52:06</sys_updated_on>
+        <template>sc_catalogs=88dab92edb5c00106e345c7a48961905^EQ</template>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=cfd0fcb0dbac40106e345c7a48961917"/>
+</record_update>

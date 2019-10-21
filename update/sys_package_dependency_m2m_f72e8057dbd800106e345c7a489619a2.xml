@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_package_dependency_m2m">
+    <sys_package_dependency_m2m action="INSERT_OR_UPDATE">
+        <dependency display_value="Service Catalog Platform" source="com.glideapp.servicecatalog.platform">bdfeb79adbd000106e345c7a48961906</dependency>
+        <min_version>1.0.0</min_version>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-10 00:36:23</sys_created_on>
+        <sys_id>f72e8057dbd800106e345c7a489619a2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-10 00:36:23</sys_updated_on>
+    </sys_package_dependency_m2m>
+</record_update>

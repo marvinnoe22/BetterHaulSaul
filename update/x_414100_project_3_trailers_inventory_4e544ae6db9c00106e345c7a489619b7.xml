@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="x_414100_project_3_trailers_inventory">
+    <x_414100_project_3_trailers_inventory action="INSERT_OR_UPDATE">
+        <number>TRA0001013</number>
+        <sys_class_name>x_414100_project_3_trailers_inventory</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 01:23:48</sys_created_on>
+        <sys_id>4e544ae6db9c00106e345c7a489619b7</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>Flatbed Gooseneck Deck Over Trailer</sys_name>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_update_name>x_414100_project_3_trailers_inventory_4e544ae6db9c00106e345c7a489619b7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-10 14:13:56</sys_updated_on>
+        <trailer_image>fc5e3a43db9400106e345c7a4896191f</trailer_image>
+        <u_condition>new</u_condition>
+        <u_description>OPTIONS:&#13;
+- 5ft Self-cleaning Dove&#13;
+- 2-10k Dexter Oil Bath Axles with Electric Brakes&#13;
+- 3-Inch Cross Members on 16-Inch Centers&#13;
+- All LED Lighting&#13;
+- 8-235/80R16-Inch 10-ply Radial tires each rated at 3080# (Total Tire Rating = 24,640#)&#13;
+- 12" I-Beam Gooseneck (19 lb/Ft)&#13;
+- Pipe Spools and Rub Rails&#13;
+- Double Drop Leg Side Wind Jacks&#13;
+- 2 Adjustable Fold Over Flat Double Hinged Spring Assisted Wedge Ramps&#13;
+- 2x8 Pressure Treated Decking Sealed with Woodrich Timber Oil wood Preservative&#13;
+- 12-Inch I-Beam @ 19# per foot Main Frame</u_description>
+        <u_floor_length>30 ft</u_floor_length>
+        <u_gvwr>20000 lbs</u_gvwr>
+        <u_manufacturer>haulmark</u_manufacturer>
+        <u_model>FG102-30T10-FF</u_model>
+        <u_name>Flatbed Gooseneck Deck Over Trailer</u_name>
+        <u_price/>
+        <u_pull_type>gooseneck</u_pull_type>
+        <u_qty>0</u_qty>
+        <u_trailer_type>flatbed</u_trailer_type>
+        <u_vin>1ORLFG23234567890</u_vin>
+        <u_weight>10 ton</u_weight>
+        <u_width>8.5 ft</u_width>
+        <u_year>2019</u_year>
+    </x_414100_project_3_trailers_inventory>
+</record_update>

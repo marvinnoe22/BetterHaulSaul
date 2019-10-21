@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function (spModal) {
+    //Including spModal service
+    var c = this;
+    var shared = {}; //This is an empty array we can add to and share with the modal and embedded widget.
+
+    c.onBrowseTrailers = function(size) {
+        //This function is called by a button in the HTML
+
+        shared.currentTrailer = c.data.currentTrailer; //We store the currentPet data as an object in 'shared' so that it is available to the embedded widget.
+
+        spModal.open({
+            //spModal.open will open a modal, and we'll pass it the following parameters
+            size: size,
+            title: 'Flatbed Trailers',
+            widget: 'd9f8b6b6db1480106e345c7a4896191f', //Insert sys_id of the embedded widget - "Pet Selection"
+            buttons: [{
+                label: '${EXIT}',
+                primary: true
+            }],
+            shared: shared //We make the 'shared' array available to modal's embedded widget
+        }).then(function() {
+            //This function is triggered by submitting/closing the modal.
+            c.data.selectedTrailer = shared.selectedTrailer; //The selected pet is shared with this widget via the 'share' object
+            //c.data.action = "adoptme";
+            c.server.update(); //Send the updated data object to the server script
+        });
+
+    }
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>button.adopt {&#13;
+ position: relative;&#13;
+ padding: 20px 20px;&#13;
+ margin-bottom: 20px;&#13;
+ font-size: 1.5em;&#13;
+ width: 100%;&#13;
+}&#13;
+&#13;
+.log_pet{&#13;
+  width: 80px;&#13;
+  height: 50px;&#13;
+  float: left;&#13;
+  padding-left: 5px;&#13;
+  border-raduis: 10px;&#13;
+}&#13;
+.pet_label{&#13;
+  text-align: center;&#13;
+}&#13;
+&#13;
+.desc{&#13;
+  font-size: 14px;&#13;
+}&#13;
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>flatbed_trailers</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>Flatbed Trailers (button)</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	
+// if(input && input.selectedTrailer && (input.action == "adoptme" || input.action =="lostPet") ) {
+//      //If there is no current Pet,make a new entry in the u_pet_adoptions table
+//      var newTrailer = new GlideRecord('x_414100_project_3_trailers_inventory');
+// 	newPet.get(input.selectedPet.sys_id);
+// 	newPet.u_full_name = gs.getUserDisplayName();
+//    newPet.adopt_status = "adopted";
+//    newPet.update();
+   
+// }
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 23:44:56</sys_created_on>
+        <sys_id>7a57fabedbd080106e345c7a48961999</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Flatbed Trailers (button)</sys_name>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_update_name>sp_widget_7a57fabedbd080106e345c7a48961999</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-09 00:43:06</sys_updated_on>
+        <template><![CDATA[<div class="petButton">
+ <button ng-click="c.onBrowseTrailers('lg')" class="adopt btn btn-danger">
+ <img src="adopt_dog.png"  class="log_pet"/> <span class="pet_label">${Flatbed Trailers}</span>
+      <p class="desc">Browse flatbed trailers available for purchase</p> 
+ </button>
+</div>]]></template>
+    </sp_widget>
+</record_update>

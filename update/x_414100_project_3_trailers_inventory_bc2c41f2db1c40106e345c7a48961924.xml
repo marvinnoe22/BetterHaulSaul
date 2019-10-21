@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="x_414100_project_3_trailers_inventory">
+    <x_414100_project_3_trailers_inventory action="INSERT_OR_UPDATE">
+        <number>TRA0001022</number>
+        <sys_class_name>x_414100_project_3_trailers_inventory</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 15:51:43</sys_created_on>
+        <sys_id>bc2c41f2db1c40106e345c7a48961924</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name>Tilt Deck Hauler Trailer</sys_name>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_update_name>x_414100_project_3_trailers_inventory_bc2c41f2db1c40106e345c7a48961924</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-10 14:12:02</sys_updated_on>
+        <trailer_image>d49cc9f2db1c40106e345c7a489619a9</trailer_image>
+        <u_condition>new</u_condition>
+        <u_description>5x10 Tilt Deck Bobcat Hauler Trailer 7K Trailers 5 x 10 | T59-10S7T-GT&#13;
+&#13;
+OPTIONS:&#13;
+- [1] 7K EZ LUBE AXLE W/ [1] ELECTRIC BRAKE, TORSION (22°) UP&#13;
+- 235/80 R16 LR(E) 10 PLY&#13;
+- MOUNT ONLY (Optional)&#13;
+- 2-5/16" ADJ., DEMCO, 2-BOLT (21K) CAST COUPLER&#13;
+- 7K DROP LEG JACK&#13;
+- FULL WRAP TONGUE&#13;
+- TILT DECK W/ CUSHION CYLINDER&#13;
+- DIAMOND PLATE FENDERS&#13;
+- [4] WELD ON D-RINGS&#13;
+- 16" CENTER-TO-CENTER CROSSMEMBERS&#13;
+- DIAMOND PLATE, 3/16 FLOOR&#13;
+- CHARCOAL GRAY POWDER PAINT</u_description>
+        <u_floor_length>10 ft</u_floor_length>
+        <u_gvwr>7000 lbs</u_gvwr>
+        <u_manufacturer>pace america</u_manufacturer>
+        <u_model>T59-10S7T-GT</u_model>
+        <u_name>Tilt Deck Hauler Trailer</u_name>
+        <u_price/>
+        <u_pull_type>bumper</u_pull_type>
+        <u_qty>10</u_qty>
+        <u_trailer_type>tilt</u_trailer_type>
+        <u_vin>1ORLT602345678901</u_vin>
+        <u_weight>950 lbs</u_weight>
+        <u_width>5 ft</u_width>
+        <u_year>2019</u_year>
+    </x_414100_project_3_trailers_inventory>
+</record_update>

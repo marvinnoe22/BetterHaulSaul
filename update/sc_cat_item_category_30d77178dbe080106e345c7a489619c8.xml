@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category">
+    <sc_cat_item_category action="INSERT_OR_UPDATE">
+        <sc_cat_item display_value="Enclosed Cargo Trailer Car Hauler Trailers">e8cdb3dcdbe400106e345c7a48961971</sc_cat_item>
+        <sc_category display_value="Car Haulers">722b316edb5c00106e345c7a48961933</sc_category>
+        <sys_class_name>sc_cat_item_category</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-15 00:08:48</sys_created_on>
+        <sys_id>30d77178dbe080106e345c7a489619c8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Car Haulers.Enclosed Cargo Trailer Car Hauler Trailers</sys_name>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_update_name>sc_cat_item_category_30d77178dbe080106e345c7a489619c8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-15 00:08:48</sys_updated_on>
+    </sc_cat_item_category>
+</record_update>

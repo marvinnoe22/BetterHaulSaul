@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function() {
+  /* widget controller */
+  var c = this;
+	
+	c.modalBtn = function(i) {
+        var table = document.querySelector('.modalTable2').children;
+        table[0].children[1].innerHTML = c.data.trailers[i].type;
+        table[1].children[1].innerHTML = c.data.trailers[i].condition;
+        table[2].children[1].innerHTML = c.data.trailers[i].manufacturer;
+        table[3].children[1].innerHTML = c.data.trailers[i].model;
+        table[4].children[1].innerHTML = c.data.trailers[i].width;
+        table[5].children[1].innerHTML = c.data.trailers[i].length;
+        table[6].children[1].innerHTML = c.data.trailers[i].weight;
+				//table[7].innerHTML = c.data.trailers[i].description;
+		c.description = c.data.trailers[i].description;		
+		//c.checkout = c.data.trailers[i].checkout;
+    }
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.txtStyle {
+    font-family: 'Raleway', sans-serif;
+ }
+
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>Trailers_latest_arrival</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+	
+	 data.trailers = [];
+		
+    var trailerGR = new GlideRecord('x_414100_project_3_trailer_catalog_table');
+    //trailerGR.addQuery("u_trailer_type", "flatbed");
+		trailerGR.orderByDesc("sys_updated_on");
+		trailerGR.setLimit(4);
+    trailerGR.query();
+    while (trailerGR.next()) {
+        data.trailers.push({					
+					stock_number: trailerGR.number.toString(),
+					checkout: "https://dev84767.service-now.com/trailers?id=sc_cat_item&sys_id="+trailerGR.sys_id.toString(),
+					id: trailerGR.sys_id.toString(),
+					name: trailerGR.name.toString(),
+					price: trailerGR.price.toString(),
+					photo: trailerGR.picture.getDisplayValue().toString(),
+					type: trailerGR.meta_trailer_type.toString(),
+					condition: trailerGR.meta_condition.toString(),
+					manufacturer: trailerGR.meta_manufacturer.toString(),
+					model: trailerGR.meta_model.toString(),
+					width: trailerGR.meta_width.toString(),
+					length: trailerGR.meta_floor_length.toString(),
+					weight: trailerGR.meta_weight.toString(),
+					gvwr: trailerGR.meta_gvwr.toString(),
+					quantity: trailerGR.meta_qty.toString(),
+					description: trailerGR.meta_description.toString()
+				});
+    }
+
+})();
+
+
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-14 06:36:19</sys_created_on>
+        <sys_id>c3c6caa8dba040106e345c7a489619f0</sys_id>
+        <sys_mod_count>55</sys_mod_count>
+        <sys_name>Trailers_latest_arrival</sys_name>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_update_name>sp_widget_c3c6caa8dba040106e345c7a489619f0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-17 16:51:44</sys_updated_on>
+        <template><![CDATA[<!-- Google Fonts / Raleway -->
+<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+
+<div class="row" style="margin-bottom: 30px;">
+  <div class="col-xs-6 col-sm-3"
+       ng-repeat="trailer in data.trailers">
+    <div class="text-center" style="margin-top: 20px; padding-top: 5px; padding-bottom: 5px;">
+      <div style="height:45px; overflow:hidden; background-color: #dddddd; padding:2px;">
+         <h5 style="color: black; font-family: 'Noto Sans JP', sans-serif; text-align: center;">{{trailer.name}}</h5>
+      </div>
+     
+      <img style="width: 80%; height: 100px; margin: 10px" ng-src="{{trailer.photo}}" />
+      <div>
+        <!--<button class="btn btn-info"  data-toggle="modal" data-target="#myModal2" ng-click="c.modalBtn($index)">
+        views details
+      </button>-->
+        
+        <button class="btn txtStyle" data-toggle="modal" data-target="#myModal2" ng-click="c.modalBtn($index)" style="background-color: #de412c; color: white">View Details</button>
+      </div>
+    	
+    </div>
+    
+  </div>
+</div>
+
+<!-- More Details Popup -->
+<div id="myModal2" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Popup Content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title text-center" >More Information</h4>
+      </div>
+      <div class="modal-body">
+     <table class="table">
+    <tbody class="modalTable2 text-right">
+        <tr>
+          <th>Trailer Type</th>
+            <td>{{trailers.type}}</td>
+        </tr>
+        <tr>
+          <th>Condition</th>
+            <td>{{trailers.condition}}</td>
+        </tr>
+        <tr>
+          <th>Manufacturer</th>
+            <td>{{trailers.manufacturer}}</td>
+        </tr>
+      <tr>
+          <th>Model</th>
+          	<td>{{trailers.model}}</td>
+        </tr>
+            <tr>
+          <th>Width</th>
+          	<td>{{trailers.width}} </td>
+        </tr>
+            <tr>
+          <th>Length</th>
+          	<td>{{trailers.length}} </td>
+        </tr>
+         <tr>
+          <th>Weight</th>
+          	<td>{{trailers.weight}} </td>
+        </tr>
+      	
+    </tbody>
+</table>
+        <div>
+          <h3 class="text-center">Description</h3>
+          <p>
+            {{c.description}}
+          </p>
+        </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+    </div>
+ </div>
+
+]]></template>
+    </sp_widget>
+</record_update>

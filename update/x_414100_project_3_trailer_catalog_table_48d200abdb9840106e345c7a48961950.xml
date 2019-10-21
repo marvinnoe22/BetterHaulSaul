@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="x_414100_project_3_trailer_catalog_table">
+    <x_414100_project_3_trailer_catalog_table action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <availability>on_desktop</availability>
+        <billable>false</billable>
+        <category display_value="Tilt">478bb56edb5c00106e345c7a48961948</category>
+        <cost>0</cost>
+        <custom_cart/>
+        <delivery_plan/>
+        <delivery_plan_script/>
+        <delivery_time>1970-01-03 00:00:00</delivery_time>
+        <description><![CDATA[<p><span style="font-size: 10pt;">7 x 18 3.5 Ton | Hydraulic Tilt Equipment Hauler Trailer | T83-162T7T-GT</span></p>
+<p><span style="font-size: 10pt;">Options:</span></p>
+<ul style="list-style-position: inside;"><li><span style="font-size: 10pt;">2 - 7,000 Lb Dexter Torsion Axles (UP)(2 Elec FSA Brakes)</span></li><li><span style="font-size: 10pt;"> ST235/80 R16 LRE 10 Ply. </span></li><li><span style="font-size: 10pt;">Coupler 2-5/16&#34; Adjustable (6 HOLE) Gravity 16&#39; Deck 2&#39; </span></li><li><span style="font-size: 10pt;">Stationary Deck Diamond Plate Fenders (weld-on) </span></li><li><span style="font-size: 10pt;">16&#34; Cross-Members Jack Spring Loaded Drop Leg 1</span></li><li><span style="font-size: 10pt;">10K Lighting LED 6 </span></li><li><span style="font-size: 10pt;"> D-Rings 4&#34; Weld On 2&#34; </span></li><li><span style="font-size: 10pt;">Rub Rail Optional Spare Tire Mount Tool Tray Winch Plate</span></li></ul>]]></description>
+        <display_price_property>non_zero</display_price_property>
+        <entitlement_script/>
+        <group/>
+        <hide_sp>false</hide_sp>
+        <icon/>
+        <ignore_price>false</ignore_price>
+        <image/>
+        <list_price>0</list_price>
+        <location/>
+        <mandatory_attachment>false</mandatory_attachment>
+        <meta/>
+        <meta_condition>new</meta_condition>
+        <meta_description>7 x 18 3.5 Ton | Hydraulic Tilt Equipment Hauler Trailer | T83-162T7T-GT&#13;
+&#13;
+Options:&#13;
+&#13;
+2 - 7,000 Lb Dexter Torsion Axles (UP)(2 Elec FSA Brakes)&#13;
+ST235/80 R16 LRE 10 Ply.&#13;
+Coupler 2-5/16" Adjustable (6 HOLE) Gravity 16' Deck 2'&#13;
+Stationary Deck Diamond Plate Fenders (weld-on)&#13;
+16" Cross-Members Jack Spring Loaded Drop Leg 1&#13;
+10K Lighting LED 6 &#13;
+D-Rings 4" Weld On 2"&#13;
+Rub Rail Optional Spare Tire Mount Tool Tray Winch Plate</meta_description>
+        <meta_floor_length>18</meta_floor_length>
+        <meta_gvwr>7000 lbs</meta_gvwr>
+        <meta_manufacturer>haulmark</meta_manufacturer>
+        <meta_model>T83-162T7T-GT</meta_model>
+        <meta_name>Hydraulic Tilt Equipment Hauler Trailer</meta_name>
+        <meta_number/>
+        <meta_price/>
+        <meta_pull_type>bumper</meta_pull_type>
+        <meta_qty>30</meta_qty>
+        <meta_trailer_image/>
+        <meta_trailer_type>tilt</meta_trailer_type>
+        <meta_vin>1ORLT602345648601</meta_vin>
+        <meta_weight>7000 </meta_weight>
+        <meta_width>7 </meta_width>
+        <meta_year>2019</meta_year>
+        <mobile_hide_price>false</mobile_hide_price>
+        <mobile_picture/>
+        <mobile_picture_type>use_desktop_picture</mobile_picture_type>
+        <model/>
+        <name>Hydraulic Tilt Equipment Hauler Trailer</name>
+        <no_attachment_v2>false</no_attachment_v2>
+        <no_cart>false</no_cart>
+        <no_cart_v2>false</no_cart_v2>
+        <no_delivery_time_v2>false</no_delivery_time_v2>
+        <no_order>false</no_order>
+        <no_order_now>false</no_order_now>
+        <no_proceed_checkout>false</no_proceed_checkout>
+        <no_quantity>false</no_quantity>
+        <no_quantity_v2>false</no_quantity_v2>
+        <no_search>false</no_search>
+        <no_wishlist_v2>false</no_wishlist_v2>
+        <number>TRA0001010</number>
+        <omit_price>false</omit_price>
+        <order>0</order>
+        <ordered_item_link/>
+        <picture>556d0d36db1c40106e345c7a48961956</picture>
+        <preview>JavaScript: popupOpenStandard("com.glideapp.servicecatalog_cat_item_view.do?v=1&amp;sysparm_id=48d200abdb9840106e345c7a48961950&amp;sysparm_preview=true", "summary");</preview>
+        <price>2750</price>
+        <recurring_frequency/>
+        <recurring_price>0</recurring_price>
+        <request_method/>
+        <roles/>
+        <sc_catalogs>88dab92edb5c00106e345c7a48961905</sc_catalogs>
+        <sc_ic_item_staging/>
+        <sc_ic_version/>
+        <short_description>7 x 18 3.5 Ton | Hydraulic Tilt Equipment Hauler Trailer | T83-162T7T-GT</short_description>
+        <show_variable_help_on_load>false</show_variable_help_on_load>
+        <start_closed>false</start_closed>
+        <sys_class_name>x_414100_project_3_trailer_catalog_table</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-10 18:25:11</sys_created_on>
+        <sys_id>48d200abdb9840106e345c7a48961950</sys_id>
+        <sys_mod_count>30</sys_mod_count>
+        <sys_name>Hydraulic Tilt Equipment Hauler Trailer</sys_name>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_update_name>x_414100_project_3_trailer_catalog_table_48d200abdb9840106e345c7a48961950</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-16 13:32:11</sys_updated_on>
+        <template/>
+        <type>item</type>
+        <use_sc_layout>true</use_sc_layout>
+        <vendor/>
+        <visible_bundle>true</visible_bundle>
+        <visible_guide>true</visible_guide>
+        <visible_standalone>true</visible_standalone>
+        <workflow display_value="Trailer Order Flow">41af15efdb1080106e345c7a489619cd</workflow>
+    </x_414100_project_3_trailer_catalog_table>
+    <sys_translated_text action="delete_multiple" query="documentkey=48d200abdb9840106e345c7a48961950"/>
+    <fx_price action="delete_multiple" query="id=48d200abdb9840106e345c7a48961950"/>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>2750</amount>
+        <currency display_value="USD">USD</currency>
+        <field>price</field>
+        <id>48d200abdb9840106e345c7a48961950</id>
+        <parent/>
+        <reference_amount>2750</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-10 18:25:11</sys_created_on>
+        <sys_id>0cd200abdb9840106e345c7a48961951</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-10 19:31:33</sys_updated_on>
+        <table>x_414100_project_3_trailer_catalog_table</table>
+        <type>calculated</type>
+    </fx_price>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>recurring_price</field>
+        <id>48d200abdb9840106e345c7a48961950</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-10 18:25:11</sys_created_on>
+        <sys_id>44d200abdb9840106e345c7a48961952</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-10 18:25:11</sys_updated_on>
+        <table>x_414100_project_3_trailer_catalog_table</table>
+        <type>calculated</type>
+    </fx_price>
+</record_update>

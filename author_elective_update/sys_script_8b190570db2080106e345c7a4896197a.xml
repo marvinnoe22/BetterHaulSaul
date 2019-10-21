@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="DELETE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>false</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>sc_req_item</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>auto decrement quantity field</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+    var cat_item = current.cat_item.toString();
+    var tr = new GlideRecord("x_414100_project_3_trailer_catalog_table");
+    tr.addQuery('sys_id', cat_item);
+    tr.query();
+
+    while(tr.next()){
+		
+        tr.meta_qty -= current.quantity;
+    }
+	
+	gs.info('business rule ran');
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-14 20:52:11</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8b190570db2080106e345c7a4896197a</sys_id>
+        <sys_mod_count>19</sys_mod_count>
+        <sys_name>auto decrement quantity field</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_update_name>sys_script_8b190570db2080106e345c7a4896197a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-15 01:01:06</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=8b190570db2080106e345c7a4896197a"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</application>
+        <file_path/>
+        <instance_id>72ba96d3db05b7004d2bac44d49619e4</instance_id>
+        <instance_name>dev84767</instance_name>
+        <name>sys_script_8b190570db2080106e345c7a4896197a</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script"&gt;&lt;sys_script action="INSERT_OR_UPDATE"&gt;&lt;abort_action&gt;false&lt;/abort_action&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;action_delete&gt;false&lt;/action_delete&gt;&lt;action_insert&gt;true&lt;/action_insert&gt;&lt;action_query&gt;false&lt;/action_query&gt;&lt;action_update&gt;true&lt;/action_update&gt;&lt;active&gt;false&lt;/active&gt;&lt;add_message&gt;false&lt;/add_message&gt;&lt;advanced&gt;true&lt;/advanced&gt;&lt;change_fields&gt;false&lt;/change_fields&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;collection&gt;sc_req_item&lt;/collection&gt;&lt;condition/&gt;&lt;description/&gt;&lt;execute_function&gt;false&lt;/execute_function&gt;&lt;filter_condition/&gt;&lt;is_rest&gt;false&lt;/is_rest&gt;&lt;message/&gt;&lt;name&gt;auto decrement quantity field&lt;/name&gt;&lt;order&gt;100&lt;/order&gt;&lt;priority&gt;100&lt;/priority&gt;&lt;rest_method/&gt;&lt;rest_method_text/&gt;&lt;rest_service/&gt;&lt;rest_service_text/&gt;&lt;rest_variables/&gt;&lt;role_conditions/&gt;&lt;script&gt;&lt;![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+    var cat_item = current.cat_item.toString();
+    var tr = new GlideRecord("x_414100_project_3_trailer_catalog_table");
+    tr.addQuery('sys_id', cat_item);
+    tr.query();
+
+    while(tr.next()){
+		
+        tr.meta_qty -= current.quantity;
+    }
+	
+	gs.info('business rule ran');
+
+})(current, previous);]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-14 20:52:11&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;8b190570db2080106e345c7a4896197a&lt;/sys_id&gt;&lt;sys_mod_count&gt;19&lt;/sys_mod_count&gt;&lt;sys_name&gt;auto decrement quantity field&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Project 3" source="x_414100_project_3"&gt;eb77e1a2db1c00106e345c7a489619be&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Project 3"&gt;eb77e1a2db1c00106e345c7a489619be&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_8b190570db2080106e345c7a4896197a&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-15 01:01:06&lt;/sys_updated_on&gt;&lt;template/&gt;&lt;when&gt;after&lt;/when&gt;&lt;/sys_script&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=8b190570db2080106e345c7a4896197a"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1678504736</payload_hash>
+        <record_name>auto decrement quantity field</record_name>
+        <reverted_from/>
+        <source>fb1689a3dbdc40106e345c7a489619d8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-15 01:01:06</sys_created_on>
+        <sys_id>32c3ca74db2480106e345c7a489619b7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16dcceed3980000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-15 01:01:06</sys_updated_on>
+        <type>Business Rule</type>
+        <update_guid>3ac3ca7437248010ee27398930a4b3b6</update_guid>
+        <update_guid_history>3ac3ca7437248010ee27398930a4b3b6:-1678504736,55130a7403248010f7ffa3bf947f952d:-40465043,75e2427464248010bd4d433250568d67:-1588297499,6b6286f0bb248010702ac498f37639fa:1323764030,0751caf004248010669bffd82af6db6b:1729258272,690146f06124801067000baa8d12fd1a:800613842,391086b0f12480100fa205fa7df234d3:1993823145,d07ff9306a248010a9482cc1253c96fd:-431524593,d3ddb9bc16e080108c55c343d6e0d451:-306411248,89ec31fc80e08010f1556f0e8a0db64d:-559616635,56ccf93c17e08010468cb353664077db:1775190516,b97ab53c5ee08010de59c71cbe370522:-688142012,260a3df841e0801077cbd7e0026336cd:-1090197371,4409b5b812e080100b58d76b8bbaf381:-196964484,5ec0357019e08010f5f553fea66cc73d:-454859729,bfa0b5304ee08010fe3a263debed795b:2017876942,f58aed386ba080103479f9d4613bc11f:-1501958502,3486257096a080100d020ff13174688e:-786227172,04ab0574222080102588d3566039a853:-78853141,a4da8d342a20801057a86325aeea5594:-1011382766</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-15 01:14:16</sys_created_on>
+        <sys_db_object display_value="" name="sys_script">sys_script</sys_db_object>
+        <sys_id>231282e12df143c2b78b4f3107b4b059</sys_id>
+        <sys_metadata>8b190570db2080106e345c7a4896197a</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>auto decrement quantity field</sys_name>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_parent display_value="Sc Req Item">b50f3f9adbd000106e345c7a489619c6</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_scope_delete display_value="">205e6add2b6c46828e85eec0dde7c144</sys_scope_delete>
+        <sys_update_name>sys_script_8b190570db2080106e345c7a4896197a</sys_update_name>
+        <sys_update_version display_value="sys_script_8b190570db2080106e345c7a4896197a">32c3ca74db2480106e345c7a489619b7</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-15 01:14:16</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

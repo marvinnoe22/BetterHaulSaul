@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="3">302bd53adb5c40106e345c7a489619ea</sp_column>
+        <sp_widget display_value="trailers-html-box-1">633b153adb5c40106e345c7a48961971</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 17:01:08</sys_created_on>
+        <sys_id>296c557adb5c40106e345c7a48961968</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_update_name>sp_instance_296c557adb5c40106e345c7a48961968</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 19:40:13</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"html": {
+		"value": "<div class=\"text-center\" style=\"margin-top: 20px;\" data-mce-style=\"margin-top: 20px;\"><img style=\"width: 75px; height: 50px;\" src=\"https://dealer-cdn.s3.amazonaws.com/skin/website/responsive/loadrunner/images/cat-goose.png?sv=229w4b\" alt=\"this image\" data-mce-src=\"https://dealer-cdn.s3.amazonaws.com/skin/website/responsive/loadrunner/images/cat-goose.png?sv=229w4b\" data-mce-style=\"width: 75px; height: 50px;\"><p style=\"font-weight: bold; padding-top: 10px; color: black;\" data-mce-style=\"font-weight: bold; padding-top: 10px; color: black;\">FLATBED TRAILERS</p></div>",
+		"displayValue": "<div class=\"text-center\" style=\"margin-top: 20px;\"><img style=\"width: 75px; height: 50px;\" src=\"https://dealer-cdn.s3.amazonaws.com/skin/website/responsive/loadrunner/images/cat-goose.png?sv=229w4b\" alt=\"this image\" />\n<p style=\"font-weight: bold; padding-top: 10px; color: black;\">FLATBED TRAILERS</p>\n</div>"
+	}
+}]]></widget_parameters>
+    </sp_instance>
+    <sys_translated_text action="delete_multiple" query="documentkey=296c557adb5c40106e345c7a48961968"/>
+</record_update>

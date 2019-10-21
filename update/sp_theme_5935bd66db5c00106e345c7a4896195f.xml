@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_theme">
+    <sp_theme action="INSERT_OR_UPDATE">
+        <css_variables>$sp-logo-margin-x: 		15px !default;&#13;
+$sp-tagline-color:		$text-color !default;&#13;
+$navbar-inverse-bg: 	#3a3f51 !default;&#13;
+$navbar-inverse-link-color: #bdc0c4 !default;&#13;
+$navbar-inverse-link-hover-color: #ffffff !default;&#13;
+$body-bg: 				#f0f3f4 !default;&#13;
+$dropdown-link-disabled-color: #ccc;</css_variables>
+        <footer display_value="Trailers_Footer">27b1f576dbdc40106e345c7a489619e1</footer>
+        <footer_fixed>false</footer_fixed>
+        <header display_value="Trailers_Header">c77831aadb5c00106e345c7a4896190b</header>
+        <name>Trailers_Theme</name>
+        <navbar_fixed>false</navbar_fixed>
+        <sys_class_name>sp_theme</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 00:12:44</sys_created_on>
+        <sys_id>5935bd66db5c00106e345c7a4896195f</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Trailers_Theme</sys_name>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_update_name>sp_theme_5935bd66db5c00106e345c7a4896195f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 18:35:12</sys_updated_on>
+    </sp_theme>
+</record_update>

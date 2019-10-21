@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_catalog">
+    <sc_cat_item_catalog action="DELETE">
+        <sc_cat_item display_value="Get a Quote">e1564536dbd840106e345c7a4896191c</sc_cat_item>
+        <sc_catalog display_value="Trailers">88dab92edb5c00106e345c7a48961905</sc_catalog>
+        <sys_class_name>sc_cat_item_catalog</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 15:26:50</sys_created_on>
+        <sys_id>04d6c576dbd840106e345c7a48961907</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Trailers.Get a Quote</sys_name>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_update_name>sc_cat_item_catalog_04d6c576dbd840106e345c7a48961907</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 15:26:50</sys_updated_on>
+    </sc_cat_item_catalog>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</application>
+        <file_path/>
+        <instance_id>72ba96d3db05b7004d2bac44d49619e4</instance_id>
+        <instance_name>dev84767</instance_name>
+        <name>sc_cat_item_catalog_04d6c576dbd840106e345c7a48961907</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_catalog"><sc_cat_item_catalog action="INSERT_OR_UPDATE"><sc_cat_item display_value="Get a Quote">e1564536dbd840106e345c7a4896191c</sc_cat_item><sc_catalog display_value="Trailers">88dab92edb5c00106e345c7a48961905</sc_catalog><sys_class_name>sc_cat_item_catalog</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2019-10-08 15:26:50</sys_created_on><sys_id>04d6c576dbd840106e345c7a48961907</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Trailers.Get a Quote</sys_name><sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package><sys_policy/><sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope><sys_update_name>sc_cat_item_catalog_04d6c576dbd840106e345c7a48961907</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2019-10-08 15:26:50</sys_updated_on></sc_cat_item_catalog></record_update>]]></payload>
+        <payload_hash>-2027756443</payload_hash>
+        <record_name>Trailers.Get a Quote</record_name>
+        <reverted_from/>
+        <source>a6c765a6db1c00106e345c7a48961914</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 15:26:50</sys_created_on>
+        <sys_id>04d6c576dbd840106e345c7a48961909</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16dabfae7c60000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 15:26:50</sys_updated_on>
+        <type>Catalog Items Catalog</type>
+        <update_guid>4cd6c576f8d84010051719649d49bb08</update_guid>
+        <update_guid_history>4cd6c576f8d84010051719649d49bb08:-2027756443</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Trailers.Get a Quote">0399ac78db6c40106e345c7a48961993</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-14 18:27:06</sys_created_on>
+        <sys_db_object display_value="" name="sc_cat_item_catalog">sc_cat_item_catalog</sys_db_object>
+        <sys_id>3808b6e496e34ab49de3874c862f8f44</sys_id>
+        <sys_metadata>04d6c576dbd840106e345c7a48961907</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Trailers.Get a Quote</sys_name>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_parent display_value="">e1564536dbd840106e345c7a4896191c</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_scope_delete display_value="">205e6add2b6c46828e85eec0dde7c144</sys_scope_delete>
+        <sys_update_name>sc_cat_item_catalog_04d6c576dbd840106e345c7a48961907</sys_update_name>
+        <sys_update_version display_value="sc_cat_item_catalog_04d6c576dbd840106e345c7a48961907">04d6c576dbd840106e345c7a48961909</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-14 18:27:06</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

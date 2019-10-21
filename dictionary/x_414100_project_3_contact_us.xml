@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="task" label="Contact Us" max_length="40" name="x_414100_project_3_contact_us" sizeclass="250" type="collection">
+        <element label="Business" max_length="100" name="business" type="string"/>
+        <element label="Comments" max_length="1000" name="comments_field" type="string"/>
+        <element label="Email" max_length="100" name="email" type="string"/>
+        <element label="First Name" max_length="100" name="first_name" type="string"/>
+        <element label="Last Name" max_length="100" name="last_name" type="string"/>
+        <element label="Phone Number" max_length="40" name="phone_number" type="phone_number_e164"/>
+        <element choice="1" label="Preferred Contact" max_length="100" name="preferred_contact" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Email" value="Email"/>
+                <element inactive_on_update="false" label="Phone" value="Phone"/>
+            </choice>
+        </element>
+        <element choice="1" label="Preferred Location" max_length="1000" name="preferred_location" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Elm Street" value="1428 Elm Street, Springwood OH"/>
+                <element inactive_on_update="false" label="Seseme Street" value="123 Seseme Street, Hollywood CA"/>
+                <element inactive_on_update="false" label="Westchester Place" value="1120 Westchester Place, Los Angeles CA"/>
+            </choice>
+        </element>
+        <element label="Zip Code" max_length="5" name="zip_code" type="string"/>
+    </element>
+</database>

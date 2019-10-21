@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_page">
+    <sp_page action="INSERT_OR_UPDATE">
+        <category>other</category>
+        <css>section.page {&#13;
+	background-color: $sp-homepage-bg;&#13;
+}&#13;
+section.page, main.body {&#13;
+    padding-top: 0px !important;&#13;
+}&#13;
+</css>
+        <draft>false</draft>
+        <dynamic_title_structure/>
+        <id>copy_of_trailers_homepage_1</id>
+        <internal>false</internal>
+        <public>true</public>
+        <roles/>
+        <short_description>Trailers home page</short_description>
+        <sys_class_name>sp_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-14 18:59:58</sys_created_on>
+        <sys_id>b821f8b0dbac40106e345c7a48961988</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>copy_of_trailers_homepage_1</sys_name>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_update_name>sp_page_b821f8b0dbac40106e345c7a48961988</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-14 18:59:58</sys_updated_on>
+        <title>Copy of  Trailers_HomePage (1)</title>
+    </sp_page>
+    <sys_translated_text action="delete_multiple" query="documentkey=b821f8b0dbac40106e345c7a48961988"/>
+</record_update>

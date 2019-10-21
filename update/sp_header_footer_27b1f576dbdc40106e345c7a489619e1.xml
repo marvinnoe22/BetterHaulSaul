@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_header_footer">
+    <sp_header_footer action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function() {
+  /* widget controller */
+  var c = this;
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>&#13;
+/* unvisited link */&#13;
+a.socialLinks:link {&#13;
+  color: white;&#13;
+}&#13;
+&#13;
+/* visited link */&#13;
+a.socialLinks:visited {&#13;
+  color: white;&#13;
+}&#13;
+&#13;
+/* mouse over link */&#13;
+a.socialLinks:hover {&#13;
+  color: red;&#13;
+}&#13;
+&#13;
+/* selected link */&#13;
+a.socialLinks:active {&#13;
+  color: white;&#13;
+}&#13;
+&#13;
+&#13;
+.trailersFooter {&#13;
+  padding : 40px; &#13;
+  background-color:back;&#13;
+}&#13;
+    &#13;
+.footerTextOne {&#13;
+	color: #de412c; &#13;
+    font-weight: bold;&#13;
+}&#13;
+    &#13;
+.footerText {&#13;
+    font-size: 14px;&#13;
+    color: white; &#13;
+    padding-left: 75px; &#13;
+    padding-top: 10px;&#13;
+}&#13;
+&#13;
+#footerTxtV2 {&#13;
+  font-size: 25px; &#13;
+  color: white;&#13;
+}&#13;
+&#13;
+@media only screen and (max-width: 1024px) and (min-width:1000px){&#13;
+  .footerText {&#13;
+    /*font-size: 10px;*/&#13;
+    padding-left: 35px; &#13;
+  }&#13;
+}&#13;
+&#13;
+@media only screen and (max-width: 768px) {&#13;
+  .footerText {&#13;
+    /*font-size: 10px;*/&#13;
+    padding-left: 0px;&#13;
+    text-align: center; &#13;
+  }&#13;
+  &#13;
+ .bottomHeader {&#13;
+    padding-top: 20px; &#13;
+ } &#13;
+}&#13;
+&#13;
+&#13;
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Trailers_Footer</name>
+        <option_schema/>
+        <public>true</public>
+        <roles/>
+        <script><![CDATA[(function() {
+
+	
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_header_footer</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 18:34:24</sys_created_on>
+        <sys_id>27b1f576dbdc40106e345c7a489619e1</sys_id>
+        <sys_mod_count>34</sys_mod_count>
+        <sys_name>Trailers_Footer</sys_name>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_update_name>sp_header_footer_27b1f576dbdc40106e345c7a489619e1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-15 17:15:28</sys_updated_on>
+        <template><![CDATA[<div class="container-fluid">
+    <!--<div class="row">
+      <div class="col-xs-12 text-center trailersFooter">-->
+        
+	<div class="row" style="background-color: #1662a6; padding-top: 20px;">
+      
+      <!--<div class="col-md-2">
+        
+      </div>-->
+        
+      
+        
+    	<div class="col-md-3">
+            
+        	<h5 class="text-center" style="font-weight: bold; font-size: 18px; color: white;">CONTACT US</h5>
+                
+            <p class="footerText">
+            	<i style="color: red;" class="fas fa-map-marker-alt"></i> 19681 SW 69TH PL
+                <br>  
+                FT. LAUDERDALE, FL 33332
+                <br>
+                <i style="color: red;" class="fas fa-map-marker-alt"></i> 3110 N FALKENBURG RD
+                <br>
+                TAMPA FL, 33619
+                <br>
+                <i style="color: red;" class="fas fa-map-marker-alt"></i> 5311 YOUNG PINE RD
+                <br>
+                ORLANDO, FL 32829
+                <br>
+                <i style="color: red;" class="fas fa-phone-alt"></i> (866) 296-9727
+            </p>
+        
+        </div>
+            
+        <div class="col-md-3">
+            
+        	<h5 class="text-center bottomHeader" style="font-weight: bold; font-size: 18px; color: white;">HOURS</h5>
+                
+            <p class="footerText">
+            	<span class="footerTextOne">MONDAY</span> 8:30 AM - 5 PM
+                <br>
+                <span class="footerTextOne">TUESDAY</span> 8:30 AM - 5 PM
+                <br>
+                <span class="footerTextOne">WEDNESDAY</span> 8:30 AM - 5 PM
+                <br>
+                <span class="footerTextOne">THURSDAY</span> 8:30 AM - 5 PM
+                <br>
+                <span class="footerTextOne">FRIDAY</span> 8:30 AM - 5 PM
+                <br>
+                <span class="footerTextOne">SATURDAY</span> 9:00 AM - 3 PM
+                <br>
+                <span class="footerTextOne">SUNDAY CLOSED</span>
+            </p>
+        
+        </div>
+            
+        <div class="col-md-3">
+            
+        	<h5 class="text-center bottomHeader" style="font-weight: bold; font-size: 18px; color: white;">QUICK LINKS</h5>
+                
+            <p class="footerText">
+            	ALL INVENTORY
+                <br>
+                TAMPA INVENTORY
+                <br>
+                FT. LAUDERDALE INVENTORY
+                <br>
+                ORLANDO INVENTORY
+                <br>
+                PARTS & SERVICE
+                <br>
+                FINANCING
+                <br>
+                CONTACT US
+            </p>
+        
+        </div>
+            
+        <div class="col-md-3">
+            
+            <h5 class="text-center bottomHeader" style="font-weight: bold; font-size: 18px; color: white;">CONNECT</h5>
+                
+            <p class="text-center" id="footerTxtV2"><a class="socialLinks" href="https://senecadoss.000webhostapp.com/project-3/facebook-betterhaulsaul.php" target="_blank"><i class="fab fa-facebook-square"></i></a> <a class="socialLinks" href="mailto:betterhaulsaul@gmail.com?Subject=Info%20Request"><i class="far fa-envelope"></i></a></p>
+        
+ 
+      <!--<div class="col-md-2">
+        
+      </div>-->
+        
+     
+      
+    </div>
+        
+        
+       	<!--footer go here!!!!!
+        ${ServiceNow Confidential. © ServiceNow, Inc. All rights reserved.}
+      </div>
+    </div>
+  </div>-->]]></template>
+    </sp_header_footer>
+</record_update>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category">
+    <sc_cat_item_category action="INSERT_OR_UPDATE">
+        <sc_cat_item display_value="Financing">6353f07adb1840106e345c7a4896197f</sc_cat_item>
+        <sc_category display_value="Information">361b0a0bdb9000106e345c7a48961987</sc_category>
+        <sys_class_name>sc_cat_item_category</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-09 15:05:21</sys_created_on>
+        <sys_id>8f7bce0bdb9000106e345c7a48961927</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Information.Financing</sys_name>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_update_name>sc_cat_item_category_8f7bce0bdb9000106e345c7a48961927</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-09 15:05:21</sys_updated_on>
+    </sc_cat_item_category>
+</record_update>

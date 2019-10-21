@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>sc</category>
+        <client_script><![CDATA[function($scope, $rootScope, $uibModal, spModal, spAriaUtil) {
+  /* widget controller */
+  var c = this;
+	$rootScope.hasSavedCarts = true;
+	if (c.data.savedCarts.length == 0)
+		$rootScope.hasSavedCarts = false;
+
+	var modalInstance;
+	c.loadCart = function(cart) {
+		c.server.get({
+			action: "retrieve_bundle_items",
+			cartName: cart.name
+		}).then(function(response) {
+			modalInstance = $uibModal.open({
+				ariaLabelledBy: 'modal-title',
+				ariaDescribedBy: 'modal-body',
+				templateUrl: 'myModalContent.html',
+				size: 'lg',
+				controller: modalCtrl,
+				resolve: {
+					cartID: function() {
+						return cart.sys_id;
+					},
+					bundleItems: function() {
+						return response.data.bundleItems;
+					},
+					cartCount: function() {
+						return c.data.cartCount;
+					},
+					bundleName: function() {
+						return cart.name;
+					}
+				}
+			});
+		})
+	}
+
+	function modalCtrl($scope, cartID, bundleItems, cartCount, bundleName) {
+		$scope.bundleName = bundleName;
+		$scope.cartCount = cartCount;
+		$scope.bundleItems = bundleItems;
+		$scope.cartID = cartID;
+		$scope.addBundleToCart = addBundleToCart;
+		$scope.replaceCartWithBundle = replaceCartWithBundle;
+	}
+
+	function addBundleToCart(cartID) {
+		c.server.get({
+			action: "load_cart",
+			cartID: cartID
+		}).then(function(response) {
+			spAriaUtil.sendLiveMessage($scope.data.msgs.bundleAddedMsg);
+			c.data = response.data;
+			$rootScope.$broadcast("$sp.service_catalog.cart.update");
+			modalInstance.dismiss();
+		});
+	}
+
+	function replaceCartWithBundle(cartID) {
+		c.server.get({
+			action: "replace_cart",
+			cartID: cartID
+		}).then(function(response) {
+			spAriaUtil.sendLiveMessage($scope.data.msgs.bundleLoadedMsg);
+
+			c.data = response.data;
+			$rootScope.$broadcast("$sp.service_catalog.cart.update");
+			modalInstance.dismiss();
+		});
+	}
+
+	$scope.$on("$sp.service_catalog.cart.save_cart", function() {
+		c.server.update();
+	});
+
+	$scope.$on("$sp.service_catalog.cart.update", function() {
+		c.server.update();
+	})
+
+	c.removeBundle = function(cart) {
+		spModal.confirm(c.data.msgs.deleteBundleConfirmation).then(function(confirm) {
+			if (confirm) {
+				c.data.action = "remove_bundle";
+				c.data.cartID = cart.sys_id;
+				c.server.get({
+					action: "remove_bundle",
+					cartID: cart.sys_id
+				}).then(function(response) {
+					spAriaUtil.sendLiveMessage(cart.name + " " + $scope.data.msgs.bundleRemovedMsg);
+					c.data = response.data;
+				});
+			}
+		});
+	}
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.panel {
+ 		margin-bottom: 0; 
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Popular Bundles</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+	data.msgs = {};
+	data.msgs.deleteBundleConfirmation = gs.getMessage("Are you sure you want to delete this bundle?");
+	data.msgs.bundleLoadedMsg = gs.getMessage("The bundle has replaced the contents of your cart.");
+	data.msgs.bundleRemovedMsg = gs.getMessage("has been removed from your bundles");
+	data.msgs.bundleAddedMsg = gs.getMessage("Bundle has been added to your cart.");
+
+	var userID = gs.getUser().getID();
+	var cart = new SPCart(input.cartName, userID);
+
+	data.cartCount = cart.getItems().length;
+
+	if (input && input.action === "retrieve_bundle_items") {
+		var bundle = new SPCart(input.cartName, userID);
+		data.bundleItems = bundle.getItems();
+		return;
+	}
+
+	if (input && input.action === "load_cart") {
+		cart.loadCart(input.cartID);
+	}
+
+	if (input && input.action === "replace_cart") {
+		cart.clearCart();
+		cart.loadCart(input.cartID);
+	}
+
+	if (input && input.action === "remove_bundle") {
+		var scCartGR = new GlideRecord("sc_cart");
+		if (scCartGR.get(input.cartID)) {
+			scCartGR.deleteRecord();
+		}
+	}
+
+	data.savedCarts = [];
+	var savedCartsGR = new GlideRecord("sc_cart");
+	savedCartsGR.addQuery("user", userID);
+	savedCartsGR.addQuery("hidden", false);
+	savedCartsGR.addQuery("name", "!=", "DEFAULT");
+	savedCartsGR.addQuery("name", "!=", "saved_items");
+	savedCartsGR.orderBy("name");
+	savedCartsGR.query();
+
+	while(savedCartsGR.next()) {
+		data.savedCarts.push({
+			name: savedCartsGR.getValue("name"),
+			sys_id: savedCartsGR.getUniqueValue()
+		});
+	}
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-16 18:17:18</sys_created_on>
+        <sys_id>538ab2d1dba444106e345c7a489619b3</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Popular Bundles</sys_name>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_update_name>sp_widget_538ab2d1dba444106e345c7a489619b3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-16 18:17:52</sys_updated_on>
+        <template><![CDATA[<div class="panel panel-default" ng-class="{'hidden-xs': c.data.savedCarts.length == 0}" ng-if = "$root.hasSavedCarts || $root.hasRequestsOrApprovals">
+
+  <div class="panel-heading bundle-title">
+    <h2 class="h6 panel-title bundle-title-content">${My Saved Bundles}</h2>
+  </div>
+  
+  <div ng-if="c.data.savedCarts.length == 0" class="panel-body bundles-container" >
+ 		${You have no saved bundles } 
+  </div>
+  <div ng-if="c.data.savedCarts.length > 0" class="list-group bundles-container" >
+    <div class="list-group-item "
+         ng-repeat="cart in c.data.savedCarts | orderBy: 'order'" >
+      <div class="row">
+        <div class="col-sm-8 col-xs-7">{{cart.name}}</div>
+        <div class="col-sm-4 col-xs-5 text-a-r">
+            <a ng-click="c.removeBundle(cart)" aria-label="${Remove} {{cart.name}} bundle" href="javascript:void(0)">${Remove}</a>
+            <span class="m-r-sm m-l-sm"> | </span>
+            <a ng-click="c.loadCart(cart)"  aria-label="${Open} {{cart.name}} bundle" href="javascript:void(0)">${Open}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/ng-template" id="myModalContent.html">
+    <div class="modal-header">
+        <h1 class="h3 modal-title">{{bundleName}}</h1>
+    </div>
+    <div class="modal-body">
+    	<div ng-if="cartCount > 0">
+        <p><strong>${Replace Cart}</strong> ${will remove the current contents of your cart and replace it with the bundle.}</p>
+        <p><strong>${Add to Cart}</strong> ${will add the contents of the bundle into your cart without removing it's current contents.}</p>
+      </div>
+      <h2 class="h4">${Items In Bundle}</h2>
+      <table id="cart" class="table table-hover table-condensed">
+        <tbody>
+          <tr ng-repeat="item in bundleItems track by item.sys_id | orderBy: 'order'">
+            <td data-th="Product">
+              <div class="row">
+                <div class="col-sm-2 hidden-xs"><img ng-show="item.picture" ng-src="{{item.picture}}" alt="..." class="img-responsive item-image"/></div>
+                <div class="col-sm-10">
+                  <h4 class="nomargin">{{item.name}}</h4>
+                  <p class="hidden-xs">{{item.short_description}}</p>
+                </div>
+              </div>
+            </td>
+            <td>
+              <span ng-if ="item.show_price"><strong aria-label="${Price} {{item.display_price}}">{{item.display_price}}</strong></span>
+              <div ng-if ="item.show_recurring_price" aria-label="${Recurring price} {{item.display_recurring_price}}">+ {{item.display_recurring_price}} {{item.recurring_frequency_display}}</div>
+            </td>
+            <td data-th="Quantity">
+              <span ng-if="item.show_quantity" aria-label="${Quantity} {{item.quantity}}">{{item.quantity}}</span>
+              <span ng-if="!item.show_quantity">-</span>
+            </td>
+            <td>
+              <span ng-if ="item.show_price"><strong aria-label="${Subtotal price} {{item.subtotal_price}}">{{item.subtotal_price}}</strong></span>
+              <div ng-if ="item.show_recurring_price" aria-label="${Recurring subtotal price} {{item.recurring_subtotal_price}}">+ {{item.recurring_subtotal_price}} {{item.recurring_frequency_display}}</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal-footer">
+      <button ng-if="cartCount > 0" class="btn btn-default" ng-click="replaceCartWithBundle(cartID)">${Replace Cart}</button>
+      <button class="btn btn-primary" ng-click="addBundleToCart(cartID)">${Add to Cart}</button>
+    </div>
+  </script>
+</div>]]></template>
+    </sp_widget>
+</record_update>

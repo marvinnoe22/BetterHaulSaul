@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_push_notif_app_install">
+    <sys_push_notif_app_install action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <last_registered_on>2019-10-15 14:03:53</last_registered_on>
+        <sys_class_name>sys_push_notif_app_install</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-15 14:03:53</sys_created_on>
+        <sys_id>91f67c09dbec80106e345c7a4896199d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>1101ad6ac3bc2450f88c7232d1c0453f1d3fd0790eeae4c41d469215a0f6c625</sys_name>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_policy/>
+        <sys_push_application_id display_value="ServiceNow Classic Mobile Application">ab704041ff1102009738ffffffffff33</sys_push_application_id>
+        <sys_push_platform_id display_value="Apple">20e71f30ff0002009738ffffffffff6b</sys_push_platform_id>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_update_name>sys_push_notif_app_install_91f67c09dbec80106e345c7a4896199d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-15 14:03:53</sys_updated_on>
+        <sys_user_id display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</sys_user_id>
+        <token>1101ad6ac3bc2450f88c7232d1c0453f1d3fd0790eeae4c41d469215a0f6c625</token>
+    </sys_push_notif_app_install>
+</record_update>

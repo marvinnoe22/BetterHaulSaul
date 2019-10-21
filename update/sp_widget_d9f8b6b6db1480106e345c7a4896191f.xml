@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function($timeout, spModal) 
+{
+ var c = this;
+ var shared = c.widget.options.shared; //Get the shared object from the "My Pet" widget
+ 
+	//Function that selects the pet when you click the Adopt button
+ c.selectTrailer = function(trailer) {
+ //shared.selectedTrailer = trailer;
+
+	$timeout(function(){
+	 //The native 'close' binding from Bootstrap UI Modals is not accessible through the spModal service, therefore...
+	 //We use Angular Element within a $timeout function to simulate clicking the modal's submit button
+	 angular.element('[ng-click*="buttonClicked"]').triggerHandler('click'); 
+	 //The modal's native submit button has the ng-click attribute and calls the function "buttonClicked"
+	 //Therefore, we can target that attribute and click it
+	 });
+ }
+ 
+/* c.onPrompt = function(trailer) {
+        spModal.open({
+          title: "Contact Info",
+          widget: "99c4f26fdb4cc010915861ca0b96198f", 
+					buttons: [{label:'${Adopt}', primary: true} ],
+					shared: shared.selectedTrailer
+				}).then(function(){
+            console.log('trailer adopted');
+        }) ;
+    }*/
+ //Disable the visibility of the default modal button
+ angular.element('[ng-click*="buttonClicked"]').css({visibility:'hidden'});
+	
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.thumbnail.selected {&#13;
+ box-shadow: 0 0 10px 5px #3071a9;&#13;
+}&#13;
+.pets {&#13;
+ display: -ms-flex;&#13;
+ display: -webkit-flex;&#13;
+ display: flex;&#13;
+ flex-wrap: wrap;&#13;
+}&#13;
+.pet {&#13;
+ display: flex; &#13;
+}&#13;
+&#13;
+&#13;
+.caption{&#13;
+  font-weight: bolder;&#13;
+}&#13;
+&#13;
+.petImage{&#13;
+  width: 100%;&#13;
+  height: 200px;&#13;
+}&#13;
+&#13;
+.badge{&#13;
+  background-color: red;&#13;
+  padding: 10px;&#13;
+}&#13;
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>flatbed_trailers_query</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>Flatbed trailers (query)</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+    //Use GlideRecord to build the list of adoptable pets, store them in the data.pets object
+    data.trailers = [];
+		console.log('hi');
+    var trailerGR = new GlideRecord('x_414100_project_3_trailers_inventory');
+    trailerGR.addQuery("u_trailer_type", "flatbed");
+    trailerGR.query();
+    while (trailerGR.next()) {
+        data.trailers.push({
+stock_number: trailerGR.number.toString(),
+name: trailerGR.u_name.toString(),
+photo: trailerGR.trailer_image.getDisplayValue().toString(),
+type: trailerGR.u_trailer_type.toString(),
+condition: trailerGR.u_condition.toString(),
+manufacturer: trailerGR.u_manufacturer.toString(),
+model: trailerGR.u_model.toString(),
+width: trailerGR.u_width.toString(),
+length: trailerGR.u_floor_length.toString(),
+weight: trailerGR.u_weight.toString(),
+gvwr: trailerGR.u_gvwr.toString(),
+quantity: trailerGR.u_qty.toString()
+			
+        });
+			
+    }
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-09 00:03:31</sys_created_on>
+        <sys_id>d9f8b6b6db1480106e345c7a4896191f</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>Flatbed trailers (query)</sys_name>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_update_name>sp_widget_d9f8b6b6db1480106e345c7a4896191f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-09 14:41:26</sys_updated_on>
+        <template><![CDATA[<div class="row pets">
+ <div class="col-sm-6 col-md-3 pet" ng-repeat="trailers in data.trailers">
+   <div class="thumbnail" ng-class="{'selected' : c.widget.options.shared.currentTrailer.name == trailer.name}">
+   <img ng-src="{{trailers.photo}}">
+   <div class="caption">
+    <h3>{{trailers.name}}</h3>
+    <p>Type: {{trailers.type}}</p>
+    <p>Condition: {{trailers.condition}}</p>
+    <p>Stock Number: <span class="badge">{{trailers.stock_number}}</span></p>
+    <p>manufacturer: {{trailers.manufacturer}}</p>
+
+   <!--<p ng-if="!pet.owner">
+     <button ng-click="c.onPrompt(pet)" class="btn btn-success">
+      Adopt Me
+     </button>
+    </p>  -->
+
+   <!--      
+   <p>
+     <button ng-click="c.selectTrailer(trailer)" class="btn btn-primary" role="button">${Adopt} {{pet.name}}</button>
+   </p>
+  -->
+   </div>
+   </div>
+ </div>
+</div>]]></template>
+    </sp_widget>
+</record_update>

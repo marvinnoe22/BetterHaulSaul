@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="x_414100_project_3_trailers_inventory">
+    <x_414100_project_3_trailers_inventory action="INSERT_OR_UPDATE">
+        <number>TRA0001019</number>
+        <sys_class_name>x_414100_project_3_trailers_inventory</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 15:43:21</sys_created_on>
+        <sys_id>67b98d7edbd840106e345c7a4896199f</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Car Hauler Trailer w/ brakes</sys_name>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_update_name>x_414100_project_3_trailers_inventory_67b98d7edbd840106e345c7a4896199f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-10 14:11:45</sys_updated_on>
+        <trailer_image>32ed7243db9400106e345c7a489619c4</trailer_image>
+        <u_condition>new</u_condition>
+        <u_description>7x20 7K Car Hauler Trailer w/brakes |LR Trailers &amp; Haulers 7 x 20 | CH82-20T3-2B&#13;
+&#13;
+OPTIONS:Tandem 3,500 lb Al-Ko Dexter Axles (Brakes on Both Axles)&#13;
+- Tail Light Protectors&#13;
+- Slide in Ramps&#13;
+- Stake Body Pockets&#13;
+- Steel Mod Wheels&#13;
+- Break Away System&#13;
+- Full Wrap Tongue&#13;
+- Tread Plated Steel Decking&#13;
+- Electric Brakes&#13;
+- Raised Bump Rail&#13;
+- Fender Backs&#13;
+- 7 Way Wiring Harness&#13;
+- 2,000 Lb Tongue Jack&#13;
+- 2x10 Pressure Treated Decking&#13;
+- Woodrich Timberoil Wood Treament System</u_description>
+        <u_floor_length>20 ft</u_floor_length>
+        <u_gvwr>7000 lbs</u_gvwr>
+        <u_manufacturer>pace america</u_manufacturer>
+        <u_model>CH82-20T3-2B</u_model>
+        <u_name>Car Hauler Trailer w/ brakes</u_name>
+        <u_price/>
+        <u_pull_type>bumper</u_pull_type>
+        <u_qty>1</u_qty>
+        <u_trailer_type>car haulers</u_trailer_type>
+        <u_vin>1ORLCH16B23456789</u_vin>
+        <u_weight>3.5 ton</u_weight>
+        <u_width>7 ft</u_width>
+        <u_year>2019</u_year>
+    </x_414100_project_3_trailers_inventory>
+</record_update>

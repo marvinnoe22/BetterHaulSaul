@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_ng_pro_sp_widget">
+    <m2m_sp_ng_pro_sp_widget action="DELETE">
+        <sp_angular_provider display_value="scBindHtmlCompile">631d65a287300300e0ef0cf888cb0ba3</sp_angular_provider>
+        <sp_widget display_value="Copy of SC Catalog Item">154b54d3db1c00106e345c7a489619d7</sp_widget>
+        <sys_class_name>m2m_sp_ng_pro_sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-10 01:33:34</sys_created_on>
+        <sys_id>d54b9cd3db1c00106e345c7a4896196f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>scBindHtmlCompile.Copy of SC Catalog Item</sys_name>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_update_name>m2m_sp_ng_pro_sp_widget_d54b9cd3db1c00106e345c7a4896196f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-10 01:33:34</sys_updated_on>
+    </m2m_sp_ng_pro_sp_widget>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</application>
+        <file_path/>
+        <instance_id>72ba96d3db05b7004d2bac44d49619e4</instance_id>
+        <instance_name>dev84767</instance_name>
+        <name>m2m_sp_ng_pro_sp_widget_d54b9cd3db1c00106e345c7a4896196f</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_ng_pro_sp_widget"><m2m_sp_ng_pro_sp_widget action="INSERT_OR_UPDATE"><sp_angular_provider display_value="scBindHtmlCompile">631d65a287300300e0ef0cf888cb0ba3</sp_angular_provider><sp_widget display_value="Copy of SC Catalog Item">154b54d3db1c00106e345c7a489619d7</sp_widget><sys_class_name>m2m_sp_ng_pro_sp_widget</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2019-10-10 01:33:34</sys_created_on><sys_id>d54b9cd3db1c00106e345c7a4896196f</sys_id><sys_mod_count>0</sys_mod_count><sys_name>scBindHtmlCompile.Copy of SC Catalog Item</sys_name><sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package><sys_policy/><sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope><sys_update_name>m2m_sp_ng_pro_sp_widget_d54b9cd3db1c00106e345c7a4896196f</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2019-10-10 01:33:34</sys_updated_on></m2m_sp_ng_pro_sp_widget></record_update>]]></payload>
+        <payload_hash>-1943644164</payload_hash>
+        <record_name>scBindHtmlCompile.Copy of SC Catalog Item</record_name>
+        <reverted_from/>
+        <source>a6c765a6db1c00106e345c7a48961914</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-10 01:33:34</sys_created_on>
+        <sys_id>9d4b9cd3db1c00106e345c7a48961970</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16db34cbdeb0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-10 01:33:34</sys_updated_on>
+        <type>Angular Providers</type>
+        <update_guid>d54b9cd3bf1c00108bfe320864301a70</update_guid>
+        <update_guid_history>d54b9cd3bf1c00108bfe320864301a70:-1943644164</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="scBindHtmlCompile.Copy of SC Catalog Item">6cfc5857db1c00106e345c7a48961961</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-10 01:40:53</sys_created_on>
+        <sys_db_object display_value="" name="m2m_sp_ng_pro_sp_widget">m2m_sp_ng_pro_sp_widget</sys_db_object>
+        <sys_id>08fb5ac039154698839118763791d844</sys_id>
+        <sys_metadata>d54b9cd3db1c00106e345c7a4896196f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>scBindHtmlCompile.Copy of SC Catalog Item</sys_name>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_scope_delete display_value="">205e6add2b6c46828e85eec0dde7c144</sys_scope_delete>
+        <sys_update_name>m2m_sp_ng_pro_sp_widget_d54b9cd3db1c00106e345c7a4896196f</sys_update_name>
+        <sys_update_version display_value="m2m_sp_ng_pro_sp_widget_d54b9cd3db1c00106e345c7a4896196f">9d4b9cd3db1c00106e345c7a48961970</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-10 01:40:53</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

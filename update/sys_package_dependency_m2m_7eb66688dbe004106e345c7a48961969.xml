@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_package_dependency_m2m">
+    <sys_package_dependency_m2m action="INSERT_OR_UPDATE">
+        <dependency display_value="Change Request" source="com.snc.change_request">2f1ef716dbd000106e345c7a48961978</dependency>
+        <min_version>1.0.0</min_version>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-12 19:38:18</sys_created_on>
+        <sys_id>7eb66688dbe004106e345c7a48961969</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-12 19:38:18</sys_updated_on>
+    </sys_package_dependency_m2m>
+</record_update>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="io_set_item">
+    <io_set_item action="INSERT_OR_UPDATE">
+        <order>100</order>
+        <sc_cat_item display_value="Acer Aspire E 15">23d5574fdbd400106e345c7a4896199e</sc_cat_item>
+        <sys_class_name>io_set_item</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-09 20:49:11</sys_created_on>
+        <sys_id>2f2a1f83db1800106e345c7a48961953</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Laptop Requirements.Acer Aspire E 15</sys_name>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_update_name>io_set_item_2f2a1f83db1800106e345c7a48961953</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-09 20:49:11</sys_updated_on>
+        <variable_set display_value="Laptop Requirements">c92a1b43db1800106e345c7a489619de</variable_set>
+    </io_set_item>
+</record_update>

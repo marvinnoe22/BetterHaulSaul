@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function($rootScope) {
+  /* widget controller */
+  var c = this;
+	c.data.trailersCat= c.data.trailersCatagories;
+	//c.data.trailersCat= removeDups(c.data.trailers);
+	
+	/*function removeDups(names) {
+  var unique = {};
+  names.forEach(function(i) {
+    if(!unique[i]) {
+      unique[i] = true;
+			
+    }
+  });
+  return Object.keys(unique);
+}*/
+	
+	c.selected = function(cat){
+		$rootScope.$broadcast('customEvent', cat);
+	}
+}
+
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.imageCat{
+  width: 75px; 
+  height: 50px;
+  
+}
+.imageCatBox{
+  padding:10px;
+}
+
+.catName{
+  font-weight: bold; 
+  padding-top: 10px; 
+  color: black;
+}
+
+.imageCatBox:hover{
+  background: gray;
+}
+  
+
+@media only screen and (max-width: 480px){
+  .imageCat{
+    width: 45px;
+    height: 35px;
+  }
+  
+  .imageCatBox{
+  padding:1px;
+}
+  
+  .catName{
+  	font-size: 0.6em;
+	}
+    
+}
+  </css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>trailers_categories</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>trailers_categories</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+	
+	data.trailersCatagories = [
+		{type: "dump", name: "DUMP", image:"https://dealer-cdn.s3.amazonaws.com/skin/website/responsive/loadrunner/images/cat-dump.png?sv=229w4b"},
+		{type: "cargo",name: "ENCLOSED CARGO",  image:"https://dealer-cdn.s3.amazonaws.com/skin/website/responsive/loadrunner/images/cat-cargo.png?sv=229w4b"},
+		{type: "car haulers",name: "CAR TRAILERS", image:"https://dealer-cdn.s3.amazonaws.com/skin/website/responsive/loadrunner/images/cat-car.png?sv=229w4b"},
+		{type: "equipment",name: "EQUIPMENT", image:"https://dealer-cdn.s3.amazonaws.com/skin/website/responsive/loadrunner/images/cat-equipment.png?sv=229w4b"},
+		{type: "utility",name: "UTILITY", image:"https://dealer-cdn.s3.amazonaws.com/skin/website/responsive/loadrunner/images/cat-utility.png?sv=229w4b"},
+		{type: "flatbed",name: "FLATBED TRAILERS", image:"https://dealer-cdn.s3.amazonaws.com/skin/website/responsive/loadrunner/images/cat-goose.png?sv=229w4b"}
+	];
+	/*data.trailersCatagories = [];
+    var trailerGR = new GlideAggregate('x_414100_project_3_trailer_catalog_table');
+    trailerGR.groupBy("type");
+		
+    trailerGR.query();
+    while (trailerGR.next()) {
+        data.trailersCatagories.push({
+				type: trailerGR.meta_trailer_type.toString(),
+				photo: trailerGR.picture.getDisplayValue().toString()
+        });
+    }*/
+
+})();
+
+
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-12 23:09:28</sys_created_on>
+        <sys_id>16e6d700dbe404106e345c7a489619b8</sys_id>
+        <sys_mod_count>69</sys_mod_count>
+        <sys_name>trailers_categories</sys_name>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_update_name>sp_widget_16e6d700dbe404106e345c7a489619b8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-16 10:05:00</sys_updated_on>
+        <template><![CDATA[<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+<div class="row" style="border-top: 4px solid black; padding-top: 20px;">
+  <div class="col-xs-4 col-sm-2"
+       ng-repeat="cat in c.data.trailersCat">
+    <div class="text-center imageCatBox" ng-click="c.selected(cat)" >
+      <img class="imageCat" ng-src="{{cat.image}}" alt="this image" />
+    	<p class="catName">{{cat.name}}</p>
+    </div> 
+  </div>
+</div>
+
+
+<!--<script>
+    $(document).ready(function(){
+        $(".imageCat").mouseenter(function(){
+            $(this).css("background-color", "#636363");
+  			});
+        $(".imageCat").mouseleave(function(){
+    		    $(this).css("background-color", "white");
+  			});
+    });
+</script> -->
+
+
+]]></template>
+    </sp_widget>
+</record_update>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="update_synch=true" extends="sc_cat_item" label="Trailer Catalog Table" max_length="40" name="x_414100_project_3_trailer_catalog_table" type="collection">
+        <element choice="1" label="Condition" max_length="40" name="meta_condition" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="New" sequence="100" value="new"/>
+                <element inactive_on_update="false" label="Used" sequence="200" value="used"/>
+            </choice>
+        </element>
+        <element label="Description" max_length="3000" name="meta_description" type="string"/>
+        <element label="Floor Length" max_length="30" name="meta_floor_length" type="string"/>
+        <element label="GVWR" max_length="30" name="meta_gvwr" type="string"/>
+        <element choice="1" label="Manufacturer" max_length="40" name="meta_manufacturer" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="haulmark" sequence="100" value="haulmark"/>
+                <element inactive_on_update="false" label="look trailers" sequence="200" value="look trailers"/>
+                <element inactive_on_update="false" label="Pace America" sequence="300" value="pace america"/>
+                <element inactive_on_update="false" label="Wells Cargo" sequence="400" value="wells cargo"/>
+                <element inactive_on_update="false" label="Cargo Mate" sequence="500" value="cargo mate"/>
+            </choice>
+        </element>
+        <element label="Model" max_length="30" name="meta_model" type="string"/>
+        <element label="Name" max_length="100" name="meta_name" type="string"/>
+        <element label="Number" max_length="20" name="meta_number" type="string"/>
+        <element label="Price" max_length="40" name="meta_price" type="float"/>
+        <element choice="1" label="Pull Type" max_length="40" name="meta_pull_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Bumper" sequence="100" value="bumper"/>
+                <element inactive_on_update="false" label="Gooseneck" sequence="200" value="gooseneck"/>
+            </choice>
+        </element>
+        <element label="In Stock" max_length="40" name="meta_qty" type="integer"/>
+        <element label="Image" max_length="40" name="meta_trailer_image" type="user_image"/>
+        <element choice="1" label="Trailer Type" max_length="40" name="meta_trailer_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Tilt" sequence="0" value="tilt"/>
+                <element inactive_on_update="false" label="Utility" sequence="1" value="utility"/>
+                <element inactive_on_update="false" label="Flatbed" sequence="2" value="flatbed"/>
+                <element inactive_on_update="false" label="Car Haulers" sequence="3" value="car haulers"/>
+                <element inactive_on_update="false" label="Cargo" sequence="4" value="cargo"/>
+                <element inactive_on_update="false" label="Dump" sequence="5" value="dump"/>
+                <element inactive_on_update="false" label="Equipment" sequence="6" value="equipment"/>
+            </choice>
+        </element>
+        <element label="VIN" max_length="30" name="meta_vin" type="string"/>
+        <element label="Weight" max_length="30" name="meta_weight" type="string"/>
+        <element label="Width" max_length="30" name="meta_width" type="string"/>
+        <element label="Year" max_length="10" name="meta_year" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Stock Number" max_length="40" name="number" type="string"/>
+    </element>
+</database>

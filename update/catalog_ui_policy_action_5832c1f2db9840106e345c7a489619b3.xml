@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="catalog_ui_policy_action">
+    <catalog_ui_policy_action action="INSERT_OR_UPDATE">
+        <catalog_item display_value="Financing">6353f07adb1840106e345c7a4896197f</catalog_item>
+        <catalog_variable>IO:eb514d32db9840106e345c7a489619c6</catalog_variable>
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field/>
+        <mandatory>ignore</mandatory>
+        <order>100</order>
+        <sys_class_name>catalog_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 15:06:56</sys_created_on>
+        <sys_id>5832c1f2db9840106e345c7a489619b3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>enter_address</sys_name>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_update_name>catalog_ui_policy_action_5832c1f2db9840106e345c7a489619b3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-08 15:06:56</sys_updated_on>
+        <table/>
+        <ui_policy display_value="hide address">ac020db2db9840106e345c7a489619fc</ui_policy>
+        <variable>enter_address</variable>
+        <variable_set/>
+        <visible>false</visible>
+    </catalog_ui_policy_action>
+</record_update>

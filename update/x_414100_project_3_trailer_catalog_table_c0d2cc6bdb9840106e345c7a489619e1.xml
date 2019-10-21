@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="x_414100_project_3_trailer_catalog_table">
+    <x_414100_project_3_trailer_catalog_table action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <availability>on_desktop</availability>
+        <billable>false</billable>
+        <category display_value="Flatbed">d47bf16edb5c00106e345c7a4896199e</category>
+        <cost>0</cost>
+        <custom_cart/>
+        <delivery_plan/>
+        <delivery_plan_script/>
+        <delivery_time>1970-01-03 00:00:00</delivery_time>
+        <description><![CDATA[<p><span style="font-size: 10pt;">8.5x36 Deck Over Trailer Gooseneck 12 TON Flatbed 8.5 x 36 | FG102-36T12-FF </span></p>
+<p><span style="font-size: 10pt;">OPTIONS: </span></p>
+<ul style="list-style-position: inside;"><li><span style="font-size: 10pt;"> 2 - 12,000 Lb Dexter Sprg Axles (2 Elec Brakes) </span></li><li><span style="font-size: 10pt;"> ST235/80 R16 LRE 10 Ply. (BLACK WHEELS)(Dual) </span></li><li><span style="font-size: 10pt;"> Coupler 2-5/16&#34; Adj. Rd. 19 lb. (Standard Neck &amp; Coupler) </span></li><li><span style="font-size: 10pt;"> Treated Wood Floor </span></li><li><span style="font-size: 10pt;">16&#34; Cross-Members </span></li><li><span style="font-size: 10pt;"> Jack Spring Loaded Drop Leg 2-10K </span></li><li><span style="font-size: 10pt;"> Lighting LED </span></li><li><span style="font-size: 10pt;"> Mud Flaps </span></li><li><span style="font-size: 10pt;"> Front Tool Box (Full Width Between Risers) </span></li><li><span style="font-size: 10pt;"> Standard Frame w/out Bridge </span></li><li><span style="font-size: 10pt;"> Black (w/Primer) </span></li><li><span style="font-size: 10pt;"> Road Service Program </span></li><li><span style="font-size: 10pt;"> 2 Adjustable Fold Over Flat Double Hinged Spring Assisted Wedge Ramps</span></li></ul>]]></description>
+        <display_price_property>non_zero</display_price_property>
+        <entitlement_script/>
+        <group/>
+        <hide_sp>false</hide_sp>
+        <icon/>
+        <ignore_price>false</ignore_price>
+        <image/>
+        <list_price>0</list_price>
+        <location/>
+        <mandatory_attachment>false</mandatory_attachment>
+        <meta/>
+        <meta_condition>new</meta_condition>
+        <meta_description>8.5x36 Deck Over Trailer Gooseneck 12 TON Flatbed 8.5 x 36 | FG102-36T12-FF&#13;
+&#13;
+OPTIONS: &#13;
+&#13;
+2 - 12,000 Lb Dexter Sprg Axles (2 Elec Brakes) &#13;
+ST235/80 R16 LRE 10 Ply. (BLACK WHEELS)(Dual) &#13;
+Coupler 2-5/16" Adj. Rd. 19 lb. (Standard Neck &amp; Coupler) &#13;
+Treated Wood Floor&#13;
+16" Cross-Members &#13;
+Jack Spring Loaded Drop Leg 2-10K &#13;
+Lighting LED &#13;
+Mud Flaps &#13;
+Front Tool Box (Full Width Between Risers) &#13;
+Standard Frame w/out Bridge &#13;
+Black (w/Primer) &#13;
+Road Service Program &#13;
+2 Adjustable Fold Over Flat Double Hinged Spring Assisted Wedge Ramps</meta_description>
+        <meta_floor_length>36</meta_floor_length>
+        <meta_gvwr>240000</meta_gvwr>
+        <meta_manufacturer>pace america</meta_manufacturer>
+        <meta_model>FG102-36T12-FF</meta_model>
+        <meta_name>Deck Over Trailer Gooseneck</meta_name>
+        <meta_number/>
+        <meta_price/>
+        <meta_pull_type>gooseneck</meta_pull_type>
+        <meta_qty>20</meta_qty>
+        <meta_trailer_image/>
+        <meta_trailer_type>flatbed</meta_trailer_type>
+        <meta_vin>1ORLFG72234567890</meta_vin>
+        <meta_weight>24000</meta_weight>
+        <meta_width>8.5 </meta_width>
+        <meta_year>2019</meta_year>
+        <mobile_hide_price>false</mobile_hide_price>
+        <mobile_picture/>
+        <mobile_picture_type>use_desktop_picture</mobile_picture_type>
+        <model/>
+        <name>Deck Over Trailer Gooseneck</name>
+        <no_attachment_v2>false</no_attachment_v2>
+        <no_cart>false</no_cart>
+        <no_cart_v2>false</no_cart_v2>
+        <no_delivery_time_v2>false</no_delivery_time_v2>
+        <no_order>false</no_order>
+        <no_order_now>false</no_order_now>
+        <no_proceed_checkout>false</no_proceed_checkout>
+        <no_quantity>false</no_quantity>
+        <no_quantity_v2>false</no_quantity_v2>
+        <no_search>false</no_search>
+        <no_wishlist_v2>false</no_wishlist_v2>
+        <number>TRA0001003</number>
+        <omit_price>false</omit_price>
+        <order>0</order>
+        <ordered_item_link/>
+        <picture>3117120bdbd000106e345c7a489619f8</picture>
+        <preview>JavaScript: popupOpenStandard("com.glideapp.servicecatalog_cat_item_view.do?v=1&amp;sysparm_id=c0d2cc6bdb9840106e345c7a489619e1&amp;sysparm_preview=true", "summary");</preview>
+        <price>1000</price>
+        <recurring_frequency/>
+        <recurring_price>0</recurring_price>
+        <request_method/>
+        <roles/>
+        <sc_catalogs>88dab92edb5c00106e345c7a48961905</sc_catalogs>
+        <sc_ic_item_staging/>
+        <sc_ic_version/>
+        <short_description>8.5x36 Deck Over Trailer Gooseneck 12 TON Flatbed 8.5 x 36 | FG102-36T12-FF</short_description>
+        <show_variable_help_on_load>false</show_variable_help_on_load>
+        <start_closed>false</start_closed>
+        <sys_class_name>x_414100_project_3_trailer_catalog_table</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-10 18:25:11</sys_created_on>
+        <sys_id>c0d2cc6bdb9840106e345c7a489619e1</sys_id>
+        <sys_mod_count>21</sys_mod_count>
+        <sys_name>Deck Over Trailer Gooseneck</sys_name>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_update_name>x_414100_project_3_trailer_catalog_table_c0d2cc6bdb9840106e345c7a489619e1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-16 13:36:33</sys_updated_on>
+        <template/>
+        <type>item</type>
+        <use_sc_layout>true</use_sc_layout>
+        <vendor/>
+        <visible_bundle>true</visible_bundle>
+        <visible_guide>true</visible_guide>
+        <visible_standalone>true</visible_standalone>
+        <workflow display_value="Trailer Order Flow">41af15efdb1080106e345c7a489619cd</workflow>
+    </x_414100_project_3_trailer_catalog_table>
+    <sys_translated_text action="delete_multiple" query="documentkey=c0d2cc6bdb9840106e345c7a489619e1"/>
+    <fx_price action="delete_multiple" query="id=c0d2cc6bdb9840106e345c7a489619e1"/>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>1000</amount>
+        <currency display_value="USD">USD</currency>
+        <field>price</field>
+        <id>c0d2cc6bdb9840106e345c7a489619e1</id>
+        <parent/>
+        <reference_amount>1000</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-10 18:25:11</sys_created_on>
+        <sys_id>c0d2cc6bdb9840106e345c7a489619e2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-10 18:25:11</sys_updated_on>
+        <table>x_414100_project_3_trailer_catalog_table</table>
+        <type>calculated</type>
+    </fx_price>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>recurring_price</field>
+        <id>c0d2cc6bdb9840106e345c7a489619e1</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-10 18:25:11</sys_created_on>
+        <sys_id>0cd2cc6bdb9840106e345c7a489619e2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-10 18:25:11</sys_updated_on>
+        <table>x_414100_project_3_trailer_catalog_table</table>
+        <type>calculated</type>
+    </fx_price>
+</record_update>

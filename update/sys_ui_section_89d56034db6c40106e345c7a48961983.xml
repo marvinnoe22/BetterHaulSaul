@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="P3" section_id="89d56034db6c40106e345c7a48961983" sys_domain="global" table="sp_instance" version="3" view="sp_instance_config">
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>P3</caption>
+            <header>false</header>
+            <name>sp_instance</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-10-14 18:10:34</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>89d56034db6c40106e345c7a48961983</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>P3</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+            <sys_update_name>sys_ui_section_89d56034db6c40106e345c7a48961983</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-10-14 18:10:34</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="SP Instance Config" name="sp_instance_config">0ce54027b33232007a6de81816a8dca1</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

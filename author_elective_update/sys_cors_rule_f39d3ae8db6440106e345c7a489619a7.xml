@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_cors_rule">
+    <sys_cors_rule action="DELETE">
+        <delete>true</delete>
+        <domain>http://alexkutz.selfip.com</domain>
+        <exposed_headers>'Access-Control-Allow-Origin'</exposed_headers>
+        <get>true</get>
+        <max_age>0</max_age>
+        <name>Trailers_inc-Attachments</name>
+        <patch>true</patch>
+        <post>true</post>
+        <put>true</put>
+        <rest_api>now/attachment</rest_api>
+        <sys_class_name>sys_cors_rule</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-14 10:36:03</sys_created_on>
+        <sys_id>f39d3ae8db6440106e345c7a489619a7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Trailers_inc-Attachments</sys_name>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_update_name>sys_cors_rule_f39d3ae8db6440106e345c7a489619a7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-14 10:36:03</sys_updated_on>
+    </sys_cors_rule>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</application>
+        <file_path/>
+        <instance_id>72ba96d3db05b7004d2bac44d49619e4</instance_id>
+        <instance_name>dev84767</instance_name>
+        <name>sys_cors_rule_f39d3ae8db6440106e345c7a489619a7</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_cors_rule"><sys_cors_rule action="INSERT_OR_UPDATE"><delete>true</delete><domain>http://alexkutz.selfip.com</domain><exposed_headers>'Access-Control-Allow-Origin'</exposed_headers><get>true</get><max_age>0</max_age><name>Trailers_inc-Attachments</name><patch>true</patch><post>true</post><put>true</put><rest_api>now/attachment</rest_api><sys_class_name>sys_cors_rule</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2019-10-14 10:36:03</sys_created_on><sys_id>f39d3ae8db6440106e345c7a489619a7</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Trailers_inc-Attachments</sys_name><sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package><sys_policy/><sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope><sys_update_name>sys_cors_rule_f39d3ae8db6440106e345c7a489619a7</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2019-10-14 10:36:03</sys_updated_on></sys_cors_rule></record_update>]]></payload>
+        <payload_hash>1217901677</payload_hash>
+        <record_name>Trailers_inc-Attachments</record_name>
+        <reverted_from/>
+        <source>fb1689a3dbdc40106e345c7a489619d8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-14 10:36:03</sys_created_on>
+        <sys_id>cbcdf22cdb6440106e345c7a4896196c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16dc9d6d7310000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-14 10:36:03</sys_updated_on>
+        <type>CORS Rule</type>
+        <update_guid>07cdf22c68644010c44560c918d2a66c</update_guid>
+        <update_guid_history>07cdf22c68644010c44560c918d2a66c:1217901677</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-15 17:23:08</sys_created_on>
+        <sys_db_object display_value="" name="sys_cors_rule">sys_cors_rule</sys_db_object>
+        <sys_id>0178396433764854826f7f29f7951490</sys_id>
+        <sys_metadata>f39d3ae8db6440106e345c7a489619a7</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Trailers_inc-Attachments</sys_name>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_scope_delete display_value="">205e6add2b6c46828e85eec0dde7c144</sys_scope_delete>
+        <sys_update_name>sys_cors_rule_f39d3ae8db6440106e345c7a489619a7</sys_update_name>
+        <sys_update_version display_value="sys_cors_rule_f39d3ae8db6440106e345c7a489619a7">cbcdf22cdb6440106e345c7a4896196c</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-15 17:23:08</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

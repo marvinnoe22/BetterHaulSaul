@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function ($http, $window, spUtil) {	 
+	var c = this;	
+  $http.get(c.options.queue_url).then(function (response) {		
+    if (response.data.result && response.data.result.length)
+      angular.extend(c.data, response.data.result[0]);
+    else
+      angular.extend(c.data, response.data.result);
+		
+  })	
+  c.open = function () {		
+		console.log(spUtil.format(c.options.window.url, {sys_id: c.data.sys_id}), c.options.window.target, c.options.window.options)
+    $window.open(spUtil.format(c.options.window.url, {sys_id: c.data.sys_id}), c.options.window.target, c.options.window.options);
+  };
+}
+
+
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.waiting-time {
+  float: right;
+  margin-right: 0px;
+}
+
+.example_a {
+color: #fff !important;
+text-transform: uppercase;
+text-decoration: none;
+background: #58b82c;
+/*background: #ed3330;*/
+padding: 20px;
+  font-weight: bold;
+border-radius: 5px;
+display: inline-block;
+border: none;
+transition: all 0.4s ease 0s;
+width: 85%
+
+  
+}
+
+.example_a:hover {
+background: #434343;
+letter-spacing: 1px;
+-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+transition: all 0.4s ease 0s;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list>color</field_list>
+        <has_preview>false</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Connect Support Trailers</name>
+        <option_schema>[{"name":"queue_url","label":"Queue URL","type":"string"},{"name":"queue_name","label":"Queue Name","type":"string"},{"name":"queue_id","label":"Queue ID","type":"string"},{"name":"message","label":"Message","type":"string"},{"name":"window","label":"Window","type":"string"},{"name":"title","label":"Title","type":"string"}]</option_schema>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {	
+	// Default Values
+	options.queue_url = options.queue_url || '/api/now/connect/support/queues';	
+	if (options.queue_name) 
+		options.queue_url += '?queue_name=' + options.queue_name;
+		
+	if (options.queue_id) 
+		options.queue_url += '/' + options.queue_id;
+	
+	options.title = options.title || 'Get Live Support';
+	options.title = gs.getMessage(options.title);	
+	
+	options.message = options.message || 'Click here to get live support.';
+	options.message = gs.getMessage(options.message);	
+	options.window = options.window || {url: '/$chat_support.do?queueID={sys_id}', target: '_blank', options: 'location=no,toolbar=no,menubar=no,scrollbars=yes,width=760,height=600,resizable=yes'};
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 15:42:38</sys_created_on>
+        <sys_id>276a8dfedbd840106e345c7a4896193b</sys_id>
+        <sys_mod_count>37</sys_mod_count>
+        <sys_name>Connect Support Trailers</sys_name>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_update_name>sp_widget_276a8dfedbd840106e345c7a4896193b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-15 17:18:05</sys_updated_on>
+        <template><![CDATA[<script src="https://kit.fontawesome.com/9898e913cd.js" crossorigin="anonymous"></script>
+
+<div class="button_cont" align="center" style="margin-right: 27px; margin-bottom: 50px;">
+    <a class="example_a" rel="nofollow noopener"ng-click="c.open()" role="button"><i style="font-size: 18px"class="fas fa-headphones-alt"></i> &nbsp; {{::c.options.message}}<br>Avg wait: {{::c.data.average_wait_time}}</a>
+</div>
+  
+  ]]></template>
+    </sp_widget>
+</record_update>

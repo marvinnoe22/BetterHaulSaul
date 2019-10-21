@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="x_414100_project_3_trailers_inventory">
+    <x_414100_project_3_trailers_inventory action="INSERT_OR_UPDATE">
+        <number>TRA0001021</number>
+        <sys_class_name>x_414100_project_3_trailers_inventory</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 15:48:40</sys_created_on>
+        <sys_id>fc9bc5b2db1c40106e345c7a489619e4</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Utility lawn trailer</sys_name>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_update_name>x_414100_project_3_trailers_inventory_fc9bc5b2db1c40106e345c7a489619e4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-10 14:12:07</sys_updated_on>
+        <trailer_image>cfebc1f2db1c40106e345c7a4896198d</trailer_image>
+        <u_condition>new</u_condition>
+        <u_description>7x16 Utility Lawn Trailer |Load Runner Trailers 7 x 16 | U83-16T3-1B-PR&#13;
+&#13;
+OPTIONS:&#13;
+- 205/75 R15 RADIAL BLACK SPOKE&#13;
+- MOUNT ONLY (Optional)&#13;
+- 2" (7K) RAM A-FRAME CAST COUPLER&#13;
+- 2K FLIP JACK, TOP-WIND JACK&#13;
+- WRAP TONGUE&#13;
+- STRAIGHT DECK&#13;
+- 4' LAY-DOWN GATE W/ SPRING ASSIST&#13;
+- SMOOTH STRAIGHT FENDERS&#13;
+- SIDE RAILS, OPEN, REGULAR HEIGHT&#13;
+- 2-3/8" PIPE TOP&#13;
+- 24" CENTER CROSSMEMBERS&#13;
+- TREATED YELLOW PINE FLOOR&#13;
+- CHARCOAL GRAY POWDER PAINT</u_description>
+        <u_floor_length>16 ft</u_floor_length>
+        <u_gvwr>7000 lbs</u_gvwr>
+        <u_manufacturer>look trailers</u_manufacturer>
+        <u_model>U83-16T3-1B-PR</u_model>
+        <u_name>Utility lawn trailer</u_name>
+        <u_price/>
+        <u_pull_type>bumper</u_pull_type>
+        <u_qty>1</u_qty>
+        <u_trailer_type>utility</u_trailer_type>
+        <u_vin>1ORLU852345678901</u_vin>
+        <u_weight>1675 lbs</u_weight>
+        <u_width>7 ft</u_width>
+        <u_year>2019</u_year>
+    </x_414100_project_3_trailers_inventory>
+</record_update>

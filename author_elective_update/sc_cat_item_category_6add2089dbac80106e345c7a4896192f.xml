@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category">
+    <sc_cat_item_category action="DELETE">
+        <sc_cat_item display_value="Super Single Equipment Hauler Trailer w/Kicker Ramps">26dd2089dbac80106e345c7a4896192a</sc_cat_item>
+        <sc_category display_value="Equipment">e46b316edb5c00106e345c7a489619b5</sc_category>
+        <sys_class_name>sc_cat_item_category</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-15 13:24:06</sys_created_on>
+        <sys_id>6add2089dbac80106e345c7a4896192f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Equipment.Super Single Equipment Hauler Trailer w/Kicker Ramps</sys_name>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_update_name>sc_cat_item_category_6add2089dbac80106e345c7a4896192f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-15 13:24:06</sys_updated_on>
+    </sc_cat_item_category>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</application>
+        <file_path/>
+        <instance_id>72ba96d3db05b7004d2bac44d49619e4</instance_id>
+        <instance_name>dev84767</instance_name>
+        <name>sc_cat_item_category_6add2089dbac80106e345c7a4896192f</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category"><sc_cat_item_category action="INSERT_OR_UPDATE"><sc_cat_item display_value="Super Single Equipment Hauler Trailer w/Kicker Ramps">26dd2089dbac80106e345c7a4896192a</sc_cat_item><sc_category display_value="Equipment">e46b316edb5c00106e345c7a489619b5</sc_category><sys_class_name>sc_cat_item_category</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2019-10-15 13:24:06</sys_created_on><sys_id>6add2089dbac80106e345c7a4896192f</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Equipment.Super Single Equipment Hauler Trailer w/Kicker Ramps</sys_name><sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package><sys_policy/><sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope><sys_update_name>sc_cat_item_category_6add2089dbac80106e345c7a4896192f</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2019-10-15 13:24:06</sys_updated_on></sc_cat_item_category></record_update>]]></payload>
+        <payload_hash>1322631005</payload_hash>
+        <record_name>Equipment.Super Single Equipment Hauler Trailer w/Kicker Ramps</record_name>
+        <reverted_from/>
+        <source>fb1689a3dbdc40106e345c7a489619d8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-15 13:24:06</sys_created_on>
+        <sys_id>26dd2089dbac80106e345c7a48961932</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16dcf9710ad0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-15 13:24:06</sys_updated_on>
+        <type>Catalog Item Category</type>
+        <update_guid>6edd2089f5ac80103c2dc600176fb531</update_guid>
+        <update_guid_history>6edd2089f5ac80103c2dc600176fb531:1322631005</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Equipment.Super Single Equipment Hauler Trailer w/Kicker Ramps">dd3e6889dbac80106e345c7a489619c1</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-15 13:25:40</sys_created_on>
+        <sys_db_object display_value="" name="sc_cat_item_category">sc_cat_item_category</sys_db_object>
+        <sys_id>0a5facfe2cb8400685471b6ab7e42e64</sys_id>
+        <sys_metadata>6add2089dbac80106e345c7a4896192f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Equipment.Super Single Equipment Hauler Trailer w/Kicker Ramps</sys_name>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_parent display_value="">26dd2089dbac80106e345c7a4896192a</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_scope_delete display_value="">205e6add2b6c46828e85eec0dde7c144</sys_scope_delete>
+        <sys_update_name>sc_cat_item_category_6add2089dbac80106e345c7a4896192f</sys_update_name>
+        <sys_update_version display_value="sc_cat_item_category_6add2089dbac80106e345c7a4896192f">26dd2089dbac80106e345c7a48961932</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-15 13:25:40</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Picture" section_id="688e8857dbd800106e345c7a48961925" sys_domain="global" table="x_414100_project_3_trailer_catalog_table" version="3" view="">
+        <sys_ui_annotation action="INSERT_OR_UPDATE">
+            <is_plain_text>false</is_plain_text>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-10-14 20:16:14</sys_created_on>
+            <sys_id>71928df8dbec40106e345c7a48961980</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-10-14 20:16:14</sys_updated_on>
+            <text>${gs.getMessage('Add an icon and picture for display')}</text>
+            <type display_value="Section Details">19756e5ec3313000bac1addbdfba8f18</type>
+        </sys_ui_annotation>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>71928df8dbec40106e345c7a48961980</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-10-14 20:16:14</sys_created_on>
+            <sys_id>71928df8dbec40106e345c7a48961983</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Picture" display_value="Picture" name="x_414100_project_3_trailer_catalog_table" sys_domain="global" view="Default view">688e8857dbd800106e345c7a48961925</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-10-14 20:16:14</sys_updated_on>
+            <sys_user/>
+            <type>annotation</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>icon</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-10-14 20:16:14</sys_created_on>
+            <sys_id>f5928df8dbec40106e345c7a48961983</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Picture" display_value="Picture" name="x_414100_project_3_trailer_catalog_table" sys_domain="global" view="Default view">688e8857dbd800106e345c7a48961925</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-10-14 20:16:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>picture</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-10-14 20:16:14</sys_created_on>
+            <sys_id>7d928df8dbec40106e345c7a48961983</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Picture" display_value="Picture" name="x_414100_project_3_trailer_catalog_table" sys_domain="global" view="Default view">688e8857dbd800106e345c7a48961925</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-10-14 20:16:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Picture</caption>
+            <header>false</header>
+            <name>x_414100_project_3_trailer_catalog_table</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-10-10 00:37:48</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>688e8857dbd800106e345c7a48961925</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Picture</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+            <sys_update_name>sys_ui_section_688e8857dbd800106e345c7a48961925</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-10-10 00:37:48</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

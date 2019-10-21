@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="x_414100_project_3_trailers_inventory">
+    <x_414100_project_3_trailers_inventory action="INSERT_OR_UPDATE">
+        <number>TRA0001020</number>
+        <sys_class_name>x_414100_project_3_trailers_inventory</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 15:46:54</sys_created_on>
+        <sys_id>ba9ac532db1c40106e345c7a489619b3</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Gooseneck car hauler trailer</sys_name>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_update_name>x_414100_project_3_trailers_inventory_ba9ac532db1c40106e345c7a489619b3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-09 15:53:02</sys_updated_on>
+        <trailer_image>55665a87dbd000106e345c7a489619ad</trailer_image>
+        <u_condition>new</u_condition>
+        <u_description>8.5x32 7 TON Gooseneck Car Hauler Trailer |LR Trailers 8.5 x 32 | CHG102-32TT7-DOF&#13;
+&#13;
+OPTIONS:&#13;
+- 10" I-Beam Frame&#13;
+- 3 - 7,000 Lb Dexter Spring Axles (2 Elec FSA Brakes)&#13;
+- ST235/80 R16 LRE 10 Ply.&#13;
+- Gooseneck Coupler 2-5/16" Adjustable Rd. 12 lb. I-Beam&#13;
+- Treated Wood Floor w/2' Dove Tail&#13;
+- Drive-Over Fenders 9"&#13;
+- 16" Cross-Members&#13;
+- Jack Spring Loaded Drop Leg 2-10K&#13;
+- Lighting LED&#13;
+- Standard Neck&#13;
+- Front Tool Box (Full Width Between Risers)&#13;
+- 2" - Rub Rail (Optional)&#13;
+- Road Service Program</u_description>
+        <u_floor_length>32 ft</u_floor_length>
+        <u_gvwr>21000 ft</u_gvwr>
+        <u_manufacturer>look trailers</u_manufacturer>
+        <u_model>CHG102-32TT7-DOF</u_model>
+        <u_name>Gooseneck car hauler trailer</u_name>
+        <u_price>3000</u_price>
+        <u_pull_type>gooseneck</u_pull_type>
+        <u_qty>5</u_qty>
+        <u_trailer_type>car haulers</u_trailer_type>
+        <u_vin>1ORLCHG4423456789</u_vin>
+        <u_weight>6390 ft</u_weight>
+        <u_width>8.5 ft</u_width>
+        <u_year>2019</u_year>
+    </x_414100_project_3_trailers_inventory>
+</record_update>

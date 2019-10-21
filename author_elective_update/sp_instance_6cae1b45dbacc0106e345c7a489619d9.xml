@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="2">d9065b4fdbd400106e345c7a48961934</sp_column>
+        <sp_widget display_value="Connect Support">431542e2c3200200c3fd154e81d3aeeb</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-16 02:16:28</sys_created_on>
+        <sys_id>6cae1b45dbacc0106e345c7a489619d9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_update_name>sp_instance_6cae1b45dbacc0106e345c7a489619d9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-16 02:16:28</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters/>
+    </sp_instance>
+    <sys_translated_text action="delete_multiple" query="documentkey=6cae1b45dbacc0106e345c7a489619d9"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</application>
+        <file_path/>
+        <instance_id>72ba96d3db05b7004d2bac44d49619e4</instance_id>
+        <instance_name>dev84767</instance_name>
+        <name>sp_instance_6cae1b45dbacc0106e345c7a489619d9</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance"><sp_instance action="INSERT_OR_UPDATE"><active>true</active><class_name/><color>default</color><css/><glyph/><id/><order>1</order><roles/><short_description/><size>md</size><sp_column display_value="2">d9065b4fdbd400106e345c7a48961934</sp_column><sp_widget display_value="Connect Support">431542e2c3200200c3fd154e81d3aeeb</sp_widget><sys_class_name>sp_instance</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2019-10-16 02:16:28</sys_created_on><sys_id>6cae1b45dbacc0106e345c7a489619d9</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package><sys_policy/><sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope><sys_update_name>sp_instance_6cae1b45dbacc0106e345c7a489619d9</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2019-10-16 02:16:28</sys_updated_on><title/><url/><widget_parameters/></sp_instance><sys_translated_text action="delete_multiple" query="documentkey=6cae1b45dbacc0106e345c7a489619d9"/></record_update>]]></payload>
+        <payload_hash>-1491224535</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>fb1689a3dbdc40106e345c7a489619d8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-16 02:16:28</sys_created_on>
+        <sys_id>2cae1b45dbacc0106e345c7a489619db</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16dd25a2ff60000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-16 02:16:28</sys_updated_on>
+        <type>Instance</type>
+        <update_guid>64ae1b45c3acc010e4580de38382cedb</update_guid>
+        <update_guid_history>64ae1b45c3acc010e4580de38382cedb:-1491224535</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">03ce5b45dbacc0106e345c7a48961915</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-16 02:17:11</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance">sp_instance</sys_db_object>
+        <sys_id>13dd03baf0f94f18861ebcb54a080090</sys_id>
+        <sys_metadata>6cae1b45dbacc0106e345c7a489619d9</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_scope_delete display_value="">205e6add2b6c46828e85eec0dde7c144</sys_scope_delete>
+        <sys_update_name>sp_instance_6cae1b45dbacc0106e345c7a489619d9</sys_update_name>
+        <sys_update_version display_value="sp_instance_6cae1b45dbacc0106e345c7a489619d9">2cae1b45dbacc0106e345c7a489619db</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-16 02:17:11</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="update_synch=true" extends="sys_metadata" label="Trailers Inventory" max_length="40" name="x_414100_project_3_trailers_inventory" type="collection">
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Stock Number" max_length="40" name="number" type="string"/>
+        <element label="Trailer Image" max_length="40" name="trailer_image" type="user_image"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="new" label="Condition" max_length="40" name="u_condition" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="New" sequence="0" value="new"/>
+                <element inactive_on_update="false" label="Used" sequence="1" value="used"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Description" max_length="300" name="u_description" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Floor Length" max_length="10" name="u_floor_length" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="GVWR" max_length="10" name="u_gvwr" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="haulmark" label="Manufacturer" max_length="40" name="u_manufacturer" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Haulmark" sequence="0" value="haulmark"/>
+                <element inactive_on_update="false" label="Look Trailers" sequence="1" value="look trailers"/>
+                <element inactive_on_update="false" label="Pace America" sequence="2" value="pace america"/>
+                <element inactive_on_update="false" label="Wells Cargo" sequence="3" value="wells cargo"/>
+                <element inactive_on_update="false" label="Cargo Mate" sequence="4" value="cargo mate"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Model" max_length="20" name="u_model" type="string"/>
+        <element label="Name" max_length="100" name="u_name" type="string"/>
+        <element label="Price" max_length="40" name="u_price" type="float"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Pull Type" max_length="40" name="u_pull_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Bumper" sequence="0" value="bumper"/>
+                <element inactive_on_update="false" label="Gooseneck" sequence="1" value="gooseneck"/>
+            </choice>
+        </element>
+        <element label="In Stock" max_length="40" name="u_qty" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="tilt" label="Type of Trailer" max_length="40" name="u_trailer_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Tilt" sequence="0" value="tilt"/>
+                <element inactive_on_update="false" label="Utility" sequence="1" value="utility"/>
+                <element inactive_on_update="false" label="Flatbed" sequence="2" value="flatbed"/>
+                <element inactive_on_update="false" label="Car Haulers" sequence="3" value="car haulers"/>
+                <element inactive_on_update="false" label="Cargo" sequence="4" value="cargo"/>
+                <element inactive_on_update="false" label="Dump" sequence="5" value="dump"/>
+                <element inactive_on_update="false" label="Equipment" sequence="6" value="equipment"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="VIN" max_length="30" name="u_vin" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Weight" max_length="10" name="u_weight" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Width" max_length="10" name="u_width" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="2019" label="Year" max_length="40" name="u_year" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="2019" sequence="0" value="2019"/>
+                <element inactive_on_update="false" label="2018" sequence="1" value="2018"/>
+                <element inactive_on_update="false" label="2017" sequence="2" value="2017"/>
+                <element inactive_on_update="false" label="2016" sequence="3" value="2016"/>
+                <element inactive_on_update="false" label="2015" sequence="4" value="2015"/>
+                <element inactive_on_update="false" label="2014" sequence="5" value="2014"/>
+                <element inactive_on_update="false" label="2013" sequence="6" value="2013"/>
+                <element inactive_on_update="false" label="2012" sequence="7" value="2012"/>
+                <element inactive_on_update="false" label="2011" sequence="8" value="2011"/>
+                <element inactive_on_update="false" label="2010" sequence="9" value="2010"/>
+                <element inactive_on_update="false" label="2009" sequence="10" value="2009"/>
+                <element inactive_on_update="false" label="2008" sequence="11" value="2008"/>
+                <element inactive_on_update="false" label="2007" sequence="12" value="2007"/>
+                <element inactive_on_update="false" label="2006" sequence="13" value="2006"/>
+                <element inactive_on_update="false" label="2005" sequence="14" value="2005"/>
+                <element inactive_on_update="false" label="2004" sequence="15" value="2004"/>
+                <element inactive_on_update="false" label="2003" sequence="16" value="2003"/>
+                <element inactive_on_update="false" label="2002" sequence="17" value="2002"/>
+                <element inactive_on_update="false" label="2001" sequence="18" value="2001"/>
+                <element inactive_on_update="false" label="2000" sequence="19" value="2000"/>
+            </choice>
+        </element>
+    </element>
+</database>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_catalog">
+    <sc_cat_item_catalog action="DELETE">
+        <sc_cat_item display_value="">6c97f938dbe080106e345c7a48961905</sc_cat_item>
+        <sc_catalog display_value="Trailers">88dab92edb5c00106e345c7a48961905</sc_catalog>
+        <sys_class_name>sc_cat_item_catalog</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-15 00:07:55</sys_created_on>
+        <sys_id>f7973938dbe080106e345c7a4896195c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Trailers.</sys_name>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_update_name>sc_cat_item_catalog_f7973938dbe080106e345c7a4896195c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-15 00:07:55</sys_updated_on>
+    </sc_cat_item_catalog>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</application>
+        <file_path/>
+        <instance_id>72ba96d3db05b7004d2bac44d49619e4</instance_id>
+        <instance_name>dev84767</instance_name>
+        <name>sc_cat_item_catalog_f7973938dbe080106e345c7a4896195c</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_catalog"><sc_cat_item_catalog action="INSERT_OR_UPDATE"><sc_cat_item display_value="">6c97f938dbe080106e345c7a48961905</sc_cat_item><sc_catalog display_value="Trailers">88dab92edb5c00106e345c7a48961905</sc_catalog><sys_class_name>sc_cat_item_catalog</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2019-10-15 00:07:55</sys_created_on><sys_id>f7973938dbe080106e345c7a4896195c</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Trailers.</sys_name><sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package><sys_policy/><sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope><sys_update_name>sc_cat_item_catalog_f7973938dbe080106e345c7a4896195c</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2019-10-15 00:07:55</sys_updated_on></sc_cat_item_catalog></record_update>]]></payload>
+        <payload_hash>2129523411</payload_hash>
+        <record_name>Trailers.</record_name>
+        <reverted_from/>
+        <source>fb1689a3dbdc40106e345c7a489619d8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-15 00:07:55</sys_created_on>
+        <sys_id>7b973938dbe080106e345c7a4896195e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16dccbe21c10000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-15 00:07:55</sys_updated_on>
+        <type>Catalog Items Catalog</type>
+        <update_guid>b397393883e0801004e868c80623ff5e</update_guid>
+        <update_guid_history>b397393883e0801004e868c80623ff5e:2129523411</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Trailers.">eaa7f538dbe080106e345c7a4896197e</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-15 00:08:07</sys_created_on>
+        <sys_db_object display_value="" name="sc_cat_item_catalog">sc_cat_item_catalog</sys_db_object>
+        <sys_id>12ed5759e2cf46d8bbde0fee1ed0d761</sys_id>
+        <sys_metadata>f7973938dbe080106e345c7a4896195c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Trailers.</sys_name>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_parent display_value="">6c97f938dbe080106e345c7a48961905</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_scope_delete display_value="">205e6add2b6c46828e85eec0dde7c144</sys_scope_delete>
+        <sys_update_name>sc_cat_item_catalog_f7973938dbe080106e345c7a4896195c</sys_update_name>
+        <sys_update_version display_value="sc_cat_item_catalog_f7973938dbe080106e345c7a4896195c">7b973938dbe080106e345c7a4896195e</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-15 00:08:07</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

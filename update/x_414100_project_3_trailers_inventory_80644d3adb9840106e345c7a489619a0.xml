@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="x_414100_project_3_trailers_inventory">
+    <x_414100_project_3_trailers_inventory action="INSERT_OR_UPDATE">
+        <number>TRA0001018</number>
+        <sys_class_name>x_414100_project_3_trailers_inventory</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 15:22:45</sys_created_on>
+        <sys_id>80644d3adb9840106e345c7a489619a0</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Enclosed cargo trailer w/ electic and air</sys_name>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_update_name>x_414100_project_3_trailers_inventory_80644d3adb9840106e345c7a489619a0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-10 14:11:47</sys_updated_on>
+        <trailer_image>ce2e3643db9400106e345c7a489619f2</trailer_image>
+        <u_condition>new</u_condition>
+        <u_description>8.5x20 Enclosed Cargo Trailer With Electric Pkg &amp; Air Conditioning 8.5 x 20 | EV8.5-20T5-R&#13;
+&#13;
+OPTIONS:5,200 lb American Made Axle&#13;
+- 13,500 BTU Roof Air Conditioning&#13;
+- 30 AMP Electrical Package&#13;
+- 35 AMP DC Power Converter&#13;
+- Chrome Wheel Covers&#13;
+- Powder Coated Mod Wheels&#13;
+- 2000 lb. A-Frame Jack W/ Sand Foot&#13;
+- Powder Coated Aluminum Siding&#13;
+- Aluminum Exterior Fenders&#13;
+- Easy Lube Hubs&#13;
+- Stone Guard&#13;
+- 3/4-Inch Plywood Floor&#13;
+- Spring Assist Ramp Door&#13;
+- 3/8-Inch PlyWood Walls&#13;
+- Woodrich Timber Oil Preservation System&#13;
+- Anodized Corners&#13;
+- ThermaCool Insulated Ceiling&#13;
+- LED Interior Lighting, Running Lights, Brakes and Turn Signals&#13;
+- Triple Tube Heavy Gauge Steel Extended 12 Additional Inches&#13;
+- Flush Mount Lock and Deadbolt on Side Door&#13;
+- Extra Wide Aluminum Trim&#13;
+- Elixir RV Style Side Door&#13;
+- Bar Locks&#13;
+</u_description>
+        <u_floor_length>20 ft</u_floor_length>
+        <u_gvwr>9990 lbs</u_gvwr>
+        <u_manufacturer>wells cargo</u_manufacturer>
+        <u_model>EV8.5-20T5-R</u_model>
+        <u_name>Enclosed cargo trailer w/ electic and air</u_name>
+        <u_price>132</u_price>
+        <u_pull_type>bumper</u_pull_type>
+        <u_qty>1</u_qty>
+        <u_trailer_type>cargo</u_trailer_type>
+        <u_vin>1ORLE11D234567890</u_vin>
+        <u_weight>3500 lbs</u_weight>
+        <u_width>8.5</u_width>
+        <u_year>2019</u_year>
+    </x_414100_project_3_trailers_inventory>
+</record_update>

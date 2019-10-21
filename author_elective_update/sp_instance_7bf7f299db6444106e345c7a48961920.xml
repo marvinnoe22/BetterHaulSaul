@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>2</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">b686578fdbd400106e345c7a48961950</sp_column>
+        <sp_widget display_value="SC Order Guide">480ca054db03320064301150f0b8f545</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-16 18:06:09</sys_created_on>
+        <sys_id>7bf7f299db6444106e345c7a48961920</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_update_name>sp_instance_7bf7f299db6444106e345c7a48961920</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-16 18:06:09</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters/>
+    </sp_instance>
+    <sys_translated_text action="delete_multiple" query="documentkey=7bf7f299db6444106e345c7a48961920"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</application>
+        <file_path/>
+        <instance_id>72ba96d3db05b7004d2bac44d49619e4</instance_id>
+        <instance_name>dev84767</instance_name>
+        <name>sp_instance_7bf7f299db6444106e345c7a48961920</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance"><sp_instance action="INSERT_OR_UPDATE"><active>true</active><class_name/><color>default</color><css/><glyph/><id/><order>2</order><roles/><short_description/><size>md</size><sp_column display_value="1">b686578fdbd400106e345c7a48961950</sp_column><sp_widget display_value="SC Order Guide">480ca054db03320064301150f0b8f545</sp_widget><sys_class_name>sp_instance</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2019-10-16 18:06:09</sys_created_on><sys_id>7bf7f299db6444106e345c7a48961920</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package><sys_policy/><sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope><sys_update_name>sp_instance_7bf7f299db6444106e345c7a48961920</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2019-10-16 18:06:09</sys_updated_on><title/><url/><widget_parameters/></sp_instance><sys_translated_text action="delete_multiple" query="documentkey=7bf7f299db6444106e345c7a48961920"/></record_update>]]></payload>
+        <payload_hash>-1557063663</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>fb1689a3dbdc40106e345c7a489619d8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-16 18:06:09</sys_created_on>
+        <sys_id>b7f7be99db6444106e345c7a48961943</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16dd5bfa2f80000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-16 18:06:09</sys_updated_on>
+        <type>Instance</type>
+        <update_guid>fff7be99e66444107c2cf4ad02d0cc42</update_guid>
+        <update_guid_history>fff7be99e66444107c2cf4ad02d0cc42:-1557063663</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">1f58be99db6444106e345c7a4896194c</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-16 18:07:45</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance">sp_instance</sys_db_object>
+        <sys_id>65c19e4cd8864fa8a0f1ae6935ae5010</sys_id>
+        <sys_metadata>7bf7f299db6444106e345c7a48961920</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_scope_delete display_value="">205e6add2b6c46828e85eec0dde7c144</sys_scope_delete>
+        <sys_update_name>sp_instance_7bf7f299db6444106e345c7a48961920</sys_update_name>
+        <sys_update_version display_value="sp_instance_7bf7f299db6444106e345c7a48961920">b7f7be99db6444106e345c7a48961943</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-16 18:07:45</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

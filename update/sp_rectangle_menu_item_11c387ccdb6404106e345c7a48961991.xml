@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_rectangle_menu_item">
+    <sp_rectangle_menu_item action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <color>default</color>
+        <condition>gs.isLoggedIn&amp;&amp;gs.getUser().hasRole('x_414100_project_3.Trailer Fulfiller Role');</condition>
+        <display_1/>
+        <display_2/>
+        <display_date/>
+        <filter/>
+        <glyph>empty</glyph>
+        <hint/>
+        <kb_article/>
+        <kb_category/>
+        <kb_topic/>
+        <label>MyTask</label>
+        <order>300</order>
+        <record_script/>
+        <sc_cat_item/>
+        <sc_category/>
+        <short_description/>
+        <sp_page display_value="my_task">c5350340dba404106e345c7a48961911</sp_page>
+        <sp_rectangle_menu/>
+        <sp_rectangle_menu_item display_value="Administration">1dbcb2c4db6404106e345c7a48961906</sp_rectangle_menu_item>
+        <sys_class_name>sp_rectangle_menu_item</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-12 21:57:29</sys_created_on>
+        <sys_id>11c387ccdb6404106e345c7a48961991</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_name>MyTask</sys_name>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_update_name>sp_rectangle_menu_item_11c387ccdb6404106e345c7a48961991</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-15 18:29:19</sys_updated_on>
+        <table/>
+        <type>page</type>
+        <url>https://dev84767.service-now.com/trailers?id=my_task</url>
+        <url_target/>
+    </sp_rectangle_menu_item>
+    <sys_translated_text action="delete_multiple" query="documentkey=11c387ccdb6404106e345c7a48961991"/>
+</record_update>

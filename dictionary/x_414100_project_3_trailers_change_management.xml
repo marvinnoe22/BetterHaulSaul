@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="change_request" label="Trailers Change Management" max_length="40" name="x_414100_project_3_trailers_change_management" sizeclass="3" type="collection"/>
+</database>

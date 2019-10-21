@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function($rootScope) {
+  /* widget controller */
+  var c = this;
+	
+	c.data.trailerList = c.data.trailers
+	c.data.searchTerm = "";
+	c.data.checkboxType = {
+		cat1: false,
+		cat2: false,
+		cat3: false,
+		cat4: false,
+		cat5: false,
+		cat6: false,
+		other: false
+	}
+	
+	c.selected = function(){
+		//console.log("test passed");
+		c.data.trailerList = [];
+		if(c.data.checkboxType.cat1){
+		 var cat1 = c.data.trailers.filter(function(trailer){
+			 return(trailer.type === "cargo");
+		 });
+			c.data.trailerList = c.data.trailerList.concat(cat1);
+		}
+		
+		if(c.data.checkboxType.cat2){
+		 var cat2 = c.data.trailers.filter(function(trailer){
+			 return(trailer.type === "dump");
+		 });
+			c.data.trailerList = c.data.trailerList.concat(cat2);
+		}
+		if(c.data.checkboxType.cat3){
+		 var cat3 = c.data.trailers.filter(function(trailer){
+			 return(trailer.type === "car haulers");
+		 });
+			c.data.trailerList = c.data.trailerList.concat(cat3);
+		}
+		
+		if(c.data.checkboxType.cat4){
+		 var cat4 = c.data.trailers.filter(function(trailer){
+			 return(trailer.type === "equipment");
+		 });
+			c.data.trailerList = c.data.trailerList.concat(cat4);
+		}
+		
+		if(c.data.checkboxType.cat5){
+		 var cat5 = c.data.trailers.filter(function(trailer){
+			 return(trailer.type === "utility");
+		 });
+			c.data.trailerList = c.data.trailerList.concat(cat5);
+		}
+		
+		if(c.data.checkboxType.cat6){
+		 var cat6 = c.data.trailers.filter(function(trailer){
+			 return(trailer.type === "flatbed");
+		 });
+			c.data.trailerList = c.data.trailerList.concat(cat6);
+		}
+		
+		if(c.data.checkboxType.other){
+		 var other = c.data.trailers.filter(function(trailer){
+			 return((trailer.type !== "car" ||  
+							trailer.type !== "dump" || 
+							trailer.type !== "car haulers"  ||
+							trailer.type !== "equipment" ||
+							trailer.type !== "utility" ||
+							trailer.type !== "flatbed"));
+		 });
+			c.data.trailerList = c.data.trailerList.concat(other);
+		}
+		
+		if(!c.data.checkboxType.other && !c.data.checkboxType.cat1 &&
+			!c.data.checkboxType.cat2 && !c.data.checkboxType.cat3 &&
+			!c.data.checkboxType.cat4 && !c.data.checkboxType.cat5 &&
+			!c.data.checkboxType.cat6){
+				c.data.trailerList = c.data.trailers
+		}
+		
+		
+	}
+	
+	
+	c.checkout= function(){
+		alert("checkout form!!!");
+	}	
+	
+		c.getDetails= function(){
+		alert("get more details form!!!");
+	}	
+	
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.leftSide{
+  width: 30%;
+  float: left;
+  padding: 10px;
+  border-right: 2px solid black;
+}
+
+.main{
+  width: 65%;
+  padding: 10px;
+  float: right;
+}
+
+.trailers{
+  width: 100%;
+  display: block;
+  border: 2px solid red;
+  height: 180px;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>trailer_list</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>Trailer List</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+    //Use GlideRecord to build the list of adoptable pets, store them in the data.pets object
+    data.trailers = [];
+		console.log('hi');
+    var trailerGR = new GlideRecord('x_414100_project_3_trailers_inventory');
+    //trailerGR.addQuery("u_trailer_type", "flatbed");
+    trailerGR.query();
+    while (trailerGR.next()) {
+        data.trailers.push({
+					stock_number: trailerGR.number.toString(),
+					name: trailerGR.u_name.toString(),
+					photo: trailerGR.trailer_image.getDisplayValue().toString(),
+					type: trailerGR.u_trailer_type.toString(),
+					condition: trailerGR.u_condition.toString(),
+					manufacturer: trailerGR.u_manufacturer.toString(),
+					model: trailerGR.u_model.toString(),
+					width: trailerGR.u_width.toString(),
+					length: trailerGR.u_floor_length.toString(),
+					weight: trailerGR.u_weight.toString(),
+					gvwr: trailerGR.u_gvwr.toString(),
+					quantity: trailerGR.u_qty.toString(),
+					description: trailerGR.u_description.toString(),
+					price: trailerGR.u_price.toString()
+				});
+    }
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-08 19:20:11</sys_created_on>
+        <sys_id>4b1cb1b6db1080106e345c7a48961998</sys_id>
+        <sys_mod_count>94</sys_mod_count>
+        <sys_name>Trailer List</sys_name>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_update_name>sp_widget_4b1cb1b6db1080106e345c7a48961998</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-10 17:54:00</sys_updated_on>
+        <template><![CDATA[<!-- Form -->
+<div class="leftSide">
+<form>
+<h5 style="background-color: #dddddd; padding-top: 5px; padding-bottom: 5px; color: black; font-family: 'Noto Sans JP', sans-serif; text-align: center;">SEARCH BY STOCK #</h5>
+<input id="inputSearch" class="form-control" required="" type="text" autofocus="" placeholder="ex: trailers" 
+       ng-model="c.data.searchTerm"/>
+</form><!-- break -->
+<p>&nbsp;</p>
+<!-- break -->
+<p>&nbsp;</p>
+<!-- break --><form><!-- CATEGORY -->
+<div style="margin-bottom: 20px; margin-top: 10px;">
+<h5 style="background-color: #dddddd; padding-top: 5px; padding-bottom: 5px; color: black; font-family: 'Noto Sans JP', sans-serif; text-align: center;">CATEGORY</h5>
+<div style="padding-left: 4px;">
+  <div class="custom-control custom-checkbox">
+    <input class="custom-control-input" type="checkbox"  
+           ng-model="c.data.checkboxType.cat1" 
+           ng-checked="c.selected()"/> 
+    <label class="custom-control-label" for="customCheck1">
+      Cargo / Enclosed Trailer
+    </label>
+  </div>
+  <div class="custom-control custom-checkbox">
+    <input class="custom-control-input" type="checkbox" 
+           ng-model="c.data.checkboxType.cat2" 
+           ng-checked="c.selected()" /> 
+    <label class="custom-control-label" for="customCheck1">
+      Dump Trailer
+    </label>
+  </div>
+  <div class="custom-control custom-checkbox">
+    <input class="custom-control-input" type="checkbox" 
+           ng-model="c.data.checkboxType.cat3" 
+           ng-checked="c.selected()" /> 
+    <label class="custom-control-label" for="customCheck1">
+      Car / Racing Trailer
+    </label>
+  </div>
+  <div class="custom-control custom-checkbox">
+    <input class="custom-control-input" type="checkbox" 
+           ng-model="c.data.checkboxType.cat4" 
+           ng-checked="c.selected()"/> 
+    <label class="custom-control-label" for="customCheck1">
+      Equipment Trailer
+    </label>
+  </div>
+  <div class="custom-control custom-checkbox">
+    <input class="custom-control-input" type="checkbox" 
+           ng-model="c.data.checkboxType.cat5" 
+           ng-checked="c.selected()"/> 
+    <label class="custom-control-label" for="customCheck1">
+      Utility Trailer
+    </label>
+  </div>
+  <div class="custom-control custom-checkbox">
+    <input class="custom-control-input" type="checkbox" 
+           ng-model="c.data.checkboxType.cat6" 
+           ng-checked="c.selected()"/> 
+    <label class="custom-control-label" for="customCheck1">
+      Flatbed Trailer
+    </label>
+  </div>
+  <div class="custom-control custom-checkbox">
+    <input class="custom-control-input" type="checkbox" 
+           ng-model="c.data.checkboxType.other" 
+           ng-checked="c.selected()"/> 
+    <label class="custom-control-label" for="customCheck1">
+      Other
+    </label>
+  </div>
+</div>
+</div>
+<!-- LENGTH -->
+<div class="form-group">
+<h5 style="background-color: #dddddd; padding-top: 5px; padding-bottom: 5px; color: black; font-family: 'Noto Sans JP', sans-serif; text-align: center;">LENGTH (FT)</h5>
+<input class="form-control-range" type="range" /></div>
+<!-- WIDTH -->
+<div class="form-group">
+<h5 style="background-color: #dddddd; padding-top: 5px; padding-bottom: 5px; color: black; font-family: 'Noto Sans JP', sans-serif; text-align: center;">WIDTH (FT)</h5>
+<input class="form-control-range" type="range" /></div>
+<!-- HEIGHT -->
+<div class="form-group">
+<h5 style="background-color: #dddddd; padding-top: 5px; padding-bottom: 5px; color: black; font-family: 'Noto Sans JP', sans-serif; text-align: center;">HEIGHT (FT)</h5>
+<input class="form-control-range" type="range" /></div>
+<!-- LOCATION -->
+<div style="margin-bottom: 20px; margin-top: 40px;">
+<h5 style="background-color: #dddddd; padding-top: 5px; padding-bottom: 5px; color: black; font-family: 'Noto Sans JP', sans-serif; text-align: center;">LOCATION</h5>
+<div style="padding-left: 4px;">
+<div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" /> <label class="custom-control-label" for="customCheck1">Tampa, FL</label></div>
+<div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" /> <label class="custom-control-label" for="customCheck1">Ft Lauderdale, FL</label></div>
+<div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" /> <label class="custom-control-label" for="customCheck1">Orlando, FL</label></div>
+<div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" /> <label class="custom-control-label" for="customCheck1">Central FL</label></div>
+</div>
+</div>
+<!-- PULL TYPE -->
+<div style="margin-bottom: 20px; margin-top: 40px;">
+<h5 style="background-color: #dddddd; padding-top: 5px; padding-bottom: 5px; color: black; font-family: 'Noto Sans JP', sans-serif; text-align: center;">PULL TYPE</h5>
+<div style="padding-left: 4px;">
+<div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" /> <label class="custom-control-label" for="customCheck1">Bumper</label></div>
+<div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" /> <label class="custom-control-label" for="customCheck1">Gooseneck</label></div>
+<div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" /> <label class="custom-control-label" for="customCheck1">Pintle</label></div>
+</div>
+</div>
+<!-- GVWR -->
+<div class="form-group">
+<h5 style="background-color: #dddddd; padding-top: 5px; padding-bottom: 5px; color: black; font-family: 'Noto Sans JP', sans-serif; text-align: center;">GVWR</h5>
+<input class="form-control-range" type="range" /></div>
+<!-- PAYLOAD CAPACITY -->
+<div class="form-group">
+<h5 style="background-color: #dddddd; padding-top: 5px; padding-bottom: 5px; color: black; font-family: 'Noto Sans JP', sans-serif; text-align: center;">PAYLOAD CAPACITY</h5>
+<input class="form-control-range" type="range" /></div>
+<!-- MANUFACTURER -->
+<div style="margin-bottom: 20px; margin-top: 40px;">
+<h5 style="background-color: #dddddd; padding-top: 5px; padding-bottom: 5px; color: black; font-family: 'Noto Sans JP', sans-serif; text-align: center;">MANUFACTURER</h5>
+<div style="padding-left: 4px;">
+<div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" /> <label class="custom-control-label" for="customCheck1" >Load Runner Enclosed Cargo Trailer</label></div>
+<div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" /> <label class="custom-control-label" for="customCheck1">Load Runner Dump Trailer</label></div>
+<div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" /> <label class="custom-control-label" for="customCheck1">Load Runner Car Trailer</label></div>
+<div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" /> <label class="custom-control-label" for="customCheck1">Load Runner Utility Trailer</label></div>
+<div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" /> <label class="custom-control-label" for="customCheck1">Load Runner Flatbed Trailer</label></div>
+<div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" /> <label class="custom-control-label" for="customCheck1">Load Runner Equipment Trailer</label></div>
+<div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" /> <label class="custom-control-label" for="customCheck1">Load Runner Tilt Trailer</label></div>
+<div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" /> <label class="custom-control-label" for="customCheck1">Load Runner Trailers Trailer</label></div>
+<div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" /> <label class="custom-control-label" for="customCheck1">Load Trail</label></div>
+<div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" /> <label class="custom-control-label" for="customCheck1">Traxx Trailers</label></div>
+<div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" /> <label class="custom-control-label" for="customCheck1">Legend Trailers</label></div>
+</div>
+</div>
+<!-- Price -->
+<div class="form-group">
+<h5 style="background-color: #dddddd; padding-top: 5px; padding-bottom: 5px; color: black; font-family: 'Noto Sans JP', sans-serif; text-align: center;">PRICE</h5>
+<input class="form-control-range" type="range" /></div>
+<!-- Year -->
+<div style="margin-bottom: 20px; margin-top: 40px;">
+<h5 style="background-color: #dddddd; padding-top: 5px; padding-bottom: 5px; color: black; font-family: 'Noto Sans JP', sans-serif; text-align: center;">YEAR</h5>
+<div style="padding-left: 4px;">
+<div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" /> <label class="custom-control-label" for="customCheck1">2019</label></div>
+<div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" /> <label class="custom-control-label" for="customCheck1">2018</label></div>
+<div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" /> <label class="custom-control-label" for="customCheck1">2017</label></div>
+<div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" /> <label class="custom-control-label" for="customCheck1">2016</label></div>
+<div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" /> <label class="custom-control-label" for="customCheck1">2015</label></div>
+<div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" /> <label class="custom-control-label" for="customCheck1">2014</label></div>
+<div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" /> <label class="custom-control-label" for="customCheck1">Other</label></div>
+</div>
+</div>
+<!-- AXELS -->
+<div style="margin-bottom: 20px; margin-top: 40px;">
+<h5 style="background-color: #dddddd; padding-top: 5px; padding-bottom: 5px; color: black; font-family: 'Noto Sans JP', sans-serif; text-align: center;">AXELS</h5>
+<div style="padding-left: 4px;">
+<div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" /> <label class="custom-control-label" for="customCheck1">2</label></div>
+<div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" /> <label class="custom-control-label" for="customCheck1">1</label></div>
+<div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" /> <label class="custom-control-label" for="customCheck1">3 Or More</label></div>
+<div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" /> <label class="custom-control-label" for="customCheck1">Central FL</label></div>
+</div>
+</div>
+<!-- CONSTRUCTION -->
+<div style="margin-bottom: 20px; margin-top: 40px;">
+<h5 style="background-color: #dddddd; padding-top: 5px; padding-bottom: 5px; color: black; font-family: 'Noto Sans JP', sans-serif; text-align: center;">CONSTRUCTION</h5>
+<div style="padding-left: 4px;">
+<div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" /> <label class="custom-control-label" for="customCheck1">Steel</label></div>
+<div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" /> <label class="custom-control-label" for="customCheck1">Steel Frame / Aluminum Skin</label></div>
+</div>
+</div>
+<!-- COLOR -->
+<div style="margin-bottom: 20px; margin-top: 40px;">
+<h5 style="background-color: #dddddd; padding-top: 5px; padding-bottom: 5px; color: black; font-family: 'Noto Sans JP', sans-serif; text-align: center;">COLOR</h5>
+<div style="padding-left: 4px;">
+<div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" /> <label class="custom-control-label" for="customCheck1">White</label></div>
+<div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" /> <label class="custom-control-label" for="customCheck1">Black</label></div>
+<div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" /> <label class="custom-control-label" for="customCheck1">Red</label></div>
+<div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" /> <label class="custom-control-label" for="customCheck1">Green</label></div>
+<div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" /> <label class="custom-control-label" for="customCheck1">Other</label></div>
+</div>
+</div>
+<h5 style="background-color: #dddddd; padding-top: 5px; padding-bottom: 5px; color: black; font-family: 'Noto Sans JP', sans-serif; text-align: center;">SEARCH BY MODEL</h5>
+<input id="inputEmail" class="form-control" required="" type="text" autofocus="" />
+<div style="margin-top: 10px;"><button class="btn btn-lg btn-primary btn-block" style="background-color: red;" type="submit">Sign in</button></div>
+</form>
+</div>
+
+<div class="main">
+  <div >
+    <div ng-repeat="trailers in c.data.trailerList | filter : {'name' : c.data.searchTerm}"  class="trailers">
+      <img class="img-fluid" style="width: 175px; height: 160px; float: left; padding-right: 10px;" ng-src="{{trailers.photo}}">
+      <h4 style="font-size: 15px;">{{trailers.name}}</h4>
+      <p style="font-size: 13px; text-overflow: hidden; margin: left;">
+        <span style="color: red;">Price: ${{trailers.price}} | For sale in Orlando, FL</span>  
+        <br /> Stock #: {{trailers.stock_number}} type: {{trailers.type}}</p>
+      <p>
+        <button class="btn btn-primary btn-sm" style="background-color: #de412c;" 
+                type="submit" ng-click="c.checkout()">
+          CheckOut
+        </button>
+        
+        
+        <button class="btn btn-primary btn-sm" style="background-color: #de412c;" 
+                type="submit" ng-click="c.getDetails()">
+          VIEW DETAILS
+        </button>
+      </p>
+    </div>
+ </div>
+  
+  <div>
+  <p>
+    cat1: {{c.data.checkboxType.cat1}}
+  </p>
+</div>
+</div>
+<div class="clearfix"></div>
+
+
+]]></template>
+    </sp_widget>
+</record_update>

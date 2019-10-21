@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="x_414100_project_3_trailers_inventory">
+    <x_414100_project_3_trailers_inventory action="DELETE">
+        <number>TRA0001024</number>
+        <sys_class_name>x_414100_project_3_trailers_inventory</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-09 00:35:52</sys_created_on>
+        <sys_id>f2648732db5480106e345c7a4896196b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>frererfer</sys_name>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_update_name>x_414100_project_3_trailers_inventory_f2648732db5480106e345c7a4896196b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-09 00:35:52</sys_updated_on>
+        <trailer_image/>
+        <u_condition>new</u_condition>
+        <u_description/>
+        <u_floor_length/>
+        <u_gvwr/>
+        <u_manufacturer>haulmark</u_manufacturer>
+        <u_model/>
+        <u_name>frererfer</u_name>
+        <u_pull_type>bumper</u_pull_type>
+        <u_qty/>
+        <u_trailer_type>flatbed</u_trailer_type>
+        <u_vin/>
+        <u_weight/>
+        <u_width/>
+        <u_year>2019</u_year>
+    </x_414100_project_3_trailers_inventory>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</application>
+        <file_path/>
+        <instance_id>72ba96d3db05b7004d2bac44d49619e4</instance_id>
+        <instance_name>dev84767</instance_name>
+        <name>x_414100_project_3_trailers_inventory_f2648732db5480106e345c7a4896196b</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_414100_project_3_trailers_inventory"><x_414100_project_3_trailers_inventory action="INSERT_OR_UPDATE"><number>TRA0001024</number><sys_class_name>x_414100_project_3_trailers_inventory</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2019-10-09 00:35:52</sys_created_on><sys_id>f2648732db5480106e345c7a4896196b</sys_id><sys_mod_count>0</sys_mod_count><sys_name>frererfer</sys_name><sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package><sys_policy/><sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope><sys_update_name>x_414100_project_3_trailers_inventory_f2648732db5480106e345c7a4896196b</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2019-10-09 00:35:52</sys_updated_on><trailer_image/><u_condition>new</u_condition><u_description/><u_floor_length/><u_gvwr/><u_manufacturer>haulmark</u_manufacturer><u_model/><u_name>frererfer</u_name><u_pull_type>bumper</u_pull_type><u_qty/><u_trailer_type>flatbed</u_trailer_type><u_vin/><u_weight/><u_width/><u_year>2019</u_year></x_414100_project_3_trailers_inventory></record_update>]]></payload>
+        <payload_hash>-41110224</payload_hash>
+        <record_name>frererfer</record_name>
+        <reverted_from/>
+        <source>a6c765a6db1c00106e345c7a48961914</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-09 00:35:52</sys_created_on>
+        <sys_id>e674c372db5480106e345c7a489619b6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16dadf18eaa0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-09 00:35:52</sys_updated_on>
+        <type>Trailers Inventory</type>
+        <update_guid>2274c37266548010cc17a70d806e03b6</update_guid>
+        <update_guid_history>2274c37266548010cc17a70d806e03b6:-41110224</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="frererfer">f7940f7edb1480106e345c7a489619cc</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-09 00:36:29</sys_created_on>
+        <sys_db_object display_value="" name="x_414100_project_3_trailers_inventory">x_414100_project_3_trailers_inventory</sys_db_object>
+        <sys_id>d45cd08661184550a1734aaee21ecf44</sys_id>
+        <sys_metadata>f2648732db5480106e345c7a4896196b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>frererfer</sys_name>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_scope_delete display_value="">205e6add2b6c46828e85eec0dde7c144</sys_scope_delete>
+        <sys_update_name>x_414100_project_3_trailers_inventory_f2648732db5480106e345c7a4896196b</sys_update_name>
+        <sys_update_version display_value="x_414100_project_3_trailers_inventory_f2648732db5480106e345c7a4896196b">e674c372db5480106e345c7a489619b6</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-09 00:36:29</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

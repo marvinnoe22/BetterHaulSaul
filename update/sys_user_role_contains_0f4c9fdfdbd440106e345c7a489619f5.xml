@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains">
+    <sys_user_role_contains action="INSERT_OR_UPDATE">
+        <contains display_value="itil" name="itil">282bf1fac6112285017366cb5f867469</contains>
+        <role display_value="x_414100_project_3.Trailer Fulfiller Role" name="x_414100_project_3.Trailer Fulfiller Role">b6d98c13dbd800106e345c7a489619f6</role>
+        <sys_class_name>sys_user_role_contains</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-10 15:36:54</sys_created_on>
+        <sys_id>0f4c9fdfdbd440106e345c7a489619f5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>itil.x_414100_project_3.Trailer Fulfiller Role</sys_name>
+        <sys_package display_value="Project 3" source="x_414100_project_3">eb77e1a2db1c00106e345c7a489619be</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Project 3">eb77e1a2db1c00106e345c7a489619be</sys_scope>
+        <sys_update_name>sys_user_role_contains_0f4c9fdfdbd440106e345c7a489619f5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-10 15:36:54</sys_updated_on>
+    </sys_user_role_contains>
+</record_update>
